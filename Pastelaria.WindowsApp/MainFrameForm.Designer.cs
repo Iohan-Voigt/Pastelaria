@@ -39,6 +39,7 @@
             this.minimizeBtn = new FontAwesome.Sharp.IconButton();
             this.maximaziBtn = new FontAwesome.Sharp.IconButton();
             this.exitBtn = new FontAwesome.Sharp.IconButton();
+            this.EmployeeBtn = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPic)).BeginInit();
@@ -48,6 +49,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(112)))), ((int)(((byte)(184)))));
+            this.panelMenu.Controls.Add(this.EmployeeBtn);
             this.panelMenu.Controls.Add(this.logoPanel);
             this.panelMenu.Controls.Add(this.logutBtn);
             this.panelMenu.Controls.Add(this.homeBtn);
@@ -210,6 +212,26 @@
             this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
+            // EmployeeBtn
+            // 
+            this.EmployeeBtn.FlatAppearance.BorderSize = 0;
+            this.EmployeeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EmployeeBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EmployeeBtn.ForeColor = System.Drawing.Color.Black;
+            this.EmployeeBtn.IconChar = FontAwesome.Sharp.IconChar.PeopleCarry;
+            this.EmployeeBtn.IconColor = System.Drawing.Color.Black;
+            this.EmployeeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.EmployeeBtn.IconSize = 50;
+            this.EmployeeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EmployeeBtn.Location = new System.Drawing.Point(0, 190);
+            this.EmployeeBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.EmployeeBtn.Name = "EmployeeBtn";
+            this.EmployeeBtn.Size = new System.Drawing.Size(250, 45);
+            this.EmployeeBtn.TabIndex = 4;
+            this.EmployeeBtn.Tag = "Employees";
+            this.EmployeeBtn.Text = "Employees";
+            this.EmployeeBtn.UseVisualStyleBackColor = false;
+            // 
             // MainFrameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -244,5 +266,6 @@
         private System.Windows.Forms.Panel logoPanel;
         private FontAwesome.Sharp.IconButton menuBtn;
         private System.Windows.Forms.PictureBox logoPic;
+        private FontAwesome.Sharp.IconButton EmployeeBtn;
     }
 }
