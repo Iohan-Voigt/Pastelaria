@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pastelaria.WindowsApp
@@ -18,7 +13,7 @@ namespace Pastelaria.WindowsApp
             loginForm.ShowDialog();
 
             InitializeComponent();
-            this.Padding = new System.Windows.Forms.Padding(2);
+            this.Padding = new (2);
             this.BackColor = Color.FromArgb(28, 31, 51);
         }
 

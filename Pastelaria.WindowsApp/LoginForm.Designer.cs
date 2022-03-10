@@ -34,11 +34,13 @@
             this.passwordLabel = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.InfoLabel = new System.Windows.Forms.Label();
+            this.LogoPicBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).BeginInit();
             this.SuspendLayout();
             // 
             // logginBtn
             // 
-            this.logginBtn.Location = new System.Drawing.Point(61, 315);
+            this.logginBtn.Location = new System.Drawing.Point(65, 315);
             this.logginBtn.Name = "logginBtn";
             this.logginBtn.Size = new System.Drawing.Size(250, 25);
             this.logginBtn.TabIndex = 0;
@@ -86,11 +88,22 @@
             this.InfoLabel.Size = new System.Drawing.Size(0, 15);
             this.InfoLabel.TabIndex = 5;
             // 
+            // LogoPicBox
+            // 
+            this.LogoPicBox.Image = global::Pastelaria.WindowsApp.Properties.Resources.logoSemFundo;
+            this.LogoPicBox.Location = new System.Drawing.Point(97, 12);
+            this.LogoPicBox.Name = "LogoPicBox";
+            this.LogoPicBox.Size = new System.Drawing.Size(170, 140);
+            this.LogoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LogoPicBox.TabIndex = 8;
+            this.LogoPicBox.TabStop = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 411);
+            this.Controls.Add(this.LogoPicBox);
             this.Controls.Add(this.InfoLabel);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.passwordLabel);
@@ -100,6 +113,7 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,5 +127,6 @@
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Label InfoLabel;
+        private System.Windows.Forms.PictureBox LogoPicBox;
     }
 }

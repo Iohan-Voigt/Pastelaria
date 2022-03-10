@@ -37,6 +37,7 @@
             this.productBtn = new FontAwesome.Sharp.IconButton();
             this.employeeBtn = new FontAwesome.Sharp.IconButton();
             this.logoPanel = new System.Windows.Forms.Panel();
+            this.LogoPicBox = new System.Windows.Forms.PictureBox();
             this.logoPic = new System.Windows.Forms.PictureBox();
             this.menuBtn = new FontAwesome.Sharp.IconButton();
             this.logutBtn = new FontAwesome.Sharp.IconButton();
@@ -48,6 +49,7 @@
             this.exitBtn = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.logoPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPic)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
@@ -214,6 +216,7 @@
             // 
             // logoPanel
             // 
+            this.logoPanel.Controls.Add(this.LogoPicBox);
             this.logoPanel.Controls.Add(this.logoPic);
             this.logoPanel.Controls.Add(this.menuBtn);
             this.logoPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -221,6 +224,16 @@
             this.logoPanel.Name = "logoPanel";
             this.logoPanel.Size = new System.Drawing.Size(250, 140);
             this.logoPanel.TabIndex = 1;
+            // 
+            // LogoPicBox
+            // 
+            this.LogoPicBox.Image = global::Pastelaria.WindowsApp.Properties.Resources.logoSemFundo;
+            this.LogoPicBox.Location = new System.Drawing.Point(0, 0);
+            this.LogoPicBox.Name = "LogoPicBox";
+            this.LogoPicBox.Size = new System.Drawing.Size(170, 140);
+            this.LogoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LogoPicBox.TabIndex = 7;
+            this.LogoPicBox.TabStop = false;
             // 
             // logoPic
             // 
@@ -379,6 +392,7 @@
             this.Resize += new System.EventHandler(this.MainFrameForm_Resize);
             this.panelMenu.ResumeLayout(false);
             this.logoPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPic)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
@@ -406,5 +420,6 @@
         private FontAwesome.Sharp.IconButton orderBtn;
         private FontAwesome.Sharp.IconButton configBtn;
         private FontAwesome.Sharp.IconButton costumersBtn;
+        private System.Windows.Forms.PictureBox LogoPicBox;
     }
 }
