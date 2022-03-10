@@ -13,8 +13,10 @@ namespace Pastelaria.WindowsApp
 {
     public partial class MainFrameForm : Form
     {
-        public MainFrameForm()
+        public MainFrameForm(LoginForm loginForm)
         {
+            loginForm.ShowDialog();
+
             InitializeComponent();
             this.Padding = new System.Windows.Forms.Padding(2);
             this.BackColor = Color.FromArgb(28, 31, 51);

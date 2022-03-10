@@ -7,18 +7,18 @@ using Pastelaria.Domain.Shared;
 
 namespace Pastelaria.Domain
 {
-    public class Employee : UserEntity
+    public class Employee : Person
     {
-        public string user { get; set; }
-        public string password { get; set; }
+        protected string password { get; set; }
 
-        public Employee(string name,string RegisterNumber, string ContactNumber, string user, string passowrd)
+        public override string ToString()
         {
-            this.Name = name;
-            this.RegisterNumber = RegisterNumber;
-            this.ContactNumber = ContactNumber;
-            this.user = user;
-            this.password = passowrd;
+            return "";
+        }
+
+        public override string Validate()
+        {
+            return "";
         }
     }
 }

@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.costumersBtn = new FontAwesome.Sharp.IconButton();
+            this.configBtn = new FontAwesome.Sharp.IconButton();
+            this.orderBtn = new FontAwesome.Sharp.IconButton();
+            this.debitBtn = new FontAwesome.Sharp.IconButton();
             this.sellBtn = new FontAwesome.Sharp.IconButton();
             this.productBtn = new FontAwesome.Sharp.IconButton();
             this.employeeBtn = new FontAwesome.Sharp.IconButton();
@@ -42,9 +46,6 @@
             this.minimizeBtn = new FontAwesome.Sharp.IconButton();
             this.maximaziBtn = new FontAwesome.Sharp.IconButton();
             this.exitBtn = new FontAwesome.Sharp.IconButton();
-            this.debitBtn = new FontAwesome.Sharp.IconButton();
-            this.orderBtn = new FontAwesome.Sharp.IconButton();
-            this.configBtn = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPic)).BeginInit();
@@ -54,6 +55,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(112)))), ((int)(((byte)(184)))));
+            this.panelMenu.Controls.Add(this.costumersBtn);
             this.panelMenu.Controls.Add(this.configBtn);
             this.panelMenu.Controls.Add(this.orderBtn);
             this.panelMenu.Controls.Add(this.debitBtn);
@@ -70,6 +72,86 @@
             this.panelMenu.Size = new System.Drawing.Size(250, 681);
             this.panelMenu.TabIndex = 0;
             // 
+            // costumersBtn
+            // 
+            this.costumersBtn.FlatAppearance.BorderSize = 0;
+            this.costumersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.costumersBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.costumersBtn.ForeColor = System.Drawing.Color.Black;
+            this.costumersBtn.IconChar = FontAwesome.Sharp.IconChar.Restroom;
+            this.costumersBtn.IconColor = System.Drawing.Color.Black;
+            this.costumersBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.costumersBtn.IconSize = 50;
+            this.costumersBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.costumersBtn.Location = new System.Drawing.Point(0, 280);
+            this.costumersBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.costumersBtn.Name = "costumersBtn";
+            this.costumersBtn.Size = new System.Drawing.Size(250, 45);
+            this.costumersBtn.TabIndex = 10;
+            this.costumersBtn.Tag = "Costumers";
+            this.costumersBtn.Text = "Costumers";
+            this.costumersBtn.UseVisualStyleBackColor = false;
+            // 
+            // configBtn
+            // 
+            this.configBtn.FlatAppearance.BorderSize = 0;
+            this.configBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.configBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.configBtn.ForeColor = System.Drawing.Color.Black;
+            this.configBtn.IconChar = FontAwesome.Sharp.IconChar.Cogs;
+            this.configBtn.IconColor = System.Drawing.Color.Black;
+            this.configBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.configBtn.IconSize = 50;
+            this.configBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.configBtn.Location = new System.Drawing.Point(0, 576);
+            this.configBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.configBtn.Name = "configBtn";
+            this.configBtn.Size = new System.Drawing.Size(250, 45);
+            this.configBtn.TabIndex = 9;
+            this.configBtn.Tag = "Configurations";
+            this.configBtn.Text = "Configurations";
+            this.configBtn.UseVisualStyleBackColor = false;
+            // 
+            // orderBtn
+            // 
+            this.orderBtn.FlatAppearance.BorderSize = 0;
+            this.orderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.orderBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.orderBtn.ForeColor = System.Drawing.Color.Black;
+            this.orderBtn.IconChar = FontAwesome.Sharp.IconChar.HandHoldingUsd;
+            this.orderBtn.IconColor = System.Drawing.Color.Black;
+            this.orderBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.orderBtn.IconSize = 50;
+            this.orderBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.orderBtn.Location = new System.Drawing.Point(0, 370);
+            this.orderBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.orderBtn.Name = "orderBtn";
+            this.orderBtn.Size = new System.Drawing.Size(250, 45);
+            this.orderBtn.TabIndex = 8;
+            this.orderBtn.Tag = "Orders";
+            this.orderBtn.Text = "Orders";
+            this.orderBtn.UseVisualStyleBackColor = false;
+            // 
+            // debitBtn
+            // 
+            this.debitBtn.FlatAppearance.BorderSize = 0;
+            this.debitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.debitBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.debitBtn.ForeColor = System.Drawing.Color.Black;
+            this.debitBtn.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckAlt;
+            this.debitBtn.IconColor = System.Drawing.Color.Black;
+            this.debitBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.debitBtn.IconSize = 50;
+            this.debitBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.debitBtn.Location = new System.Drawing.Point(0, 415);
+            this.debitBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.debitBtn.Name = "debitBtn";
+            this.debitBtn.Size = new System.Drawing.Size(250, 45);
+            this.debitBtn.TabIndex = 7;
+            this.debitBtn.Tag = "Debits";
+            this.debitBtn.Text = "Debits";
+            this.debitBtn.UseVisualStyleBackColor = false;
+            // 
             // sellBtn
             // 
             this.sellBtn.FlatAppearance.BorderSize = 0;
@@ -81,7 +163,7 @@
             this.sellBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.sellBtn.IconSize = 50;
             this.sellBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sellBtn.Location = new System.Drawing.Point(0, 280);
+            this.sellBtn.Location = new System.Drawing.Point(0, 325);
             this.sellBtn.Margin = new System.Windows.Forms.Padding(0);
             this.sellBtn.Name = "sellBtn";
             this.sellBtn.Size = new System.Drawing.Size(250, 45);
@@ -282,66 +364,6 @@
             this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
-            // debitBtn
-            // 
-            this.debitBtn.FlatAppearance.BorderSize = 0;
-            this.debitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.debitBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.debitBtn.ForeColor = System.Drawing.Color.Black;
-            this.debitBtn.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckAlt;
-            this.debitBtn.IconColor = System.Drawing.Color.Black;
-            this.debitBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.debitBtn.IconSize = 50;
-            this.debitBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.debitBtn.Location = new System.Drawing.Point(0, 370);
-            this.debitBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.debitBtn.Name = "debitBtn";
-            this.debitBtn.Size = new System.Drawing.Size(250, 45);
-            this.debitBtn.TabIndex = 7;
-            this.debitBtn.Tag = "Debits";
-            this.debitBtn.Text = "Debits";
-            this.debitBtn.UseVisualStyleBackColor = false;
-            // 
-            // orderBtn
-            // 
-            this.orderBtn.FlatAppearance.BorderSize = 0;
-            this.orderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.orderBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.orderBtn.ForeColor = System.Drawing.Color.Black;
-            this.orderBtn.IconChar = FontAwesome.Sharp.IconChar.HandHoldingUsd;
-            this.orderBtn.IconColor = System.Drawing.Color.Black;
-            this.orderBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.orderBtn.IconSize = 50;
-            this.orderBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.orderBtn.Location = new System.Drawing.Point(0, 325);
-            this.orderBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.orderBtn.Name = "orderBtn";
-            this.orderBtn.Size = new System.Drawing.Size(250, 45);
-            this.orderBtn.TabIndex = 8;
-            this.orderBtn.Tag = "Orders";
-            this.orderBtn.Text = "Orders";
-            this.orderBtn.UseVisualStyleBackColor = false;
-            // 
-            // configBtn
-            // 
-            this.configBtn.FlatAppearance.BorderSize = 0;
-            this.configBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.configBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.configBtn.ForeColor = System.Drawing.Color.Black;
-            this.configBtn.IconChar = FontAwesome.Sharp.IconChar.PencilRuler;
-            this.configBtn.IconColor = System.Drawing.Color.Black;
-            this.configBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.configBtn.IconSize = 50;
-            this.configBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.configBtn.Location = new System.Drawing.Point(0, 576);
-            this.configBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.configBtn.Name = "configBtn";
-            this.configBtn.Size = new System.Drawing.Size(250, 45);
-            this.configBtn.TabIndex = 9;
-            this.configBtn.Tag = "Configuration";
-            this.configBtn.Text = "Configuration";
-            this.configBtn.UseVisualStyleBackColor = false;
-            // 
             // MainFrameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -352,6 +374,7 @@
             this.Controls.Add(this.panelMenu);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "MainFrameForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainFrameForm";
             this.Resize += new System.EventHandler(this.MainFrameForm_Resize);
             this.panelMenu.ResumeLayout(false);
@@ -382,5 +405,6 @@
         private FontAwesome.Sharp.IconButton debitBtn;
         private FontAwesome.Sharp.IconButton orderBtn;
         private FontAwesome.Sharp.IconButton configBtn;
+        private FontAwesome.Sharp.IconButton costumersBtn;
     }
 }

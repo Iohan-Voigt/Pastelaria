@@ -17,7 +17,11 @@ namespace Pastelaria.WindowsApp
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainFrameForm());
+
+            LoginForm loginForm = new ();
+            MainFrameForm mainFrameForm = new (loginForm);
+
+            Application.Run(mainFrameForm);
         }
     }
 }

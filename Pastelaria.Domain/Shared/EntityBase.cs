@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Pastelaria.Domain.Shared
 {
-    public class EntityBase
+    public abstract class EntityBase
     {
-        public Guid Id { get; set; }
+        public Guid Id { get => Id; set => Id = value; }
 
-        public string Name { get; set; }
+        public abstract string Validate();
+        public abstract override string ToString();
     }
 }
