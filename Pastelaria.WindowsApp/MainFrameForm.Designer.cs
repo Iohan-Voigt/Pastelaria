@@ -234,6 +234,7 @@
             this.LogoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LogoPicBox.TabIndex = 7;
             this.LogoPicBox.TabStop = false;
+            this.LogoPicBox.Tag = "Logo";
             // 
             // logoPic
             // 
@@ -259,7 +260,7 @@
             this.menuBtn.TabIndex = 1;
             this.menuBtn.Tag = "Menu";
             this.menuBtn.UseVisualStyleBackColor = false;
-            this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click);
+            this.menuBtn.Click += new System.EventHandler(this.MenuBtn_Click);
             // 
             // logutBtn
             // 
@@ -312,7 +313,7 @@
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(1014, 50);
             this.panelTitleBar.TabIndex = 1;
-            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelTitleBar_MouseDown);
             // 
             // titleLable
             // 
@@ -340,7 +341,7 @@
             this.minimizeBtn.Size = new System.Drawing.Size(40, 25);
             this.minimizeBtn.TabIndex = 0;
             this.minimizeBtn.UseVisualStyleBackColor = false;
-            this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
+            this.minimizeBtn.Click += new System.EventHandler(this.MinimizeBtn_Click);
             // 
             // maximaziBtn
             // 
@@ -357,7 +358,7 @@
             this.maximaziBtn.Size = new System.Drawing.Size(40, 25);
             this.maximaziBtn.TabIndex = 0;
             this.maximaziBtn.UseVisualStyleBackColor = false;
-            this.maximaziBtn.Click += new System.EventHandler(this.maximaziBtn_Click);
+            this.maximaziBtn.Click += new System.EventHandler(this.MaximaziBtn_Click);
             // 
             // exitBtn
             // 
@@ -375,7 +376,7 @@
             this.exitBtn.Size = new System.Drawing.Size(40, 25);
             this.exitBtn.TabIndex = 0;
             this.exitBtn.UseVisualStyleBackColor = false;
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            this.exitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // MainFrameForm
             // 

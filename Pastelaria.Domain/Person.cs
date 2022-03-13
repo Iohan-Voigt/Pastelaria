@@ -16,7 +16,6 @@ namespace Pastelaria.Domain
         #nullable enable
         public string? PhoneNumber {get;set;}
 
-        public string? Email { get; set; }
 
 
         public virtual string ValidatePerson() 
@@ -27,8 +26,6 @@ namespace Pastelaria.Domain
 
             if (IndentityDocument.Length == 11)
                 documentTypeValidationResult = ValidateCpf(IndentityDocument);
-            else if (IndentityDocument.Length == 14)
-                documentTypeValidationResult = ValidateCnpj(IndentityDocument);
             else
                 validationResult = "The DocumentType isn't right\n";
 
@@ -53,7 +50,7 @@ namespace Pastelaria.Domain
             cpf = cpf.Replace(".", "").Replace("-", "").Replace(",", "");
             if (cpf.Length != 11)
                 return false;
-            tempCpf = cpf.Substring(0, 9);
+            tempCpf = cpf[..9];
             soma = 0;
 
             for (int i = 0; i < 9; i++)
@@ -75,41 +72,6 @@ namespace Pastelaria.Domain
                 resto = 11 - resto;
             digito += resto.ToString();
             return cpf.EndsWith(digito);
-        }
-
-        private static bool ValidateCnpj(string cnpj)
-        {
-            int[] multiplicador1 = new int[12] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-            int[] multiplicador2 = new int[13] { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
-            int soma;
-            int resto;
-            string digito;
-            string tempCnpj;
-            cnpj = cnpj.Trim();
-            cnpj = cnpj.Replace(".", "").Replace("-", "").Replace("/", "").Replace(",", "");
-            if (cnpj.Length != 14)
-                return false;
-            tempCnpj = cnpj.Substring(0, 12);
-            soma = 0;
-            for (int i = 0; i < 12; i++)
-                soma += int.Parse(tempCnpj[i].ToString()) * multiplicador1[i];
-            resto = (soma % 11);
-            if (resto < 2)
-                resto = 0;
-            else
-                resto = 11 - resto;
-            digito = resto.ToString();
-            tempCnpj += digito;
-            soma = 0;
-            for (int i = 0; i < 13; i++)
-                soma += int.Parse(tempCnpj[i].ToString()) * multiplicador2[i];
-            resto = (soma % 11);
-            if (resto < 2)
-                resto = 0;
-            else
-                resto = 11 - resto;
-            digito += resto.ToString();
-            return cnpj.EndsWith(digito);
         }
 
     }

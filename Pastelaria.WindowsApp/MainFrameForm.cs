@@ -48,7 +48,7 @@ namespace Pastelaria.WindowsApp
                 {
                     if ((int)m.Result == HTCLIENT)
                     {
-                        Point screenPoint = new Point(m.LParam.ToInt32());                        
+                        Point screenPoint = new (m.LParam.ToInt32());                        
                         Point clientPoint = this.PointToClient(screenPoint);
                         if (clientPoint.Y <= resizeAreaSize)
                         {
@@ -100,24 +100,24 @@ namespace Pastelaria.WindowsApp
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        private void PanelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void minimizeBtn_Click(object sender, EventArgs e)
+        private void MinimizeBtn_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void maximaziBtn_Click(object sender, EventArgs e)
+        private void MaximaziBtn_Click(object sender, EventArgs e)
         {
             _ = this.WindowState == FormWindowState.Normal ? this.WindowState = FormWindowState.Maximized :
                                                              this.WindowState = FormWindowState.Normal;
         }
 
-        private void exitBtn_Click(object sender, EventArgs e)
+        private void ExitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -141,7 +141,7 @@ namespace Pastelaria.WindowsApp
             }
         }
 
-        private void menuBtn_Click(object sender, EventArgs e)
+        private void MenuBtn_Click(object sender, EventArgs e)
         {
             CollapseMenu();
         }

@@ -9,7 +9,7 @@ namespace Pastelaria.Domain
 {
     public class Employee : Person
     {
-        protected string password { get; set; }
+        protected string Password { get; set; }
 
         public override string ToString()
         {
