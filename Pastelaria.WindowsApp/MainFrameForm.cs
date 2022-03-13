@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Pastelaria.WindowsApp.Costumer;
 using Pastelaria.WindowsApp.Employee;
+using Pastelaria.WindowsApp.Product;
 using Pastelaria.WindowsApp.Shared;
 using System;
 using System.Drawing;
@@ -26,8 +27,8 @@ namespace Pastelaria.WindowsApp
         }
 
             private Size formSize;
-       
 
+        #region SideMenu
         protected override void WndProc(ref Message m)
         {
 
@@ -125,21 +126,16 @@ namespace Pastelaria.WindowsApp
                                                              this.WindowState = FormWindowState.Normal;
         }
 
-        private void ExitBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void MainFrameForm_Resize(object sender, EventArgs e)
         {
             AdjustForm();
         }
 
-        private void AdjustForm() 
+        private void AdjustForm()
         {
             switch (this.WindowState)
             {
-                case FormWindowState.Maximized: 
+                case FormWindowState.Maximized:
                     this.Padding = new Padding(8, 8, 8, 0);
                     break;
                 case FormWindowState.Normal:
@@ -147,6 +143,12 @@ namespace Pastelaria.WindowsApp
                         this.Padding = new Padding(2);
                     break;
             }
+        }
+        #endregion
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void MenuBtn_Click(object sender, EventArgs e)
@@ -200,6 +202,8 @@ namespace Pastelaria.WindowsApp
             operations = AutoFac.Container.Resolve<EmployeeOperations>();
 
             DataConfig();
+
+            UpdateTitle("Employee");
         }
 
         private void costumersBtn_Click(object sender, EventArgs e)
@@ -213,6 +217,23 @@ namespace Pastelaria.WindowsApp
             operations = AutoFac.Container.Resolve<CostumerOperations>();
 
             DataConfig();
+
+            UpdateTitle("Costumer");
+        }
+
+        private void productBtn_Click(object sender, EventArgs e)
+        {
+            ProductConfigurationToolBox configurationToolBox = new();
+
+            ToolboxConfig(configurationToolBox, false);
+
+            UpdateFooter(configurationToolBox.ToolType);
+
+            operations = AutoFac.Container.Resolve<ProductOperations>();
+
+            DataConfig();
+
+            UpdateTitle("Product");
         }
 
         #endregion
@@ -247,6 +268,35 @@ namespace Pastelaria.WindowsApp
         {
 
         }
+
+        public void UpdateTitle(string title)
+        {
+            this.titleLable.Text = title;
+        }
+
+
+
+        #region Buttons actions
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            operations.RegisterInsertNew();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            operations.RegisterUpdate();
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            operations.RegisterRemove();
+        }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            operations.RegistersFilter();
+        }
+        #endregion
 
         
     }

@@ -1,36 +1,32 @@
 ﻿using Pastelaria.WindowsApp.Shared;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Pastelaria.WindowsApp.Costumer
+namespace Pastelaria.WindowsApp.Product
 {
-    public class CostumerOperations : IRegisterable
+    public class ProductOperations : IRegisterable
     {
-        private readonly CostumerUserControl table;
-
-        public CostumerOperations()
+        private readonly ProductUserControl table;
+        public ProductOperations()
         {
             table = new();
         }
-
         public UserControl ObtainTable()
         {
-            List<Domain.Costumer> costumers = new List<Domain.Costumer>();
+            List<Domain.Product> product = new List<Domain.Product>();
 
-            table.UpdateRegisters(costumers);
+            table.UpdateRegisters(product);
 
             return table;
         }
 
         public void RegisterInsertNew()
         {
-            CostumerForm screen = new CostumerForm("Costumer Register");
-
-            if(screen.ShowDialog() == DialogResult.OK)
-            {
-
-            }
+            throw new NotImplementedException();
         }
 
         public void RegisterRemove()

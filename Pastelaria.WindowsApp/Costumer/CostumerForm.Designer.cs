@@ -34,6 +34,8 @@
             this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.identifierLabel = new System.Windows.Forms.Label();
             this.identifierTextBox = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NameLabel
@@ -84,11 +86,33 @@
             this.identifierTextBox.Size = new System.Drawing.Size(173, 23);
             this.identifierTextBox.TabIndex = 5;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(53, 178);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 6;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.Location = new System.Drawing.Point(151, 178);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(75, 23);
+            this.btnConfirm.TabIndex = 7;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
             // CostumerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(283, 298);
+            this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.identifierTextBox);
             this.Controls.Add(this.identifierLabel);
             this.Controls.Add(this.phoneTextBox);
@@ -110,5 +134,7 @@
         private System.Windows.Forms.TextBox phoneTextBox;
         private System.Windows.Forms.Label identifierLabel;
         private System.Windows.Forms.TextBox identifierTextBox;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnConfirm;
     }
 }

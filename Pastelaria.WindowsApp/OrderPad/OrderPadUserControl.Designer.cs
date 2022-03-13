@@ -1,6 +1,6 @@
-﻿namespace Pastelaria.WindowsApp.Product
+﻿namespace Pastelaria.WindowsApp.OrderPad
 {
-    partial class ProductUserControl
+    partial class OrderPadUserControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.productGrid = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.productGrid)).BeginInit();
+            this.orderPadGrid = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.orderPadGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // productGrid
+            // orderPadGrid
             // 
-            this.productGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productGrid.Location = new System.Drawing.Point(0, 0);
-            this.productGrid.Name = "productGrid";
-            this.productGrid.RowTemplate.Height = 25;
-            this.productGrid.Size = new System.Drawing.Size(150, 150);
-            this.productGrid.TabIndex = 0;
+            this.orderPadGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.orderPadGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orderPadGrid.Location = new System.Drawing.Point(0, 0);
+            this.orderPadGrid.Name = "orderPadGrid";
+            this.orderPadGrid.RowTemplate.Height = 25;
+            this.orderPadGrid.Size = new System.Drawing.Size(150, 150);
+            this.orderPadGrid.TabIndex = 0;
             // 
-            // ProductUserControl
+            // OrderPadUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.productGrid);
-            this.Name = "ProductUserControl";
-            ((System.ComponentModel.ISupportInitialize)(this.productGrid)).EndInit();
+            this.Controls.Add(this.orderPadGrid);
+            this.Name = "OrderPadUserControl";
+            ((System.ComponentModel.ISupportInitialize)(this.orderPadGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView productGrid;
+        private System.Windows.Forms.DataGridView orderPadGrid;
     }
 }

@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Pastelaria.WindowsApp.Employee
+namespace Pastelaria.WindowsApp.OrderPad
 {
-    public partial class EmployeeForm : Form
+    public partial class OrderPadForm : Form
     {
-        public EmployeeForm(string title)
+        public OrderPadForm()
         {
             InitializeComponent();
-            this.Text = title;
         }
     }
 }

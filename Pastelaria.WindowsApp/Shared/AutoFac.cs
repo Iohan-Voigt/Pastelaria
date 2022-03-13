@@ -2,6 +2,7 @@
 using Pastelaria.ORM;
 using Pastelaria.WindowsApp.Costumer;
 using Pastelaria.WindowsApp.Employee;
+using Pastelaria.WindowsApp.Product;
 
 namespace Pastelaria.WindowsApp.Shared
 {
@@ -27,6 +28,7 @@ namespace Pastelaria.WindowsApp.Shared
         {
             Builder.RegisterType<CostumerOperations>().InstancePerDependency();
             Builder.RegisterType<EmployeeOperations>().InstancePerDependency();
+            Builder.RegisterType<ProductOperations>().InstancePerDependency();
         }
 
         private static void AppServiceConfiguration()

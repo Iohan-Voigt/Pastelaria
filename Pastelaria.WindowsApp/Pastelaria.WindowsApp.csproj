@@ -36,7 +36,6 @@
 
   <ItemGroup>
     <Folder Include="Libraries\" />
-    <Folder Include="OrderPad\" />
   </ItemGroup>
 
 </Project>

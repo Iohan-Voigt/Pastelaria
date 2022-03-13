@@ -29,7 +29,7 @@ namespace Pastelaria.WindowsApp.Employee
                 new DataGridViewTextBoxColumn { DataPropertyName = "Name", HeaderText = "Nome"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "Registration", HeaderText = "Registration"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "AcessUser", HeaderText = "User"},
-                new DataGridViewTextBoxColumn { DataPropertyName = "EmployeePermissionsEnum", HeaderText = "Permission"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "EmployeePermissionsEnum", HeaderText = "Permission"}
            };
 
             return coluns;

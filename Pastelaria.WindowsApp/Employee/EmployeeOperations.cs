@@ -28,7 +28,12 @@ namespace Pastelaria.WindowsApp.Employee
 
         public void RegisterInsertNew()
         {
-            throw new NotImplementedException();
+            EmployeeForm screen = new EmployeeForm("Employee Register");
+
+            if (screen.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
 
         public void RegisterRemove()

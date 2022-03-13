@@ -210,6 +210,7 @@
             this.productBtn.Tag = "Products";
             this.productBtn.Text = "Products";
             this.productBtn.UseVisualStyleBackColor = false;
+            this.productBtn.Click += new System.EventHandler(this.productBtn_Click);
             // 
             // employeeBtn
             // 
@@ -417,6 +418,7 @@
             this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(23, 22);
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
             // 
@@ -425,6 +427,7 @@
             this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(23, 22);
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnRemove
             // 
@@ -433,6 +436,7 @@
             this.btnRemove.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(23, 22);
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnFilter
             // 
@@ -441,6 +445,7 @@
             this.btnFilter.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(23, 22);
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // toolStripSeparator1
             // 
