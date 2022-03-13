@@ -11,9 +11,9 @@ namespace Pastelaria.Domain
     {
     
         public string Name { get; set; }
-
-        public string IndentityDocument { get; set; }
         #nullable enable
+        public string? IndentityDocument { get; set; }
+        
         public string? PhoneNumber {get;set;}
 
 

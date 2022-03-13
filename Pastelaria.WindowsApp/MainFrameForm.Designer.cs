@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrameForm));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.costumersBtn = new FontAwesome.Sharp.IconButton();
             this.configBtn = new FontAwesome.Sharp.IconButton();
@@ -47,11 +48,25 @@
             this.minimizeBtn = new FontAwesome.Sharp.IconButton();
             this.maximaziBtn = new FontAwesome.Sharp.IconButton();
             this.exitBtn = new FontAwesome.Sharp.IconButton();
+            this.toolBoxActions = new System.Windows.Forms.ToolStrip();
+            this.btnAdd = new System.Windows.Forms.ToolStripButton();
+            this.btnEdit = new System.Windows.Forms.ToolStripButton();
+            this.btnRemove = new System.Windows.Forms.ToolStripButton();
+            this.btnFilter = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.labelRegisterType = new System.Windows.Forms.ToolStripLabel();
+            this.DataPanel = new System.Windows.Forms.Panel();
+            this.FooterLabel = new System.Windows.Forms.Label();
+            this.footerPanel = new System.Windows.Forms.Panel();
+            this.footerLabel1 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPic)).BeginInit();
             this.panelTitleBar.SuspendLayout();
+            this.toolBoxActions.SuspendLayout();
+            this.DataPanel.SuspendLayout();
+            this.footerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -68,6 +83,7 @@
             this.panelMenu.Controls.Add(this.logutBtn);
             this.panelMenu.Controls.Add(this.homeBtn);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panelMenu.ForeColor = System.Drawing.Color.Crimson;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
@@ -93,6 +109,7 @@
             this.costumersBtn.Tag = "Costumers";
             this.costumersBtn.Text = "Costumers";
             this.costumersBtn.UseVisualStyleBackColor = false;
+            this.costumersBtn.Click += new System.EventHandler(this.costumersBtn_Click);
             // 
             // configBtn
             // 
@@ -213,6 +230,7 @@
             this.employeeBtn.Tag = "Employees";
             this.employeeBtn.Text = "Employees";
             this.employeeBtn.UseVisualStyleBackColor = false;
+            this.employeeBtn.Click += new System.EventHandler(this.employeeBtn_Click);
             // 
             // logoPanel
             // 
@@ -378,12 +396,109 @@
             this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
+            // toolBoxActions
+            // 
+            this.toolBoxActions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnAdd,
+            this.btnEdit,
+            this.btnRemove,
+            this.btnFilter,
+            this.toolStripSeparator1,
+            this.labelRegisterType});
+            this.toolBoxActions.Location = new System.Drawing.Point(250, 50);
+            this.toolBoxActions.Name = "toolBoxActions";
+            this.toolBoxActions.Size = new System.Drawing.Size(1014, 25);
+            this.toolBoxActions.TabIndex = 2;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(23, 22);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(23, 22);
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnRemove.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.Image")));
+            this.btnRemove.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(23, 22);
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
+            this.btnFilter.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(23, 22);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // labelRegisterType
+            // 
+            this.labelRegisterType.Name = "labelRegisterType";
+            this.labelRegisterType.Size = new System.Drawing.Size(76, 22);
+            this.labelRegisterType.Text = "Register Type";
+            // 
+            // DataPanel
+            // 
+            this.DataPanel.Controls.Add(this.FooterLabel);
+            this.DataPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DataPanel.Location = new System.Drawing.Point(250, 75);
+            this.DataPanel.Name = "DataPanel";
+            this.DataPanel.Size = new System.Drawing.Size(1014, 606);
+            this.DataPanel.TabIndex = 3;
+            // 
+            // FooterLabel
+            // 
+            this.FooterLabel.AutoSize = true;
+            this.FooterLabel.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FooterLabel.Location = new System.Drawing.Point(3, 575);
+            this.FooterLabel.Name = "FooterLabel";
+            this.FooterLabel.Size = new System.Drawing.Size(0, 28);
+            this.FooterLabel.TabIndex = 4;
+            // 
+            // footerPanel
+            // 
+            this.footerPanel.Controls.Add(this.footerLabel1);
+            this.footerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.footerPanel.Location = new System.Drawing.Point(250, 640);
+            this.footerPanel.Name = "footerPanel";
+            this.footerPanel.Size = new System.Drawing.Size(1014, 41);
+            this.footerPanel.TabIndex = 4;
+            // 
+            // footerLabel1
+            // 
+            this.footerLabel1.AutoSize = true;
+            this.footerLabel1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.footerLabel1.Location = new System.Drawing.Point(3, 1);
+            this.footerLabel1.Name = "footerLabel1";
+            this.footerLabel1.Size = new System.Drawing.Size(58, 37);
+            this.footerLabel1.TabIndex = 0;
+            this.footerLabel1.Text = "asd";
+            // 
             // MainFrameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(151)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.footerPanel);
+            this.Controls.Add(this.DataPanel);
+            this.Controls.Add(this.toolBoxActions);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
@@ -397,7 +512,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.logoPic)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
+            this.toolBoxActions.ResumeLayout(false);
+            this.toolBoxActions.PerformLayout();
+            this.DataPanel.ResumeLayout(false);
+            this.DataPanel.PerformLayout();
+            this.footerPanel.ResumeLayout(false);
+            this.footerPanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -408,7 +530,6 @@
         private FontAwesome.Sharp.IconButton exitBtn;
         private FontAwesome.Sharp.IconButton maximaziBtn;
         private FontAwesome.Sharp.IconButton minimizeBtn;
-        private System.Windows.Forms.Label titleLable;
         private FontAwesome.Sharp.IconButton logutBtn;
         private FontAwesome.Sharp.IconButton homeBtn;
         private System.Windows.Forms.Panel logoPanel;
@@ -422,5 +543,17 @@
         private FontAwesome.Sharp.IconButton configBtn;
         private FontAwesome.Sharp.IconButton costumersBtn;
         private System.Windows.Forms.PictureBox LogoPicBox;
+        private System.Windows.Forms.Label titleLable;
+        private System.Windows.Forms.ToolStrip toolBoxActions;
+        private System.Windows.Forms.ToolStripButton btnAdd;
+        private System.Windows.Forms.ToolStripButton btnEdit;
+        private System.Windows.Forms.ToolStripButton btnRemove;
+        private System.Windows.Forms.ToolStripButton btnFilter;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripLabel labelRegisterType;
+        private System.Windows.Forms.Panel DataPanel;
+        private System.Windows.Forms.Label FooterLabel;
+        private System.Windows.Forms.Panel footerPanel;
+        private System.Windows.Forms.Label footerLabel1;
     }
 }

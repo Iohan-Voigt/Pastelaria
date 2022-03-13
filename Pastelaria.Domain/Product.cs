@@ -1,6 +1,7 @@
 ﻿using Pastelaria.Domain.Shared;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,15 +12,15 @@ namespace Pastelaria.Domain
     {
         public string Name { get; set; }
         public decimal Value { get; set; }
-        public int? Quantity { get; set; }
-        public bool HasQuantity { get; set; }
+        public string Description { get; set; }
+        public Bitmap Image { get; set; }
 
-        public Product(decimal value, int? quantity, bool hasQuantity, string name)
+        public Product(decimal value, string description, string name,Bitmap image)
         {
             this.Value = value;
-            this.Quantity = quantity;
-            this.HasQuantity = hasQuantity;
+            this.Description = description;
             this.Name = name;
+            this.Image = image;
         }
 
         public override string Validate()
@@ -29,7 +30,7 @@ namespace Pastelaria.Domain
 
         public override string ToString()
         {
-            throw new NotImplementedException();
+            return "";
         }
     }
 }

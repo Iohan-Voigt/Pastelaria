@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Autofac;
+using Pastelaria.WindowsApp.Costumer;
+using Pastelaria.WindowsApp.Employee;
+using Pastelaria.WindowsApp.Shared;
+using System;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -8,9 +12,13 @@ namespace Pastelaria.WindowsApp
 {
     public partial class MainFrameForm : Form
     {
-        public MainFrameForm(LoginForm loginForm)
+        private static IRegisterable operations;
+
+        private static MainFrameForm instance { get; set; }
+        public static Domain.Employee LoggedEmployee { get; set; }
+
+        public MainFrameForm()
         {
-            loginForm.ShowDialog();
 
             InitializeComponent();
             this.Padding = new (2);
@@ -152,6 +160,7 @@ namespace Pastelaria.WindowsApp
             {
                 panelMenu.Width = 120;
                 logoPic.Visible = false;
+                LogoPicBox.Visible = false;
                 menuBtn.Dock = DockStyle.Top;
                 logoPanel.Height = 50;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
@@ -166,6 +175,7 @@ namespace Pastelaria.WindowsApp
             {
                 panelMenu.Width = 250;
                 logoPic.Visible = true;
+                LogoPicBox.Visible = true;
                 menuBtn.Dock = DockStyle.None;
                 logoPanel.Height = 140;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
@@ -177,5 +187,67 @@ namespace Pastelaria.WindowsApp
                 }
             }
         }
+        #region Buttons
+        private void employeeBtn_Click(object sender, EventArgs e)
+        {
+
+            EmployeeConfigurationToolBox configurationToolBox = new();
+
+            ToolboxConfig(configurationToolBox, false);
+
+            UpdateFooter(configurationToolBox.ToolType);
+
+            operations = AutoFac.Container.Resolve<EmployeeOperations>();
+
+            DataConfig();
+        }
+
+        private void costumersBtn_Click(object sender, EventArgs e)
+        {
+            CostumerConfigurationToolBox configurationToolBox = new();
+
+            ToolboxConfig(configurationToolBox, false);
+
+            UpdateFooter(configurationToolBox.ToolType);
+
+            operations = AutoFac.Container.Resolve<CostumerOperations>();
+
+            DataConfig();
+        }
+
+        #endregion
+
+        #region Privates
+        private void UpdateFooter(string Message)
+        {
+            footerLabel1.Text = Message;
+            footerLabel1.Font = new Font("Segoe UI", this.footerLabel1.Font.Size);
+        }
+        private void ToolboxConfig(IConfigurationToolBox configuration, bool canFilter)
+        {
+            toolBoxActions.Enabled = true;
+            canFilter = true? btnFilter.Enabled = true : btnFilter.Enabled = false;
+
+            labelRegisterType.Text = configuration.ToolType;
+            btnAdd.Text = configuration.ToolTipAdd;
+            btnEdit.Text = configuration.ToolTipEdit;
+            btnRemove.Text = configuration.ToolTipRemove;
+        }
+
+        private void DataConfig()
+        {
+            UserControl table = operations.ObtainTable();
+            table.Dock = DockStyle.Fill;
+            DataPanel.Controls.Clear();
+            DataPanel.Controls.Add(table);
+        }
+        #endregion
+
+        private void MainFrameForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

@@ -1,3 +1,4 @@
+using Pastelaria.WindowsApp.Costumer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,11 +18,10 @@ namespace Pastelaria.WindowsApp
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+            CostumerForm costumerForm = new CostumerForm(); 
             LoginForm loginForm = new ();
-            MainFrameForm mainFrameForm = new (loginForm);
 
-            Application.Run(mainFrameForm);
+            Application.Run(loginForm);
         }
     }
 }

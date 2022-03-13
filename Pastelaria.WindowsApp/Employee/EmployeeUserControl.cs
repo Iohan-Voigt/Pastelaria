@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pastelaria.WindowsApp.Shared;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,37 @@ namespace Pastelaria.WindowsApp.Employee
         public EmployeeUserControl()
         {
             InitializeComponent();
+            employeeGrid.ConfigColoredGrid();
+            employeeGrid.ConfigJustReadGrid();
+            employeeGrid.Columns.AddRange(ObtainColuns());
+        }
+
+        private static DataGridViewColumn[] ObtainColuns()
+        {
+            var coluns = new DataGridViewColumn[]
+           {
+                new DataGridViewTextBoxColumn { DataPropertyName = "Id", HeaderText = "Id"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "Name", HeaderText = "Nome"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "Registration", HeaderText = "Registration"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "AcessUser", HeaderText = "User"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "EmployeePermissionsEnum", HeaderText = "Permission"},
+           };
+
+            return coluns;
+        }
+        internal void UpdateRegisters(List<Domain.Employee> employeers)
+        {
+            employeeGrid.Rows.Clear();
+
+            foreach (Domain.Employee employee in employeers)
+            {
+                employeeGrid.Rows.Add(employee);
+            }
+        }
+
+        internal Guid GetSelectedId()
+        {
+            return employeeGrid.SelectId<Guid>();
         }
     }
 }

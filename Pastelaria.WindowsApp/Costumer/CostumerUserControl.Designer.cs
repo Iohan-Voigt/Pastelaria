@@ -28,10 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.costumerGrid = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.costumerGrid)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // costumerGrid
+            // 
+            this.costumerGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.costumerGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.costumerGrid.Location = new System.Drawing.Point(0, 0);
+            this.costumerGrid.Name = "costumerGrid";
+            this.costumerGrid.RowTemplate.Height = 25;
+            this.costumerGrid.Size = new System.Drawing.Size(150, 150);
+            this.costumerGrid.TabIndex = 0;
+            // 
+            // CostumerUserControl
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.costumerGrid);
+            this.Name = "CostumerUserControl";
+            ((System.ComponentModel.ISupportInitialize)(this.costumerGrid)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView costumerGrid;
     }
 }

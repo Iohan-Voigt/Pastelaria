@@ -1,24 +1,27 @@
 ﻿using Pastelaria.WindowsApp.Shared;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Pastelaria.WindowsApp.Costumer
+namespace Pastelaria.WindowsApp.Employee
 {
-    public class CostumerOperations : IRegisterable
+    public class EmployeeOperations : IRegisterable
     {
-        private readonly CostumerUserControl table;
+        private readonly EmployeeUserControl table;
 
-        public CostumerOperations()
+        public EmployeeOperations()
         {
             table = new();
         }
 
         public UserControl ObtainTable()
         {
-            List<Domain.Costumer> costumers = new List<Domain.Costumer>();
+            List<Domain.Employee> employee = new List<Domain.Employee>();
 
-            table.UpdateRegisters(costumers);
+            table.UpdateRegisters(employee);
 
             return table;
         }

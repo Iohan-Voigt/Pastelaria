@@ -4,7 +4,7 @@
     {
         string ToolTipAdd { get; }
         string ToolType { get; }
-        string ToolTipUpdate { get; }
+        string ToolTipEdit { get; }
         string ToolTipRemove { get; }
     }
 }

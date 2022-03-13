@@ -14,7 +14,7 @@ namespace Pastelaria.WindowsApp.Costumer
             get { return "Costumers register"; }
         }
 
-        public string ToolTipUpdate
+        public string ToolTipEdit
         {
             get { return "Update a costumer"; }
         }
