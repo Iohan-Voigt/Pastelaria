@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using Pastelaria.ORM;
 using Pastelaria.WindowsApp.Costumer;
 using System;
 using System.Collections.Generic;
@@ -9,9 +11,6 @@ namespace Pastelaria.WindowsApp
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
@@ -20,6 +19,12 @@ namespace Pastelaria.WindowsApp
             Application.SetCompatibleTextRenderingDefault(false); 
             LoginForm loginForm = new ();
             MainFrameForm main = new();
+
+            PastelariaDBContext db = new();
+            var pendingChanges = db.Database.GetPendingMigrations();
+            if (pendingChanges.Any())
+                db.Database.Migrate();
+
 
             Application.Run(main);
         }

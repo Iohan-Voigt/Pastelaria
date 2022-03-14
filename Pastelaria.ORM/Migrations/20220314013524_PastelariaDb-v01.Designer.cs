@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Pastelaria.ORM;
 
 namespace Pastelaria.ORM.Migrations
 {
     [DbContext(typeof(PastelariaDBContext))]
-    partial class PastelariaDBContextModel : ModelSnapshot
+    [Migration("20220314013524_PastelariaDb-v01")]
+    partial class PastelariaDbv01
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
