@@ -150,6 +150,7 @@
             this.orderBtn.Tag = "Orders";
             this.orderBtn.Text = "Orders";
             this.orderBtn.UseVisualStyleBackColor = false;
+            this.orderBtn.Click += new System.EventHandler(this.orderBtn_Click);
             // 
             // debitBtn
             // 

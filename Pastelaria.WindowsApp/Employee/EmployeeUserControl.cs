@@ -34,7 +34,7 @@ namespace Pastelaria.WindowsApp.Employee
 
             return coluns;
         }
-        internal void UpdateRegisters(List<Domain.Employee> employeers)
+        public void UpdateRegisters(List<Domain.Employee> employeers)
         {
             employeeGrid.Rows.Clear();
 
@@ -44,7 +44,7 @@ namespace Pastelaria.WindowsApp.Employee
             }
         }
 
-        internal Guid GetSelectedId()
+        public Guid GetSelectedId()
         {
             return employeeGrid.SelectId<Guid>();
         }

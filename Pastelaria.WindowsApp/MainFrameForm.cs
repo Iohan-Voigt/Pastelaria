@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Pastelaria.WindowsApp.Costumer;
 using Pastelaria.WindowsApp.Employee;
+using Pastelaria.WindowsApp.OrderPad;
 using Pastelaria.WindowsApp.Product;
 using Pastelaria.WindowsApp.Shared;
 using System;
@@ -236,6 +237,21 @@ namespace Pastelaria.WindowsApp
             UpdateTitle("Product");
         }
 
+        private void orderBtn_Click(object sender, EventArgs e)
+        {
+            OrderPadConfigurationToolBox configurationToolBox = new();
+
+            ToolboxConfig(configurationToolBox, false);
+
+            UpdateFooter(configurationToolBox.ToolType);
+
+            operations = AutoFac.Container.Resolve<OrderPadOperations>();
+
+            DataConfig();
+
+            UpdateTitle("Orders");
+        }
+
         #endregion
 
         #region Privates
@@ -296,6 +312,7 @@ namespace Pastelaria.WindowsApp
         {
             operations.RegistersFilter();
         }
+
         #endregion
 
         

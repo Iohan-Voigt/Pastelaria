@@ -24,10 +24,31 @@ namespace Pastelaria.WindowsApp.OrderPad
         private static DataGridViewColumn[] ObtainColuns()
         {
             var coluns = new DataGridViewColumn[]
-               {
+           {
+                new DataGridViewTextBoxColumn { DataPropertyName = "Id", HeaderText = "Id"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "Costumer", HeaderText = "Costumer"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "TotalValue", HeaderText = "Total Value"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "OrderPadStatus", HeaderText = "Status"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "OpenTime", HeaderText = "Open date"}
+                
+           };
 
-               };
             return coluns;
+        }
+
+        public void UpdateRegisters(List<Domain.OrderPad> orders)
+        {
+            orderPadGrid.Rows.Clear();
+
+            foreach (Domain.OrderPad orderPad in orders)
+            {
+                orderPadGrid.Rows.Add(orderPad);
+            }
+        }
+
+        public Guid GetSelectedId()
+        {
+            return orderPadGrid.SelectId<Guid>();
         }
     }
 }
