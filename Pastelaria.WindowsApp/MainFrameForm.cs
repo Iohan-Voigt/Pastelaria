@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using Pastelaria.WindowsApp.Config;
 using Pastelaria.WindowsApp.Costumer;
 using Pastelaria.WindowsApp.Employee;
 using Pastelaria.WindowsApp.OrderPad;
@@ -15,7 +16,6 @@ namespace Pastelaria.WindowsApp
     public partial class MainFrameForm : Form
     {
         private static IRegisterable operations;
-
         private static MainFrameForm instance { get; set; }
         public static Domain.Employee LoggedEmployee { get; set; }
 
@@ -39,6 +39,7 @@ namespace Pastelaria.WindowsApp
             const int SC_RESTORE = 0xF120;
             const int WM_NCHITTEST = 0x0084;
             const int resizeAreaSize = 10;
+
             #region Form Resize
 
             const int HTCLIENT = 1;
@@ -145,7 +146,7 @@ namespace Pastelaria.WindowsApp
                     break;
             }
         }
-        #endregion
+        
 
         private void ExitBtn_Click(object sender, EventArgs e)
         {
@@ -190,6 +191,7 @@ namespace Pastelaria.WindowsApp
                 }
             }
         }
+        #endregion
         #region Buttons
         private void employeeBtn_Click(object sender, EventArgs e)
         {
@@ -252,6 +254,20 @@ namespace Pastelaria.WindowsApp
             UpdateTitle("Orders");
         }
 
+        private void configBtn_Click(object sender, EventArgs e)
+        {
+            ConfigForm configForm = new();
+            configForm.ShowDialog();
+        }
+
+        private void logutBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new();
+            loginForm.ShowDialog();
+            this.Close();
+        }
+
         #endregion
 
         #region Privates
@@ -260,10 +276,10 @@ namespace Pastelaria.WindowsApp
             footerLabel1.Text = Message;
             footerLabel1.Font = new Font("Segoe UI", this.footerLabel1.Font.Size);
         }
-        private void ToolboxConfig(IConfigurationToolBox configuration, bool canFilter)
+        private void ToolboxConfig(IConfigurationToolBox configuration, bool filter)
         {
             toolBoxActions.Enabled = true;
-            canFilter = true? btnFilter.Enabled = true : btnFilter.Enabled = false;
+            filter = true ? btnFilter.Enabled = true : btnFilter.Enabled = false;
 
             labelRegisterType.Text = configuration.ToolType;
             btnAdd.Text = configuration.ToolTipAdd;
@@ -290,8 +306,6 @@ namespace Pastelaria.WindowsApp
             this.titleLable.Text = title;
         }
 
-
-
         #region Buttons actions
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -312,6 +326,8 @@ namespace Pastelaria.WindowsApp
         {
             operations.RegistersFilter();
         }
+
+
 
         #endregion
 

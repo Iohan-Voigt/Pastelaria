@@ -130,6 +130,7 @@
             this.configBtn.Tag = "Configurations";
             this.configBtn.Text = "Configurations";
             this.configBtn.UseVisualStyleBackColor = false;
+            this.configBtn.Click += new System.EventHandler(this.configBtn_Click);
             // 
             // orderBtn
             // 
@@ -300,6 +301,7 @@
             this.logutBtn.Tag = "Logout";
             this.logutBtn.Text = "Logout";
             this.logutBtn.UseVisualStyleBackColor = true;
+            this.logutBtn.Click += new System.EventHandler(this.logutBtn_Click);
             // 
             // homeBtn
             // 

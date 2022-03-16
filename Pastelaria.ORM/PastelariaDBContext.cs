@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using Pastelaria.Domain;
+using System.Data;
 using System.IO;
 using System.Linq;
 
@@ -14,9 +16,15 @@ namespace Pastelaria.ORM
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            DataSet ds = new();
+
+            ds.ReadXml(@"..\..\..\..\Pastelaria.ORM\databases.xml");
+
+            var connectionString = ds.Tables["connectionstring"].Rows[0][0].ToString();
+
             optionsBuilder
                 .UseLoggerFactory(loggerFactoryConsole)
-                .UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DBPASTELARIA;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+                .UseSqlServer(connectionString);    
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<connectionstring>
+  <sqlserverentity>
+    Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DBPASTELARIA;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
+  </sqlserverentity>
+</connectionstring>

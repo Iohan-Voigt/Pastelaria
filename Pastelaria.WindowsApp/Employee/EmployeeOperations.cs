@@ -1,4 +1,4 @@
-﻿    using Pastelaria.WindowsApp.Shared;
+﻿using Pastelaria.WindowsApp.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +11,8 @@ namespace Pastelaria.WindowsApp.Employee
     public class EmployeeOperations : IRegisterable
     {
         private readonly EmployeeUserControl table;
+
+        private EmployeeForm screen;
 
         public EmployeeOperations()
         {
@@ -28,7 +30,7 @@ namespace Pastelaria.WindowsApp.Employee
 
         public void RegisterInsertNew()
         {
-            EmployeeForm screen = new EmployeeForm("Employee Register");
+            screen = new ("Employee Register");
 
             if (screen.ShowDialog() == DialogResult.OK)
             {

@@ -9,6 +9,8 @@ namespace Pastelaria.WindowsApp.Costumer
     {
         private readonly CostumerUserControl table;
 
+        private CostumerForm screen;
+
         public CostumerOperations()
         {
             table = new();
@@ -25,7 +27,7 @@ namespace Pastelaria.WindowsApp.Costumer
 
         public void RegisterInsertNew()
         {
-            CostumerForm screen = new CostumerForm("Costumer Register");
+            screen = new ("Costumer Register");
 
             if(screen.ShowDialog() == DialogResult.OK)
             {
