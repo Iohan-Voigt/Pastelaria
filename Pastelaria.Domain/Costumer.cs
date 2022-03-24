@@ -7,13 +7,12 @@ namespace Pastelaria.Domain
 
         public override string ToString()
         {
-            throw new NotImplementedException();
+            return "Name: " + Name + " Id: " + Id;
         }
 
         public override string Validate()
         {
-            ValidatePerson();
-            throw new NotImplementedException();
+            return ValidatePerson();          
         }
     }
 }

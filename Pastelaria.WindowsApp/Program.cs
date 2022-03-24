@@ -18,7 +18,6 @@ namespace Pastelaria.WindowsApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false); 
             LoginForm loginForm = new ();
-            MainFrameForm main = new();
 
             PastelariaDBContext db = new();
             var pendingChanges = db.Database.GetPendingMigrations();
@@ -26,7 +25,7 @@ namespace Pastelaria.WindowsApp
                 db.Database.Migrate();
 
 
-            Application.Run(main);
+            Application.Run(loginForm);
         }
     }
 }

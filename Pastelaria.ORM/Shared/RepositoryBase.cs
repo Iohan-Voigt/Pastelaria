@@ -17,7 +17,7 @@ namespace Pastelaria.ORM.Shared
             dbSet = db.Set<T>();
         }
 
-        public string Insert(T register)
+        public virtual string Insert(T register)
         {
             try
             {
@@ -31,7 +31,7 @@ namespace Pastelaria.ORM.Shared
             }
         }
 
-        public string Update(T register)
+        public virtual string Update(T register)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace Pastelaria.ORM.Shared
             }
         }
 
-        public string Remove(T register)
+        public virtual string Remove(T register)
         {
             try
             {
@@ -59,12 +59,12 @@ namespace Pastelaria.ORM.Shared
             }
         }
 
-        public string RemoveById(Guid id)
+        public virtual string RemoveById(Guid id)
         {         
 
             try
             {
-                T register = SelectById(id);
+                T register = GetById(id);
                 dbSet.Remove(register);
                 db.SaveChanges();
                 return "Sucess";
@@ -75,7 +75,20 @@ namespace Pastelaria.ORM.Shared
             }
         }
 
-        public virtual T SelectById(Guid id)
+        public virtual List<T> GetAll()
+        {
+            try
+            {
+                return dbSet.ToList<T>();
+            }
+            catch (Exception ex)
+            {
+
+                return null;
+            }
+        }
+
+        public virtual T GetById(Guid id)
         {
             try
             {
@@ -88,18 +101,7 @@ namespace Pastelaria.ORM.Shared
             }
         }
 
-        public virtual List<T> SelectAll()
-        {
-            try
-            {
-                return dbSet.ToList<T>();
-            }
-            catch (Exception ex)
-            {
 
-                return null;
-            }
-        }
 
 
     }

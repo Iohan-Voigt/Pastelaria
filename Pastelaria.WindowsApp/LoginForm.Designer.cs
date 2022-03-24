@@ -40,17 +40,27 @@
             // 
             // logginBtn
             // 
-            this.logginBtn.Location = new System.Drawing.Point(65, 315);
+            this.logginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.logginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
+            this.logginBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
+            this.logginBtn.FlatAppearance.BorderSize = 0;
+            this.logginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logginBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.logginBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.logginBtn.Location = new System.Drawing.Point(97, 324);
+            this.logginBtn.Margin = new System.Windows.Forms.Padding(0);
             this.logginBtn.Name = "logginBtn";
-            this.logginBtn.Size = new System.Drawing.Size(250, 25);
-            this.logginBtn.TabIndex = 0;
-            this.logginBtn.Text = "loggin";
-            this.logginBtn.UseVisualStyleBackColor = true;
+            this.logginBtn.Size = new System.Drawing.Size(180, 46);
+            this.logginBtn.TabIndex = 3;
+            this.logginBtn.Text = "Loggin";
+            this.logginBtn.UseVisualStyleBackColor = false;
             this.logginBtn.Click += new System.EventHandler(this.LogginBtn_Click);
             // 
             // userTextBox
             // 
-            this.userTextBox.Location = new System.Drawing.Point(97, 188);
+            this.userTextBox.Location = new System.Drawing.Point(97, 201);
             this.userTextBox.Name = "userTextBox";
             this.userTextBox.Size = new System.Drawing.Size(180, 23);
             this.userTextBox.TabIndex = 1;
@@ -58,34 +68,40 @@
             // userLabel
             // 
             this.userLabel.AutoSize = true;
+            this.userLabel.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.userLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.userLabel.Location = new System.Drawing.Point(97, 170);
             this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(30, 15);
-            this.userLabel.TabIndex = 2;
+            this.userLabel.Size = new System.Drawing.Size(51, 28);
+            this.userLabel.TabIndex = 0;
             this.userLabel.Text = "User";
             // 
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(97, 214);
+            this.passwordLabel.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.passwordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.passwordLabel.Location = new System.Drawing.Point(97, 227);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(57, 15);
-            this.passwordLabel.TabIndex = 3;
+            this.passwordLabel.Size = new System.Drawing.Size(94, 28);
+            this.passwordLabel.TabIndex = 0;
             this.passwordLabel.Text = "Password";
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(97, 232);
+            this.passwordTextBox.Location = new System.Drawing.Point(97, 258);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(180, 23);
-            this.passwordTextBox.TabIndex = 4;
+            this.passwordTextBox.TabIndex = 2;
             // 
             // InfoLabel
             // 
             this.InfoLabel.AutoSize = true;
-            this.InfoLabel.Location = new System.Drawing.Point(97, 260);
+            this.InfoLabel.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.InfoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.InfoLabel.Location = new System.Drawing.Point(97, 286);
             this.InfoLabel.Name = "InfoLabel";
-            this.InfoLabel.Size = new System.Drawing.Size(0, 15);
+            this.InfoLabel.Size = new System.Drawing.Size(0, 19);
             this.InfoLabel.TabIndex = 5;
             // 
             // LogoPicBox
@@ -102,6 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(123)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(384, 411);
             this.Controls.Add(this.LogoPicBox);
             this.Controls.Add(this.InfoLabel);

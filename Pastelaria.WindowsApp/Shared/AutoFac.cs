@@ -1,7 +1,10 @@
 ﻿using Autofac;
 using Pastelaria.AppService;
+using Pastelaria.AppService.Shared;
+using Pastelaria.Domain.Shared;
 using Pastelaria.ORM;
 using Pastelaria.ORM.Features;
+using Pastelaria.ORM.Shared;
 using Pastelaria.WindowsApp.Costumer;
 using Pastelaria.WindowsApp.Employee;
 using Pastelaria.WindowsApp.OrderPad;
@@ -18,11 +21,11 @@ namespace Pastelaria.WindowsApp.Shared
         {                  
             Builder.RegisterType<PastelariaDBContext>().InstancePerLifetimeScope();
 
-            OperationConfiguration();
+            ORMConfiguration();
 
             AppServiceConfiguration();
 
-            ORMConfiguration();
+            OperationConfiguration();
 
             Container = Builder.Build();
         }
@@ -42,7 +45,7 @@ namespace Pastelaria.WindowsApp.Shared
 
         private static void ORMConfiguration()
         {
-            Builder.RegisterType<EmployeeORM>().InstancePerDependency();
+            Builder.RegisterType<EmployeeORM>().As<IRepository<Domain.Employee>>().InstancePerDependency();
         }
     }
 }

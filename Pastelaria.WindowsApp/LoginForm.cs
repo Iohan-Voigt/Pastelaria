@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Pastelaria.Domain;
 using System.Threading;
+using Pastelaria.AppService;
+using Pastelaria.ORM.Features;
 
 namespace Pastelaria.WindowsApp
 {
@@ -17,14 +19,17 @@ namespace Pastelaria.WindowsApp
     {
         private Thread thread;
 
-        private readonly PastelariaDBContext db;
         private Domain.Employee loggedEmployee;
+
+        private readonly PastelariaDBContext db;
+
+        private readonly EmployeeAppService employeeAppService;
 
         public LoginForm()
         {
+            db = new();
+            employeeAppService = new(new EmployeeORM(db));
             InitializeComponent();
-            
-            db = new ();
         }
 
         private void LogginBtn_Click(object sender, EventArgs e)
@@ -37,6 +42,16 @@ namespace Pastelaria.WindowsApp
             }
             else
             {
+                foreach(Domain.Employee employee in employeeAppService.GetAll())
+                {
+                    if(userTextBox.Text == employee.AcessUser 
+                        && passwordTextBox.Text == employee.Password)
+                    {
+                        loggedEmployee = employee;
+                        Loggin();
+                        return;
+                    }
+                }
                 userTextBox.Clear();
                 passwordTextBox.Clear();
                 InfoLabel.Text = "Invalid User";
@@ -46,8 +61,6 @@ namespace Pastelaria.WindowsApp
 
         private void Loggin()
         {
-            MessageBox.Show("Welcome " + loggedEmployee.Name);
-            
             thread = new Thread(CallMainForm);
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
@@ -60,7 +73,7 @@ namespace Pastelaria.WindowsApp
         private void CallMainForm()
         {
             MainFrameForm.LoggedEmployee = loggedEmployee;
-            Application.Run(new MainFrameForm());
+            Application.Run(new MainFrameForm(employeeAppService));
         }
     }
 }

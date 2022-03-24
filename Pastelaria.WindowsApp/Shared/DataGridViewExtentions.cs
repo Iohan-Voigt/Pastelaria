@@ -12,7 +12,7 @@ namespace Pastelaria.WindowsApp.Shared
 
             DataGridViewCellStyle darkLine = new()
             {
-                BackColor = Color.LightGray,
+                BackColor = Color.FromArgb(173, 85, 37),
                 Font = font,
                 ForeColor = Color.Black,
                 SelectionForeColor = Color.Black
@@ -22,7 +22,7 @@ namespace Pastelaria.WindowsApp.Shared
 
             DataGridViewCellStyle clearLine = new()
             {
-                BackColor = Color.White,
+                BackColor = Color.FromArgb(219, 123, 0),
                 Font = font,
                 SelectionBackColor = Color.LightYellow,
                 SelectionForeColor = Color.Black
