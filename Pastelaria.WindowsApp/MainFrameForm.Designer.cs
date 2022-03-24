@@ -59,6 +59,7 @@
             this.FooterLabel = new System.Windows.Forms.Label();
             this.footerPanel = new System.Windows.Forms.Panel();
             this.footerLabelBase = new System.Windows.Forms.Label();
+            this.pictureBoxVasco = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).BeginInit();
@@ -67,11 +68,13 @@
             this.toolBoxActions.SuspendLayout();
             this.DataPanel.SuspendLayout();
             this.footerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVasco)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
+            this.panelMenu.Controls.Add(this.pictureBoxVasco);
             this.panelMenu.Controls.Add(this.costumersBtn);
             this.panelMenu.Controls.Add(this.configBtn);
             this.panelMenu.Controls.Add(this.orderBtn);
@@ -512,6 +515,17 @@
             this.footerLabelBase.TabIndex = 0;
             this.footerLabelBase.Text = "asd";
             // 
+            // pictureBoxVasco
+            // 
+            this.pictureBoxVasco.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVasco.Image")));
+            this.pictureBoxVasco.Location = new System.Drawing.Point(39, 463);
+            this.pictureBoxVasco.Name = "pictureBoxVasco";
+            this.pictureBoxVasco.Size = new System.Drawing.Size(170, 110);
+            this.pictureBoxVasco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxVasco.TabIndex = 11;
+            this.pictureBoxVasco.TabStop = false;
+            this.pictureBoxVasco.Click += new System.EventHandler(this.pictureBoxVasco_Click);
+            // 
             // MainFrameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -540,6 +554,7 @@
             this.DataPanel.PerformLayout();
             this.footerPanel.ResumeLayout(false);
             this.footerPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVasco)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -576,5 +591,6 @@
         private System.Windows.Forms.Label FooterLabel;
         private System.Windows.Forms.Panel footerPanel;
         private System.Windows.Forms.Label footerLabelBase;
+        private System.Windows.Forms.PictureBox pictureBoxVasco;
     }
 }

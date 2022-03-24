@@ -11,6 +11,7 @@ using Pastelaria.WindowsApp.Shared;
 using System;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -29,7 +30,7 @@ namespace Pastelaria.WindowsApp
             this.employeeAppService = employeeAppService;
 
             InitializeComponent();
-            labelRegisterType.Text = "leu é gay";
+            labelRegisterType.Text = "DashBoard";
             toolBoxActions.Renderer = new NoLoadToolStripRenderer();
             UpdateFooter("Welcome " + LoggedEmployee.Name);
 
@@ -336,8 +337,20 @@ namespace Pastelaria.WindowsApp
 
 
 
+
         #endregion
 
-        
+        private void iconButtonVasco_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxVasco_Click(object sender, EventArgs e)
+        {
+            SoundPlayer player = new SoundPlayer();
+
+            player.SoundLocation = @"C:\Users\iohan\Downloads\X2Download.com-HINO-DO-VASCO-DA-GAMA-_128-kbps_.wav";
+            player.Play();
+        }
     }
 }
