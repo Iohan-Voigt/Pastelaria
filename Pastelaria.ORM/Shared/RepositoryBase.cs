@@ -17,49 +17,35 @@ namespace Pastelaria.ORM.Shared
             dbSet = db.Set<T>();
         }
 
-        public virtual string Insert(T register)
+        public virtual bool Insert(T register)
         {
             try
             {
                 dbSet.Add(register);
                 db.SaveChanges();
-                return "Sucess";
             }
             catch (Exception)
             {
-                return ("Error");
+                return false;
             }
+            return true;
         }
 
-        public virtual string Update(T register)
+        public virtual bool Update(T register)
         {
             try
             {
                 dbSet.Update(register);
                 db.SaveChanges();
-                return "Sucess";
             }
             catch (Exception)
             {
-                return ("Error");
+                return false;
             }
+            return true;
         }
 
-        public virtual string Remove(T register)
-        {
-            try
-            {
-                dbSet.Remove(register);
-                db.SaveChanges();
-                return "Sucess";
-            }
-            catch (Exception)
-            {
-                return ("Error");
-            }
-        }
-
-        public virtual string RemoveById(Guid id)
+        public virtual bool Remove(Guid id)
         {         
 
             try
@@ -67,12 +53,12 @@ namespace Pastelaria.ORM.Shared
                 T register = GetById(id);
                 dbSet.Remove(register);
                 db.SaveChanges();
-                return "Sucess";
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return ("Error : " + ex.Message);
+                return false;
             }
+            return true;
         }
 
         public virtual List<T> GetAll()
