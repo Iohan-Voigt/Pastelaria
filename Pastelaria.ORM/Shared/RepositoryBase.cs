@@ -17,65 +17,64 @@ namespace Pastelaria.ORM.Shared
             dbSet = db.Set<T>();
         }
 
-        public string Insert(T register)
+        public virtual bool Insert(T register)
         {
             try
             {
                 dbSet.Add(register);
                 db.SaveChanges();
-                return "Sucess";
             }
             catch (Exception)
             {
-                return ("Error");
+                return false;
             }
+            return true;
         }
 
-        public string Update(T register)
+        public virtual bool Update(T register)
         {
             try
             {
                 dbSet.Update(register);
                 db.SaveChanges();
-                return "Sucess";
             }
             catch (Exception)
             {
-                return ("Error");
+                return false;
             }
+            return true;
         }
 
-        public string Remove(T register)
-        {
-            try
-            {
-                dbSet.Remove(register);
-                db.SaveChanges();
-                return "Sucess";
-            }
-            catch (Exception)
-            {
-                return ("Error");
-            }
-        }
-
-        public string RemoveById(Guid id)
+        public virtual bool Remove(Guid id)
         {         
 
             try
             {
-                T register = SelectById(id);
+                T register = GetById(id);
                 dbSet.Remove(register);
                 db.SaveChanges();
-                return "Sucess";
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public virtual List<T> GetAll()
+        {
+            try
+            {
+                return dbSet.ToList<T>();
             }
             catch (Exception ex)
             {
-                return ("Error : " + ex.Message);
+
+                return null;
             }
         }
 
-        public virtual T SelectById(Guid id)
+        public virtual T GetById(Guid id)
         {
             try
             {
@@ -88,18 +87,7 @@ namespace Pastelaria.ORM.Shared
             }
         }
 
-        public virtual List<T> SelectAll()
-        {
-            try
-            {
-                return dbSet.ToList<T>();
-            }
-            catch (Exception ex)
-            {
 
-                return null;
-            }
-        }
 
 
     }

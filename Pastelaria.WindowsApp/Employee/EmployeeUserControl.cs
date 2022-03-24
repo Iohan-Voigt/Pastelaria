@@ -1,12 +1,6 @@
 ﻿using Pastelaria.WindowsApp.Shared;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pastelaria.WindowsApp.Employee
@@ -25,7 +19,7 @@ namespace Pastelaria.WindowsApp.Employee
         {
             var coluns = new DataGridViewColumn[]
            {
-                new DataGridViewTextBoxColumn { DataPropertyName = "Id", HeaderText = "Id"},
+                //new DataGridViewTextBoxColumn { DataPropertyName = "Id", HeaderText = "Id"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "Name", HeaderText = "Nome"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "Registration", HeaderText = "Registration"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "AcessUser", HeaderText = "User"},
@@ -34,14 +28,10 @@ namespace Pastelaria.WindowsApp.Employee
 
             return coluns;
         }
-        public void UpdateRegisters(List<Domain.Employee> employeers)
+        public void UpdateRegisters(List<Domain.Employee> employees)
         {
-            employeeGrid.Rows.Clear();
-
-            foreach (Domain.Employee employee in employeers)
-            {
-                employeeGrid.Rows.Add(employee);
-            }
+            employeeGrid.DataSource = null;
+            employeeGrid.DataSource = (employees);
         }
 
         public Guid GetSelectedId()

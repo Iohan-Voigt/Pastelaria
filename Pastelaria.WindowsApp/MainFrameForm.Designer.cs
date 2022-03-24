@@ -58,7 +58,7 @@
             this.DataPanel = new System.Windows.Forms.Panel();
             this.FooterLabel = new System.Windows.Forms.Label();
             this.footerPanel = new System.Windows.Forms.Panel();
-            this.footerLabel1 = new System.Windows.Forms.Label();
+            this.footerLabelBase = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).BeginInit();
@@ -71,7 +71,7 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(112)))), ((int)(((byte)(184)))));
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
             this.panelMenu.Controls.Add(this.costumersBtn);
             this.panelMenu.Controls.Add(this.configBtn);
             this.panelMenu.Controls.Add(this.orderBtn);
@@ -86,6 +86,7 @@
             this.panelMenu.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panelMenu.ForeColor = System.Drawing.Color.Crimson;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(250, 681);
             this.panelMenu.TabIndex = 0;
@@ -95,9 +96,9 @@
             this.costumersBtn.FlatAppearance.BorderSize = 0;
             this.costumersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.costumersBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.costumersBtn.ForeColor = System.Drawing.Color.Black;
+            this.costumersBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.costumersBtn.IconChar = FontAwesome.Sharp.IconChar.Restroom;
-            this.costumersBtn.IconColor = System.Drawing.Color.Black;
+            this.costumersBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.costumersBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.costumersBtn.IconSize = 50;
             this.costumersBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -116,9 +117,9 @@
             this.configBtn.FlatAppearance.BorderSize = 0;
             this.configBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.configBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.configBtn.ForeColor = System.Drawing.Color.Black;
+            this.configBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.configBtn.IconChar = FontAwesome.Sharp.IconChar.Cogs;
-            this.configBtn.IconColor = System.Drawing.Color.Black;
+            this.configBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.configBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.configBtn.IconSize = 50;
             this.configBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -137,9 +138,9 @@
             this.orderBtn.FlatAppearance.BorderSize = 0;
             this.orderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.orderBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.orderBtn.ForeColor = System.Drawing.Color.Black;
+            this.orderBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.orderBtn.IconChar = FontAwesome.Sharp.IconChar.HandHoldingUsd;
-            this.orderBtn.IconColor = System.Drawing.Color.Black;
+            this.orderBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.orderBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.orderBtn.IconSize = 50;
             this.orderBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -158,9 +159,9 @@
             this.debitBtn.FlatAppearance.BorderSize = 0;
             this.debitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.debitBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.debitBtn.ForeColor = System.Drawing.Color.Black;
+            this.debitBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.debitBtn.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckAlt;
-            this.debitBtn.IconColor = System.Drawing.Color.Black;
+            this.debitBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.debitBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.debitBtn.IconSize = 50;
             this.debitBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -178,9 +179,9 @@
             this.sellBtn.FlatAppearance.BorderSize = 0;
             this.sellBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sellBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.sellBtn.ForeColor = System.Drawing.Color.Black;
+            this.sellBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.sellBtn.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
-            this.sellBtn.IconColor = System.Drawing.Color.Black;
+            this.sellBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.sellBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.sellBtn.IconSize = 50;
             this.sellBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -198,9 +199,9 @@
             this.productBtn.FlatAppearance.BorderSize = 0;
             this.productBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.productBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.productBtn.ForeColor = System.Drawing.Color.Black;
+            this.productBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.productBtn.IconChar = FontAwesome.Sharp.IconChar.Boxes;
-            this.productBtn.IconColor = System.Drawing.Color.Black;
+            this.productBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.productBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.productBtn.IconSize = 50;
             this.productBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -219,9 +220,9 @@
             this.employeeBtn.FlatAppearance.BorderSize = 0;
             this.employeeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.employeeBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.employeeBtn.ForeColor = System.Drawing.Color.Black;
+            this.employeeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.employeeBtn.IconChar = FontAwesome.Sharp.IconChar.PeopleCarry;
-            this.employeeBtn.IconColor = System.Drawing.Color.Black;
+            this.employeeBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.employeeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.employeeBtn.IconSize = 50;
             this.employeeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -248,7 +249,7 @@
             // 
             // LogoPicBox
             // 
-            this.LogoPicBox.Image = global::Pastelaria.WindowsApp.Properties.Resources.logoSemFundo;
+            this.LogoPicBox.Image = ((System.Drawing.Image)(resources.GetObject("LogoPicBox.Image")));
             this.LogoPicBox.Location = new System.Drawing.Point(0, 0);
             this.LogoPicBox.Name = "LogoPicBox";
             this.LogoPicBox.Size = new System.Drawing.Size(170, 140);
@@ -268,11 +269,11 @@
             // menuBtn
             // 
             this.menuBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.menuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(112)))), ((int)(((byte)(184)))));
+            this.menuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
             this.menuBtn.FlatAppearance.BorderSize = 0;
             this.menuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menuBtn.IconChar = FontAwesome.Sharp.IconChar.Bars;
-            this.menuBtn.IconColor = System.Drawing.Color.Black;
+            this.menuBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.menuBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.menuBtn.IconSize = 50;
             this.menuBtn.Location = new System.Drawing.Point(176, 37);
@@ -288,9 +289,9 @@
             this.logutBtn.FlatAppearance.BorderSize = 0;
             this.logutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logutBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.logutBtn.ForeColor = System.Drawing.Color.Black;
+            this.logutBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.logutBtn.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
-            this.logutBtn.IconColor = System.Drawing.Color.Black;
+            this.logutBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.logutBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.logutBtn.IconSize = 50;
             this.logutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -308,9 +309,9 @@
             this.homeBtn.FlatAppearance.BorderSize = 0;
             this.homeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.homeBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.homeBtn.ForeColor = System.Drawing.Color.Black;
+            this.homeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.homeBtn.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.homeBtn.IconColor = System.Drawing.Color.Black;
+            this.homeBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.homeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.homeBtn.IconSize = 50;
             this.homeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -325,13 +326,15 @@
             // 
             // panelTitleBar
             // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.White;
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
             this.panelTitleBar.Controls.Add(this.titleLable);
             this.panelTitleBar.Controls.Add(this.minimizeBtn);
             this.panelTitleBar.Controls.Add(this.maximaziBtn);
             this.panelTitleBar.Controls.Add(this.exitBtn);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.panelTitleBar.Location = new System.Drawing.Point(250, 0);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(0);
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(1014, 50);
             this.panelTitleBar.TabIndex = 1;
@@ -402,6 +405,8 @@
             // 
             // toolBoxActions
             // 
+            this.toolBoxActions.AutoSize = false;
+            this.toolBoxActions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
             this.toolBoxActions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnAdd,
             this.btnEdit,
@@ -409,9 +414,11 @@
             this.btnFilter,
             this.toolStripSeparator1,
             this.labelRegisterType});
+            this.toolBoxActions.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.toolBoxActions.Location = new System.Drawing.Point(250, 50);
             this.toolBoxActions.Name = "toolBoxActions";
-            this.toolBoxActions.Size = new System.Drawing.Size(1014, 25);
+            this.toolBoxActions.Padding = new System.Windows.Forms.Padding(0);
+            this.toolBoxActions.Size = new System.Drawing.Size(1014, 50);
             this.toolBoxActions.TabIndex = 2;
             // 
             // btnAdd
@@ -420,7 +427,7 @@
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(23, 22);
+            this.btnAdd.Size = new System.Drawing.Size(23, 47);
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
@@ -429,7 +436,7 @@
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(23, 22);
+            this.btnEdit.Size = new System.Drawing.Size(23, 47);
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnRemove
@@ -438,7 +445,7 @@
             this.btnRemove.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.Image")));
             this.btnRemove.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(23, 22);
+            this.btnRemove.Size = new System.Drawing.Size(23, 47);
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnFilter
@@ -447,27 +454,31 @@
             this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
             this.btnFilter.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(23, 22);
+            this.btnFilter.Size = new System.Drawing.Size(23, 47);
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 50);
             // 
             // labelRegisterType
             // 
+            this.labelRegisterType.Font = new System.Drawing.Font("Yu Gothic UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelRegisterType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.labelRegisterType.Name = "labelRegisterType";
-            this.labelRegisterType.Size = new System.Drawing.Size(76, 22);
+            this.labelRegisterType.Size = new System.Drawing.Size(144, 47);
             this.labelRegisterType.Text = "Register Type";
             // 
             // DataPanel
             // 
+            this.DataPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(123)))), ((int)(((byte)(0)))));
             this.DataPanel.Controls.Add(this.FooterLabel);
             this.DataPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DataPanel.Location = new System.Drawing.Point(250, 75);
+            this.DataPanel.Location = new System.Drawing.Point(250, 100);
+            this.DataPanel.Margin = new System.Windows.Forms.Padding(0);
             this.DataPanel.Name = "DataPanel";
-            this.DataPanel.Size = new System.Drawing.Size(1014, 606);
+            this.DataPanel.Size = new System.Drawing.Size(1014, 581);
             this.DataPanel.TabIndex = 3;
             // 
             // FooterLabel
@@ -481,22 +492,24 @@
             // 
             // footerPanel
             // 
-            this.footerPanel.Controls.Add(this.footerLabel1);
+            this.footerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
+            this.footerPanel.Controls.Add(this.footerLabelBase);
             this.footerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.footerPanel.Location = new System.Drawing.Point(250, 640);
             this.footerPanel.Name = "footerPanel";
             this.footerPanel.Size = new System.Drawing.Size(1014, 41);
             this.footerPanel.TabIndex = 4;
             // 
-            // footerLabel1
+            // footerLabelBase
             // 
-            this.footerLabel1.AutoSize = true;
-            this.footerLabel1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.footerLabel1.Location = new System.Drawing.Point(3, 1);
-            this.footerLabel1.Name = "footerLabel1";
-            this.footerLabel1.Size = new System.Drawing.Size(58, 37);
-            this.footerLabel1.TabIndex = 0;
-            this.footerLabel1.Text = "asd";
+            this.footerLabelBase.AutoSize = true;
+            this.footerLabelBase.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.footerLabelBase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.footerLabelBase.Location = new System.Drawing.Point(3, 1);
+            this.footerLabelBase.Name = "footerLabelBase";
+            this.footerLabelBase.Size = new System.Drawing.Size(58, 37);
+            this.footerLabelBase.TabIndex = 0;
+            this.footerLabelBase.Text = "asd";
             // 
             // MainFrameForm
             // 
@@ -527,7 +540,6 @@
             this.footerPanel.ResumeLayout(false);
             this.footerPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -562,6 +574,6 @@
         private System.Windows.Forms.Panel DataPanel;
         private System.Windows.Forms.Label FooterLabel;
         private System.Windows.Forms.Panel footerPanel;
-        private System.Windows.Forms.Label footerLabel1;
+        private System.Windows.Forms.Label footerLabelBase;
     }
 }

@@ -1,4 +1,5 @@
-﻿using Pastelaria.WindowsApp.Shared;
+﻿using Pastelaria.AppService;
+using Pastelaria.WindowsApp.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,19 +12,27 @@ namespace Pastelaria.WindowsApp.Employee
     public class EmployeeOperations : IRegisterable
     {
         private readonly EmployeeUserControl table;
+        private readonly EmployeeAppService employeeAppService;
 
         private EmployeeForm screen;
 
-        public EmployeeOperations()
+        public EmployeeOperations(EmployeeAppService employeeAppService)
         {
+            this.employeeAppService = employeeAppService;
             table = new();
+        }
+
+        private void LoadGrid()
+        {
+            List<Domain.Employee> employees = employeeAppService.GetAll();
+            table.UpdateRegisters(employees);
         }
 
         public UserControl ObtainTable()
         {
-            List<Domain.Employee> employee = new List<Domain.Employee>();
+            List<Domain.Employee> employees = employeeAppService.GetAll();
 
-            table.UpdateRegisters(employee);
+            table.UpdateRegisters(employees);
 
             return table;
         }

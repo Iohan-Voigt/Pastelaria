@@ -14,6 +14,6 @@ namespace Pastelaria.AppService.Shared
         public abstract string Delete(T entity);
         public abstract string Exists(Guid Id);
         public abstract T GetById(Guid Id);
-        public abstract IEnumerable<T> GetAll();        
+        public abstract List<T> GetAll();        
     }
 }

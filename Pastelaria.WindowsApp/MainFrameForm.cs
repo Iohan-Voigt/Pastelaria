@@ -1,4 +1,7 @@
 ﻿using Autofac;
+using Pastelaria.AppService;
+using Pastelaria.ORM;
+using Pastelaria.ORM.Features;
 using Pastelaria.WindowsApp.Config;
 using Pastelaria.WindowsApp.Costumer;
 using Pastelaria.WindowsApp.Employee;
@@ -19,10 +22,17 @@ namespace Pastelaria.WindowsApp
         private static MainFrameForm instance { get; set; }
         public static Domain.Employee LoggedEmployee { get; set; }
 
-        public MainFrameForm()
+        private readonly EmployeeAppService employeeAppService;
+
+        public MainFrameForm(EmployeeAppService employeeAppService)
         {
+            this.employeeAppService = employeeAppService;
 
             InitializeComponent();
+
+            toolBoxActions.Renderer = new NoLoadToolStripRenderer();
+            UpdateFooter("Welcome " + LoggedEmployee.Name);
+
             this.Padding = new (2);
             this.BackColor = Color.FromArgb(28, 31, 51);
         }
@@ -192,6 +202,7 @@ namespace Pastelaria.WindowsApp
             }
         }
         #endregion
+
         #region Buttons
         private void employeeBtn_Click(object sender, EventArgs e)
         {
@@ -271,10 +282,11 @@ namespace Pastelaria.WindowsApp
         #endregion
 
         #region Privates
+
         private void UpdateFooter(string Message)
         {
-            footerLabel1.Text = Message;
-            footerLabel1.Font = new Font("Segoe UI", this.footerLabel1.Font.Size);
+            footerLabelBase.Text = Message;
+            footerLabelBase.Font = new Font("Segoe UI", this.footerLabelBase.Font.Size);
         }
         private void ToolboxConfig(IConfigurationToolBox configuration, bool filter)
         {
@@ -295,11 +307,6 @@ namespace Pastelaria.WindowsApp
             DataPanel.Controls.Add(table);
         }
         #endregion
-
-        private void MainFrameForm_Load(object sender, EventArgs e)
-        {
-
-        }
 
         public void UpdateTitle(string title)
         {

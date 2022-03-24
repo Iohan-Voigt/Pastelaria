@@ -1,5 +1,6 @@
 ﻿using Pastelaria.AppService.Shared;
 using Pastelaria.Domain;
+using Pastelaria.Domain.Shared;
 using Pastelaria.ORM.Features;
 using Pastelaria.ORM.Shared;
 using System;
@@ -13,11 +14,11 @@ namespace Pastelaria.AppService
     public class EmployeeAppService : AppServiceBase<Employee>
     {
         //update XX
-        private readonly RepositoryBase<Employee> employeeORM;
+        private readonly IRepository<Employee> employeeRepository;
 
-        public EmployeeAppService(RepositoryBase<Employee> employeeORM)
+        public EmployeeAppService(IRepository<Employee> employeeORM)
         {
-            this.employeeORM = employeeORM;
+            this.employeeRepository = employeeORM;
         }
 
         public override string Insert(Employee entity)
@@ -26,7 +27,7 @@ namespace Pastelaria.AppService
             {
                 if (entity.Validate().Equals("VALID"))
                 {
-                    employeeORM.Insert(entity);
+                    employeeRepository.Insert(entity);
                     return "VALID";
                 }
                 else
@@ -44,7 +45,7 @@ namespace Pastelaria.AppService
         {
             try
             {
-                employeeORM.Remove(entity);
+                employeeRepository.Remove(entity.Id);
                 return "VALID";
             }
             catch (Exception)
@@ -63,9 +64,18 @@ namespace Pastelaria.AppService
             throw new NotImplementedException();
         }
 
-        public override IEnumerable<Employee> GetAll()
+        public override List<Employee> GetAll()
         {
-            throw new NotImplementedException();
+            List<Employee> employees;
+            try
+            {
+                return employees = employeeRepository.GetAll();
+            }
+            catch (Exception)
+            {
+                return null;
+                throw;
+            }
         }
 
         public override Employee GetById(Guid Id)

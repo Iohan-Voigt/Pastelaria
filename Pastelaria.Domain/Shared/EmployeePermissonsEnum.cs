@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Pastelaria.Domain.Shared
 {
     public enum EmployeePermissionsEnum{
-        admin = 0,
-        cashier = 1
+        Admin = 0,
+        Cashier = 1
     }
 }
