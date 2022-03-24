@@ -18,6 +18,9 @@ namespace Pastelaria.ORM
         {
             DataSet ds = new();
 
+            // MANUAL
+            //ds.ReadXml(@"..\Pastelaria.ORM\databases.xml");
+
             ds.ReadXml(@"..\..\..\..\Pastelaria.ORM\databases.xml");
 
             //var connectionString = "";

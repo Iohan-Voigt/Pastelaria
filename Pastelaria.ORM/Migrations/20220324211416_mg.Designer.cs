@@ -10,7 +10,7 @@ using Pastelaria.ORM;
 namespace Pastelaria.ORM.Migrations
 {
     [DbContext(typeof(PastelariaDBContext))]
-    [Migration("20220324133507_mg")]
+    [Migration("20220324211416_mg")]
     partial class mg
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,6 +51,9 @@ namespace Pastelaria.ORM.Migrations
                     b.Property<string>("AcessUser")
                         .IsRequired()
                         .HasColumnType("VARCHAR(20)");
+
+                    b.Property<int>("EmployeeActiveEnum")
+                        .HasColumnType("INT");
 
                     b.Property<int>("EmployeePermissionsEnum")
                         .HasColumnType("INT");

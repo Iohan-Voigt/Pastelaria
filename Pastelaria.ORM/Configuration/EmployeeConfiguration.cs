@@ -24,6 +24,7 @@ namespace Pastelaria.ORM.Configuration
             builder.Property(x => x.Password).HasColumnType("VARCHAR(20)").IsRequired();
             builder.Property(x => x.Registration).HasColumnType("VARCHAR(30)").IsRequired();
             builder.Property(x => x.EmployeePermissionsEnum).HasColumnType("INT").IsRequired();
+            builder.Property(x => x.EmployeeActiveEnum).HasColumnType("INT").IsRequired();
 
         }
     }

@@ -43,8 +43,10 @@ namespace Pastelaria.WindowsApp.Employee
 
             if (screen.ShowDialog() == DialogResult.OK)
             {
-
+                employeeAppService.Insert(screen.employee);
+                LoadGrid();
             }
+            
         }
 
         public void RegisterRemove()

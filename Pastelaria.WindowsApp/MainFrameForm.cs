@@ -29,7 +29,7 @@ namespace Pastelaria.WindowsApp
             this.employeeAppService = employeeAppService;
 
             InitializeComponent();
-
+            labelRegisterType.Text = "leu é gay";
             toolBoxActions.Renderer = new NoLoadToolStripRenderer();
             UpdateFooter("Welcome " + LoggedEmployee.Name);
 

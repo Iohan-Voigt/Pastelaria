@@ -33,9 +33,8 @@
             this.label = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.labelIdentifyDocument = new System.Windows.Forms.Label();
-            this.textBoxIdentifyDocument = new System.Windows.Forms.TextBox();
             this.labelPhoneNumber = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBoxPhoneNumber = new System.Windows.Forms.MaskedTextBox();
             this.labelRegistration = new System.Windows.Forms.Label();
             this.textBoxRegistration = new System.Windows.Forms.TextBox();
             this.labelAcessUser = new System.Windows.Forms.Label();
@@ -45,9 +44,11 @@
             this.panelPermissions = new System.Windows.Forms.Panel();
             this.radioButtonCashier = new System.Windows.Forms.RadioButton();
             this.radioButtonAdmin = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelPermissions = new System.Windows.Forms.Label();
             this.iconButtonSave = new FontAwesome.Sharp.IconButton();
             this.iconButtonCancel = new FontAwesome.Sharp.IconButton();
+            this.labelMessages = new System.Windows.Forms.Label();
+            this.maskedTextBoxIdentifyDocument = new System.Windows.Forms.MaskedTextBox();
             this.panelPermissions.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +65,7 @@
             // 
             // textBoxID
             // 
+            this.textBoxID.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxID.Location = new System.Drawing.Point(36, 58);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.ReadOnly = true;
@@ -101,33 +103,26 @@
             this.labelIdentifyDocument.TabIndex = 2;
             this.labelIdentifyDocument.Text = "Identify Document";
             // 
-            // textBoxIdentifyDocument
-            // 
-            this.textBoxIdentifyDocument.Location = new System.Drawing.Point(36, 172);
-            this.textBoxIdentifyDocument.MaxLength = 14;
-            this.textBoxIdentifyDocument.Name = "textBoxIdentifyDocument";
-            this.textBoxIdentifyDocument.Size = new System.Drawing.Size(298, 23);
-            this.textBoxIdentifyDocument.TabIndex = 3;
-            // 
             // labelPhoneNumber
             // 
             this.labelPhoneNumber.AutoSize = true;
             this.labelPhoneNumber.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.labelPhoneNumber.Location = new System.Drawing.Point(36, 198);
+            this.labelPhoneNumber.Location = new System.Drawing.Point(36, 209);
             this.labelPhoneNumber.Name = "labelPhoneNumber";
             this.labelPhoneNumber.Size = new System.Drawing.Size(144, 28);
             this.labelPhoneNumber.TabIndex = 4;
             this.labelPhoneNumber.Text = "Phone Number";
             // 
-            // maskedTextBox1
+            // maskedTextBoxPhoneNumber
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(36, 229);
-            this.maskedTextBox1.Mask = "(00) 0 0000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(144, 23);
-            this.maskedTextBox1.TabIndex = 5;
-            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxPhoneNumber.Location = new System.Drawing.Point(36, 240);
+            this.maskedTextBoxPhoneNumber.Mask = "(00) 0 0000-0000";
+            this.maskedTextBoxPhoneNumber.Name = "maskedTextBoxPhoneNumber";
+            this.maskedTextBoxPhoneNumber.Size = new System.Drawing.Size(174, 23);
+            this.maskedTextBoxPhoneNumber.TabIndex = 5;
+            this.maskedTextBoxPhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxPhoneNumber.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // labelRegistration
             // 
@@ -193,11 +188,11 @@
             this.panelPermissions.CausesValidation = false;
             this.panelPermissions.Controls.Add(this.radioButtonCashier);
             this.panelPermissions.Controls.Add(this.radioButtonAdmin);
-            this.panelPermissions.Controls.Add(this.label1);
-            this.panelPermissions.Location = new System.Drawing.Point(352, 201);
+            this.panelPermissions.Controls.Add(this.labelPermissions);
+            this.panelPermissions.Location = new System.Drawing.Point(213, 149);
             this.panelPermissions.Margin = new System.Windows.Forms.Padding(0);
             this.panelPermissions.Name = "panelPermissions";
-            this.panelPermissions.Size = new System.Drawing.Size(298, 51);
+            this.panelPermissions.Size = new System.Drawing.Size(123, 114);
             this.panelPermissions.TabIndex = 12;
             // 
             // radioButtonCashier
@@ -207,7 +202,7 @@
             this.radioButtonCashier.Checked = true;
             this.radioButtonCashier.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.radioButtonCashier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.radioButtonCashier.Location = new System.Drawing.Point(203, 12);
+            this.radioButtonCashier.Location = new System.Drawing.Point(9, 71);
             this.radioButtonCashier.Name = "radioButtonCashier";
             this.radioButtonCashier.Size = new System.Drawing.Size(80, 25);
             this.radioButtonCashier.TabIndex = 15;
@@ -221,23 +216,23 @@
             this.radioButtonAdmin.CausesValidation = false;
             this.radioButtonAdmin.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.radioButtonAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.radioButtonAdmin.Location = new System.Drawing.Point(123, 12);
+            this.radioButtonAdmin.Location = new System.Drawing.Point(9, 40);
             this.radioButtonAdmin.Name = "radioButtonAdmin";
             this.radioButtonAdmin.Size = new System.Drawing.Size(74, 25);
             this.radioButtonAdmin.TabIndex = 14;
             this.radioButtonAdmin.Text = "Admin";
             this.radioButtonAdmin.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // labelPermissions
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.label1.Location = new System.Drawing.Point(3, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 28);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Permissions";
+            this.labelPermissions.AutoSize = true;
+            this.labelPermissions.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelPermissions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.labelPermissions.Location = new System.Drawing.Point(3, 9);
+            this.labelPermissions.Name = "labelPermissions";
+            this.labelPermissions.Size = new System.Drawing.Size(114, 28);
+            this.labelPermissions.TabIndex = 13;
+            this.labelPermissions.Text = "Permissions";
             // 
             // iconButtonSave
             // 
@@ -251,13 +246,14 @@
             this.iconButtonSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonSave.IconSize = 50;
             this.iconButtonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonSave.Location = new System.Drawing.Point(530, 289);
+            this.iconButtonSave.Location = new System.Drawing.Point(530, 223);
             this.iconButtonSave.Name = "iconButtonSave";
             this.iconButtonSave.Size = new System.Drawing.Size(120, 60);
             this.iconButtonSave.TabIndex = 13;
             this.iconButtonSave.Text = "Save";
             this.iconButtonSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonSave.UseVisualStyleBackColor = false;
+            this.iconButtonSave.Click += new System.EventHandler(this.iconButtonSave_Click);
             // 
             // iconButtonCancel
             // 
@@ -271,7 +267,7 @@
             this.iconButtonCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonCancel.IconSize = 50;
             this.iconButtonCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonCancel.Location = new System.Drawing.Point(404, 289);
+            this.iconButtonCancel.Location = new System.Drawing.Point(352, 223);
             this.iconButtonCancel.Name = "iconButtonCancel";
             this.iconButtonCancel.Size = new System.Drawing.Size(120, 60);
             this.iconButtonCancel.TabIndex = 14;
@@ -280,12 +276,34 @@
             this.iconButtonCancel.UseVisualStyleBackColor = false;
             this.iconButtonCancel.Click += new System.EventHandler(this.iconButtonCancel_Click);
             // 
+            // labelMessages
+            // 
+            this.labelMessages.AutoSize = true;
+            this.labelMessages.Font = new System.Drawing.Font("Yu Gothic UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelMessages.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.labelMessages.Location = new System.Drawing.Point(12, 275);
+            this.labelMessages.Name = "labelMessages";
+            this.labelMessages.Size = new System.Drawing.Size(0, 19);
+            this.labelMessages.TabIndex = 15;
+            // 
+            // maskedTextBoxIdentifyDocument
+            // 
+            this.maskedTextBoxIdentifyDocument.Location = new System.Drawing.Point(36, 172);
+            this.maskedTextBoxIdentifyDocument.Mask = "000.000.000-00";
+            this.maskedTextBoxIdentifyDocument.Name = "maskedTextBoxIdentifyDocument";
+            this.maskedTextBoxIdentifyDocument.Size = new System.Drawing.Size(174, 23);
+            this.maskedTextBoxIdentifyDocument.TabIndex = 16;
+            this.maskedTextBoxIdentifyDocument.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxIdentifyDocument.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(123)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(686, 372);
+            this.ClientSize = new System.Drawing.Size(686, 312);
+            this.Controls.Add(this.maskedTextBoxIdentifyDocument);
+            this.Controls.Add(this.labelMessages);
             this.Controls.Add(this.iconButtonCancel);
             this.Controls.Add(this.iconButtonSave);
             this.Controls.Add(this.panelPermissions);
@@ -295,9 +313,8 @@
             this.Controls.Add(this.labelAcessUser);
             this.Controls.Add(this.textBoxRegistration);
             this.Controls.Add(this.labelRegistration);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.maskedTextBoxPhoneNumber);
             this.Controls.Add(this.labelPhoneNumber);
-            this.Controls.Add(this.textBoxIdentifyDocument);
             this.Controls.Add(this.labelIdentifyDocument);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label);
@@ -321,9 +338,8 @@
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label labelIdentifyDocument;
-        private System.Windows.Forms.TextBox textBoxIdentifyDocument;
         private System.Windows.Forms.Label labelPhoneNumber;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxPhoneNumber;
         private System.Windows.Forms.Label labelRegistration;
         private System.Windows.Forms.TextBox textBoxRegistration;
         private System.Windows.Forms.Label labelAcessUser;
@@ -333,8 +349,10 @@
         private System.Windows.Forms.Panel panelPermissions;
         private System.Windows.Forms.RadioButton radioButtonCashier;
         private System.Windows.Forms.RadioButton radioButtonAdmin;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelPermissions;
         private FontAwesome.Sharp.IconButton iconButtonSave;
         private FontAwesome.Sharp.IconButton iconButtonCancel;
+        private System.Windows.Forms.Label labelMessages;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxIdentifyDocument;
     }
 }

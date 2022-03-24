@@ -106,7 +106,7 @@
             this.costumersBtn.Margin = new System.Windows.Forms.Padding(0);
             this.costumersBtn.Name = "costumersBtn";
             this.costumersBtn.Size = new System.Drawing.Size(250, 45);
-            this.costumersBtn.TabIndex = 10;
+            this.costumersBtn.TabIndex = 5;
             this.costumersBtn.Tag = "Costumers";
             this.costumersBtn.Text = "Costumers";
             this.costumersBtn.UseVisualStyleBackColor = false;
@@ -148,7 +148,7 @@
             this.orderBtn.Margin = new System.Windows.Forms.Padding(0);
             this.orderBtn.Name = "orderBtn";
             this.orderBtn.Size = new System.Drawing.Size(250, 45);
-            this.orderBtn.TabIndex = 8;
+            this.orderBtn.TabIndex = 7;
             this.orderBtn.Tag = "Orders";
             this.orderBtn.Text = "Orders";
             this.orderBtn.UseVisualStyleBackColor = false;
@@ -169,7 +169,7 @@
             this.debitBtn.Margin = new System.Windows.Forms.Padding(0);
             this.debitBtn.Name = "debitBtn";
             this.debitBtn.Size = new System.Drawing.Size(250, 45);
-            this.debitBtn.TabIndex = 7;
+            this.debitBtn.TabIndex = 8;
             this.debitBtn.Tag = "Debits";
             this.debitBtn.Text = "Debits";
             this.debitBtn.UseVisualStyleBackColor = false;
@@ -209,7 +209,7 @@
             this.productBtn.Margin = new System.Windows.Forms.Padding(0);
             this.productBtn.Name = "productBtn";
             this.productBtn.Size = new System.Drawing.Size(250, 45);
-            this.productBtn.TabIndex = 5;
+            this.productBtn.TabIndex = 4;
             this.productBtn.Tag = "Products";
             this.productBtn.Text = "Products";
             this.productBtn.UseVisualStyleBackColor = false;
@@ -230,7 +230,7 @@
             this.employeeBtn.Margin = new System.Windows.Forms.Padding(0);
             this.employeeBtn.Name = "employeeBtn";
             this.employeeBtn.Size = new System.Drawing.Size(250, 45);
-            this.employeeBtn.TabIndex = 4;
+            this.employeeBtn.TabIndex = 3;
             this.employeeBtn.Tag = "Employees";
             this.employeeBtn.Text = "Employees";
             this.employeeBtn.UseVisualStyleBackColor = false;
@@ -298,7 +298,7 @@
             this.logutBtn.Location = new System.Drawing.Point(0, 624);
             this.logutBtn.Name = "logutBtn";
             this.logutBtn.Size = new System.Drawing.Size(250, 45);
-            this.logutBtn.TabIndex = 3;
+            this.logutBtn.TabIndex = 10;
             this.logutBtn.Tag = "Logout";
             this.logutBtn.Text = "Logout";
             this.logutBtn.UseVisualStyleBackColor = true;
@@ -407,6 +407,7 @@
             // 
             this.toolBoxActions.AutoSize = false;
             this.toolBoxActions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
+            this.toolBoxActions.ImageScalingSize = new System.Drawing.Size(48, 48);
             this.toolBoxActions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnAdd,
             this.btnEdit,
@@ -419,7 +420,7 @@
             this.toolBoxActions.Name = "toolBoxActions";
             this.toolBoxActions.Padding = new System.Windows.Forms.Padding(0);
             this.toolBoxActions.Size = new System.Drawing.Size(1014, 50);
-            this.toolBoxActions.TabIndex = 2;
+            this.toolBoxActions.TabIndex = 11;
             // 
             // btnAdd
             // 
@@ -427,7 +428,7 @@
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(23, 47);
+            this.btnAdd.Size = new System.Drawing.Size(52, 47);
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
@@ -436,7 +437,7 @@
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(23, 47);
+            this.btnEdit.Size = new System.Drawing.Size(52, 47);
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnRemove
@@ -445,7 +446,7 @@
             this.btnRemove.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.Image")));
             this.btnRemove.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(23, 47);
+            this.btnRemove.Size = new System.Drawing.Size(52, 47);
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnFilter
@@ -454,7 +455,7 @@
             this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
             this.btnFilter.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(23, 47);
+            this.btnFilter.Size = new System.Drawing.Size(52, 47);
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // toolStripSeparator1
@@ -467,8 +468,8 @@
             this.labelRegisterType.Font = new System.Drawing.Font("Yu Gothic UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelRegisterType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
             this.labelRegisterType.Name = "labelRegisterType";
-            this.labelRegisterType.Size = new System.Drawing.Size(144, 47);
-            this.labelRegisterType.Text = "Register Type";
+            this.labelRegisterType.Size = new System.Drawing.Size(25, 47);
+            this.labelRegisterType.Text = "1";
             // 
             // DataPanel
             // 

@@ -13,7 +13,9 @@ namespace Pastelaria.Domain
         public string Password { get; set; }
         public string Registration { get; set; }
         public EmployeePermissionsEnum EmployeePermissionsEnum { get; set; }
+        public EmployeeActiveEnum EmployeeActiveEnum { get; set; }
 
+        public Employee() { }
         public Employee(string name, string acessUser) 
         {
             this.Name = name;
@@ -37,7 +39,23 @@ namespace Pastelaria.Domain
 
         public override string Validate()
         {
-            return "";
+            string validationResult = "";
+
+            validationResult += ValidatePerson();
+
+            if (AcessUser.Length < 5)
+                validationResult += "The AcessUser must have at least 5 characters\n";
+            if (Password.Length < 8)
+                validationResult += "The Password must have at least 8 characters\n";
+            if (Registration.Length < 3)
+                validationResult += "The Registration must have at least 3 characters\n";
+            if (PhoneNumber.Length < 10)
+                validationResult += "The Phone Number is not completed\n";
+
+                if (validationResult == "")
+                    return "VALID";
+            else
+                    return validationResult;
         }
     }
 }

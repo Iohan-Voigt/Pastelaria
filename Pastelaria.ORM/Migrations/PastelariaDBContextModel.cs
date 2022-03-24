@@ -50,6 +50,9 @@ namespace Pastelaria.ORM.Migrations
                         .IsRequired()
                         .HasColumnType("VARCHAR(20)");
 
+                    b.Property<int>("EmployeeActiveEnum")
+                        .HasColumnType("INT");
+
                     b.Property<int>("EmployeePermissionsEnum")
                         .HasColumnType("INT");
 
