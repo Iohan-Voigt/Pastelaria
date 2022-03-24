@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.logginBtn = new System.Windows.Forms.Button();
             this.userTextBox = new System.Windows.Forms.TextBox();
             this.userLabel = new System.Windows.Forms.Label();
@@ -91,8 +92,10 @@
             // 
             this.passwordTextBox.Location = new System.Drawing.Point(97, 258);
             this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '@';
             this.passwordTextBox.Size = new System.Drawing.Size(180, 23);
             this.passwordTextBox.TabIndex = 2;
+            this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // InfoLabel
             // 
@@ -106,7 +109,7 @@
             // 
             // LogoPicBox
             // 
-            this.LogoPicBox.Image = global::Pastelaria.WindowsApp.Properties.Resources.logoSemFundo;
+            this.LogoPicBox.Image = ((System.Drawing.Image)(resources.GetObject("LogoPicBox.Image")));
             this.LogoPicBox.Location = new System.Drawing.Point(97, 12);
             this.LogoPicBox.Name = "LogoPicBox";
             this.LogoPicBox.Size = new System.Drawing.Size(170, 140);

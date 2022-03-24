@@ -17,5 +17,13 @@ namespace Pastelaria.WindowsApp.Employee
             InitializeComponent();
             this.Text = title;
         }
+
+        private void iconButtonCancel_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Are you sure that you want to cancel?","Employee registration",MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

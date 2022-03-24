@@ -1,5 +1,6 @@
 ﻿using Pastelaria.AppService.Shared;
 using Pastelaria.Domain;
+using Pastelaria.Domain.Shared;
 using Pastelaria.ORM.Features;
 using Pastelaria.ORM.Shared;
 using System;
@@ -13,9 +14,9 @@ namespace Pastelaria.AppService
     public class EmployeeAppService : AppServiceBase<Employee>
     {
         //update XX
-        private readonly RepositoryBase<Employee> employeeRepository;
+        private readonly IRepository<Employee> employeeRepository;
 
-        public EmployeeAppService(RepositoryBase<Employee> employeeORM)
+        public EmployeeAppService(IRepository<Employee> employeeORM)
         {
             this.employeeRepository = employeeORM;
         }
@@ -44,7 +45,7 @@ namespace Pastelaria.AppService
         {
             try
             {
-                employeeRepository.Remove(entity);
+                employeeRepository.Remove(entity.Id);
                 return "VALID";
             }
             catch (Exception)

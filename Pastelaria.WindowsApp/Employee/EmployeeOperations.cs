@@ -22,6 +22,12 @@ namespace Pastelaria.WindowsApp.Employee
             table = new();
         }
 
+        private void LoadGrid()
+        {
+            List<Domain.Employee> employees = employeeAppService.GetAll();
+            table.UpdateRegisters(employees);
+        }
+
         public UserControl ObtainTable()
         {
             List<Domain.Employee> employees = employeeAppService.GetAll();

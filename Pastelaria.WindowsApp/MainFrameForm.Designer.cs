@@ -71,7 +71,7 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(41)))));
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
             this.panelMenu.Controls.Add(this.costumersBtn);
             this.panelMenu.Controls.Add(this.configBtn);
             this.panelMenu.Controls.Add(this.orderBtn);
@@ -249,7 +249,7 @@
             // 
             // LogoPicBox
             // 
-            this.LogoPicBox.Image = global::Pastelaria.WindowsApp.Properties.Resources.logoSemFundo;
+            this.LogoPicBox.Image = ((System.Drawing.Image)(resources.GetObject("LogoPicBox.Image")));
             this.LogoPicBox.Location = new System.Drawing.Point(0, 0);
             this.LogoPicBox.Name = "LogoPicBox";
             this.LogoPicBox.Size = new System.Drawing.Size(170, 140);
@@ -269,7 +269,7 @@
             // menuBtn
             // 
             this.menuBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.menuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(41)))));
+            this.menuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
             this.menuBtn.FlatAppearance.BorderSize = 0;
             this.menuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menuBtn.IconChar = FontAwesome.Sharp.IconChar.Bars;
@@ -326,7 +326,7 @@
             // 
             // panelTitleBar
             // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(41)))));
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
             this.panelTitleBar.Controls.Add(this.titleLable);
             this.panelTitleBar.Controls.Add(this.minimizeBtn);
             this.panelTitleBar.Controls.Add(this.maximaziBtn);
@@ -406,7 +406,7 @@
             // toolBoxActions
             // 
             this.toolBoxActions.AutoSize = false;
-            this.toolBoxActions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(41)))));
+            this.toolBoxActions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
             this.toolBoxActions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnAdd,
             this.btnEdit,
@@ -472,7 +472,7 @@
             // 
             // DataPanel
             // 
-            this.DataPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
+            this.DataPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(123)))), ((int)(((byte)(0)))));
             this.DataPanel.Controls.Add(this.FooterLabel);
             this.DataPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DataPanel.Location = new System.Drawing.Point(250, 100);
@@ -492,7 +492,7 @@
             // 
             // footerPanel
             // 
-            this.footerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(53)))), ((int)(((byte)(41)))));
+            this.footerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
             this.footerPanel.Controls.Add(this.footerLabelBase);
             this.footerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.footerPanel.Location = new System.Drawing.Point(250, 640);
