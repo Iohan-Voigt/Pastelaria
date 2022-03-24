@@ -1,5 +1,7 @@
 ﻿using Autofac;
+using Pastelaria.AppService;
 using Pastelaria.ORM;
+using Pastelaria.ORM.Features;
 using Pastelaria.WindowsApp.Costumer;
 using Pastelaria.WindowsApp.Employee;
 using Pastelaria.WindowsApp.OrderPad;
@@ -35,12 +37,12 @@ namespace Pastelaria.WindowsApp.Shared
 
         private static void AppServiceConfiguration()
         {
-
+            Builder.RegisterType<EmployeeAppService>().InstancePerDependency();
         }
 
         private static void ORMConfiguration()
         {
-
+            Builder.RegisterType<EmployeeORM>().InstancePerDependency();
         }
     }
 }

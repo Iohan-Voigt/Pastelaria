@@ -20,7 +20,8 @@ namespace Pastelaria.ORM
 
             ds.ReadXml(@"..\..\..\..\Pastelaria.ORM\databases.xml");
 
-            var connectionString = ds.Tables["connectionstring"].Rows[0][0].ToString();
+            var connectionString = "";
+            //var connectionString = ds.Tables["connectionstring"].Rows[0][0].ToString();
 
             optionsBuilder
                 .UseLoggerFactory(loggerFactoryConsole)

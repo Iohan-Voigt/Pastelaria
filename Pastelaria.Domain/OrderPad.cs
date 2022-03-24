@@ -16,14 +16,15 @@ namespace Pastelaria.Domain
         public OrderPadStatus OrderPadStatus { get; set; }
         public OrderPadPaymentStatus orderPadPaymentStatus { get; set; }
         public decimal TotalValue { get; set; }
+
         public override string ToString()
         {
-            throw new NotImplementedException();
+            return "GUID: " + Id;
         }
 
         public override string Validate()
         {
-            throw new NotImplementedException();
+            return "VALID";
         }
     }
 }

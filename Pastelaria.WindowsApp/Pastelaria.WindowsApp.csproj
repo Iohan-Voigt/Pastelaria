@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Pastelaria.AppService\Pastelaria.AppService.csproj" />
     <ProjectReference Include="..\Pastelaria.Domain\Pastelaria.Domain.csproj" />
     <ProjectReference Include="..\Pastelaria.ORM\Pastelaria.ORM.csproj" />
   </ItemGroup>
