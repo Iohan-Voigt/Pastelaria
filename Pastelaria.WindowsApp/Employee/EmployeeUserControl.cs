@@ -19,7 +19,7 @@ namespace Pastelaria.WindowsApp.Employee
         {
             var coluns = new DataGridViewColumn[]
            {
-                //new DataGridViewTextBoxColumn { DataPropertyName = "Id", HeaderText = "Id"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "Id", HeaderText = "Id"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "Name", HeaderText = "Nome"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "Registration", HeaderText = "Registration"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "AcessUser", HeaderText = "User"},

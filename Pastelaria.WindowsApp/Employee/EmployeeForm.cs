@@ -15,7 +15,26 @@ namespace Pastelaria.WindowsApp.Employee
     public partial class EmployeeForm : Form
     {
         private Color lightRed = Color.FromArgb(255, 105, 97);
-        public Domain.Employee employee { get; set; }
+        public Domain.Employee employee 
+        {           
+            get 
+            { 
+                return employee; 
+            }             
+            set
+            {
+                textBoxName.Text = employee.Name;
+                maskedTextBoxIdentifyDocument.Text = employee.IndentityDocument;
+                maskedTextBoxPhoneNumber.Text = employee.PhoneNumber;
+                textBoxRegistration.Text = employee.Registration;
+                textBoxAcessUser.Text = employee.AcessUser;
+                textBoxPassword.Text = employee.Password;
+                if (employee.EmployeePermissionsEnum == EmployeePermissionsEnum.Cashier)
+                    radioButtonCashier.Checked = true;
+                else
+                    radioButtonAdmin.Checked = false;
+            }
+        }
         public EmployeeForm(string title)
         {           
             employee = new();

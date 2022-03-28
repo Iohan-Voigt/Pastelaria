@@ -66,7 +66,22 @@ namespace Pastelaria.WindowsApp.Employee
 
         public void RegisterUpdate()
         {
-            throw new NotImplementedException();
+            Guid employeeId = table.GetSelectedId();
+            
+            Domain.Employee employee = employeeAppService.GetById(employeeId);
+
+            EmployeeForm screen = new EmployeeForm("Employee Editor");
+
+            screen.employee = employee;
+
+            if(screen.ShowDialog() == DialogResult.OK)
+            {
+                bool result = employeeAppService.Update(employee);
+
+                List<Domain.Employee> employees = employeeAppService.GetAll();
+
+                table.UpdateRegisters(employees);
+            }
         }
     }
 }

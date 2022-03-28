@@ -316,7 +316,17 @@ namespace Pastelaria.WindowsApp
         #region Buttons actions
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            try 
+            { 
             operations.RegisterInsertNew();
+            }
+            catch (NullReferenceException)
+            {
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+
+                player.SoundLocation = @"C:\Users\iohan\Downloads\X2Download.com-HINO-DO-VASCO-DA-GAMA-_128-kbps_.wav";
+                player.Play();
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

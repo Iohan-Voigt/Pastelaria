@@ -21,45 +21,45 @@ namespace Pastelaria.AppService
             this.employeeRepository = employeeORM;
         }
 
-        public override string Insert(Employee entity)
+        public override bool Insert(Employee entity)
         {
             try
             {
                 if (entity.Validate().Equals("VALID"))
                 {
                     employeeRepository.Insert(entity);
-                    return "VALID";
+                    return true;
                 }
                 else
                 {
-                    return entity.Validate();
+                    return false;
                 }
             }
             catch (Exception)
             {
-                return "ERROR";
+                return false;
             }
             
         }
-        public override string Delete(Employee entity)
+        public override bool Delete(Employee entity)
         {
             try
             {
                 employeeRepository.Remove(entity.Id);
-                return "VALID";
+                return true;
             }
             catch (Exception)
             {
 
-                return "ERROR";
+                return false;
             }
         }
-        public override string Update(Employee entity)
+        public override bool Update(Employee entity)
         {
             throw new NotImplementedException();
         }
 
-        public override string Exists(Guid Id)
+        public override bool Exists(Guid Id)
         {
             throw new NotImplementedException();
         }
@@ -80,7 +80,7 @@ namespace Pastelaria.AppService
 
         public override Employee GetById(Guid Id)
         {
-            throw new NotImplementedException();
+            return employeeRepository.GetById(Id);
         }
     }
 }
