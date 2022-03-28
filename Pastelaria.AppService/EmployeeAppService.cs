@@ -56,12 +56,38 @@ namespace Pastelaria.AppService
         }
         public override string Update(Employee entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (entity.Validate().Equals("VALID"))
+                {
+
+                    employeeRepository.Update(entity);
+                    return "VALID";
+
+                }
+
+                return entity.Validate();
+            }
+            catch (Exception)
+            {
+
+                return "ERROR";
+            }
         }
 
         public override string Exists(Guid Id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (employeeRepository.GetById(Id) != null)
+                    return "YES";
+                else
+                    return "NO";
+            }
+            catch (Exception)
+            { 
+                return "ERROR";
+            }
         }
 
         public override List<Employee> GetAll()
@@ -80,7 +106,15 @@ namespace Pastelaria.AppService
 
         public override Employee GetById(Guid Id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return employeeRepository.GetById(Id);
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
     }
 }
