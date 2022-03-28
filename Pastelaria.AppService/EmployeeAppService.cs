@@ -60,10 +60,8 @@ namespace Pastelaria.AppService
             {
                 if (entity.Validate().Equals("VALID"))
                 {
-
                     employeeRepository.Update(entity);
-                    return "VALID";
-
+                    return "Employee:  " + entity.Name.ToString() + " succeed updated!";
                 }
 
                 return entity.Validate();

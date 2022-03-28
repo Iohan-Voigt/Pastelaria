@@ -43,7 +43,7 @@ namespace Pastelaria.WindowsApp.Employee
 
             if (screen.ShowDialog() == DialogResult.OK)
             {
-                employeeAppService.Insert(screen.employee);
+                employeeAppService.Insert(screen.Employee);
                 LoadGrid();
             }
             
@@ -66,7 +66,22 @@ namespace Pastelaria.WindowsApp.Employee
 
         public void RegisterUpdate()
         {
-            throw new NotImplementedException();
+            Guid employeeId = table.GetSelectedId();
+
+            if(employeeId==default)
+            {
+                MainFrameForm.instance.UpdateFooter("Any employee selected!");
+                return;
+            }
+            screen = null;
+            screen = new("Employee Update");
+
+            screen.Employee = employeeAppService.GetById(employeeId);
+
+            if(screen.ShowDialog() == DialogResult.OK)
+            {
+                employeeAppService.Update(screen.Employee);
+            }
         }
     }
 }

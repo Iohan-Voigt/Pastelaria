@@ -15,9 +15,41 @@ namespace Pastelaria.WindowsApp.Employee
     public partial class EmployeeForm : Form
     {
         private Color lightRed = Color.FromArgb(255, 105, 97);
-        public Domain.Employee employee { get; set; }
+
+        private Domain.Employee employee;
+        public Domain.Employee Employee
+        {
+            get
+            {
+                return employee;
+            }
+            set
+            {
+                employee = value;
+        
+                textBoxID.Text = employee.Id.ToString();
+                textBoxName.Text = employee.Name;
+                maskedTextBoxIdentifyDocument.Text = employee.IndentityDocument;
+                maskedTextBoxPhoneNumber.Text = employee.PhoneNumber;
+                textBoxRegistration.Text = employee.Registration;
+                textBoxAcessUser.Text = employee.AcessUser;
+                textBoxPassword.Text = employee.Password;
+        
+                if(employee.EmployeePermissionsEnum == EmployeePermissionsEnum.Cashier)
+                {
+                    radioButtonAdmin.Checked = false;
+                    radioButtonCashier.Checked = true;
+                }
+                else
+                {
+                    radioButtonCashier.Checked = false;
+                    radioButtonAdmin.Checked = true;
+                }
+            }
+        }
         public EmployeeForm(string title)
-        {           
+        {
+            employee = null;
             employee = new();
             InitializeComponent();
             this.labelMessages.BackColor = lightRed;
@@ -51,11 +83,8 @@ namespace Pastelaria.WindowsApp.Employee
                 labelMessages.Text = new StringReader(validateResult).ReadLine();
                 return;
 
-
             }
-
             DialogResult = DialogResult.OK;
-
         }
 
         private EmployeePermissionsEnum RadioButtonConverter()

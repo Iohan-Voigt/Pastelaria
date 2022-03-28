@@ -19,7 +19,7 @@ namespace Pastelaria.WindowsApp
     public partial class MainFrameForm : Form
     {
         private static IRegisterable operations;
-        private static MainFrameForm instance { get; set; }
+        public static MainFrameForm instance { get => instance; set => instance = value; }
         public static Domain.Employee LoggedEmployee { get; set; }
 
         private readonly EmployeeAppService employeeAppService;
@@ -29,7 +29,7 @@ namespace Pastelaria.WindowsApp
             this.employeeAppService = employeeAppService;
 
             InitializeComponent();
-            labelRegisterType.Text = "leu é gay";
+            labelRegisterType.Text = "Title :)";
             toolBoxActions.Renderer = new NoLoadToolStripRenderer();
             UpdateFooter("Welcome " + LoggedEmployee.Name);
 
@@ -283,7 +283,7 @@ namespace Pastelaria.WindowsApp
 
         #region Privates
 
-        private void UpdateFooter(string Message)
+        public void UpdateFooter(string Message)
         {
             footerLabelBase.Text = Message;
             footerLabelBase.Font = new Font("Segoe UI", this.footerLabelBase.Font.Size);
