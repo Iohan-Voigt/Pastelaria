@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            this.logginBtn = new System.Windows.Forms.Button();
+            this.loginBtn = new System.Windows.Forms.Button();
             this.userTextBox = new System.Windows.Forms.TextBox();
-            this.userLabel = new System.Windows.Forms.Label();
-            this.passwordLabel = new System.Windows.Forms.Label();
+            this.labelUser = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.InfoLabel = new System.Windows.Forms.Label();
             this.LogoPicBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // logginBtn
+            // loginBtn
             // 
-            this.logginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.loginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.logginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
-            this.logginBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
-            this.logginBtn.FlatAppearance.BorderSize = 0;
-            this.logginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logginBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.logginBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.logginBtn.Location = new System.Drawing.Point(97, 324);
-            this.logginBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.logginBtn.Name = "logginBtn";
-            this.logginBtn.Size = new System.Drawing.Size(180, 46);
-            this.logginBtn.TabIndex = 3;
-            this.logginBtn.Text = "Loggin";
-            this.logginBtn.UseVisualStyleBackColor = false;
-            this.logginBtn.Click += new System.EventHandler(this.LogginBtn_Click);
+            this.loginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
+            this.loginBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
+            this.loginBtn.FlatAppearance.BorderSize = 0;
+            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.loginBtn.Location = new System.Drawing.Point(97, 324);
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.Size = new System.Drawing.Size(180, 46);
+            this.loginBtn.TabIndex = 3;
+            this.loginBtn.Text = "Login";
+            this.loginBtn.UseVisualStyleBackColor = false;
+            this.loginBtn.Click += new System.EventHandler(this.LogginBtn_Click);
             // 
             // userTextBox
             // 
@@ -66,27 +66,27 @@
             this.userTextBox.Size = new System.Drawing.Size(180, 23);
             this.userTextBox.TabIndex = 1;
             // 
-            // userLabel
+            // labelUser
             // 
-            this.userLabel.AutoSize = true;
-            this.userLabel.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.userLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.userLabel.Location = new System.Drawing.Point(97, 170);
-            this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(51, 28);
-            this.userLabel.TabIndex = 0;
-            this.userLabel.Text = "User";
+            this.labelUser.AutoSize = true;
+            this.labelUser.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.labelUser.Location = new System.Drawing.Point(97, 170);
+            this.labelUser.Name = "labelUser";
+            this.labelUser.Size = new System.Drawing.Size(51, 28);
+            this.labelUser.TabIndex = 0;
+            this.labelUser.Text = "User";
             // 
-            // passwordLabel
+            // labelPassword
             // 
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.passwordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.passwordLabel.Location = new System.Drawing.Point(97, 227);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(94, 28);
-            this.passwordLabel.TabIndex = 0;
-            this.passwordLabel.Text = "Password";
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.labelPassword.Location = new System.Drawing.Point(97, 227);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(94, 28);
+            this.labelPassword.TabIndex = 0;
+            this.labelPassword.Text = "Password";
             // 
             // passwordTextBox
             // 
@@ -126,10 +126,10 @@
             this.Controls.Add(this.LogoPicBox);
             this.Controls.Add(this.InfoLabel);
             this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.passwordLabel);
-            this.Controls.Add(this.userLabel);
+            this.Controls.Add(this.labelPassword);
+            this.Controls.Add(this.labelUser);
             this.Controls.Add(this.userTextBox);
-            this.Controls.Add(this.logginBtn);
+            this.Controls.Add(this.loginBtn);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
@@ -141,10 +141,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button logginBtn;
+        private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.TextBox userTextBox;
-        private System.Windows.Forms.Label userLabel;
-        private System.Windows.Forms.Label passwordLabel;
+        private System.Windows.Forms.Label labelUser;
+        private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Label InfoLabel;
         private System.Windows.Forms.PictureBox LogoPicBox;

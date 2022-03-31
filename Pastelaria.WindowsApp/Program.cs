@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Pastelaria.ORM;
+using Pastelaria.RescourcesLib;
 using Pastelaria.WindowsApp.Costumer;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,9 @@ namespace Pastelaria.WindowsApp
         [STAThread]
         static void Main()
         {
+            GeneralConfig.Language = GensSysConfs.Default.Language;
+            GeneralConfig.SetLanguageData();
+
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false); 

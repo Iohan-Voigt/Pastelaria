@@ -12,6 +12,7 @@ using Pastelaria.Domain;
 using System.Threading;
 using Pastelaria.AppService;
 using Pastelaria.ORM.Features;
+using Pastelaria.RescourcesLib;
 
 namespace Pastelaria.WindowsApp
 {
@@ -30,6 +31,7 @@ namespace Pastelaria.WindowsApp
             db = new();
             employeeAppService = new(new EmployeeORM(db));
             InitializeComponent();
+            ConfigureInfo();
         }
 
         private void LogginBtn_Click(object sender, EventArgs e)
@@ -74,6 +76,13 @@ namespace Pastelaria.WindowsApp
         {
             MainFrameForm.LoggedEmployee = loggedEmployee;
             Application.Run(new MainFrameForm(employeeAppService));
+        }
+
+        private void ConfigureInfo()
+        {
+            labelUser.Text = GeneralConfig.Data["User"];
+            labelPassword.Text = GeneralConfig.Data["Password"];
+            loginBtn.Text = GeneralConfig.Data["Login"];
         }
     }
 }

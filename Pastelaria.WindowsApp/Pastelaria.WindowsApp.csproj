@@ -23,9 +23,15 @@
     <ProjectReference Include="..\Pastelaria.AppService\Pastelaria.AppService.csproj" />
     <ProjectReference Include="..\Pastelaria.Domain\Pastelaria.Domain.csproj" />
     <ProjectReference Include="..\Pastelaria.ORM\Pastelaria.ORM.csproj" />
+    <ProjectReference Include="..\Pastelaria.RescourcesLib\Pastelaria.RescourcesLib.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="GensSysConfs.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GensSysConfs.settings</DependentUpon>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -42,6 +48,13 @@
 
   <ItemGroup>
     <Folder Include="Libraries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="GensSysConfs.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>GensSysConfs.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>
