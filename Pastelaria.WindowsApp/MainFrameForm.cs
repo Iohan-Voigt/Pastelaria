@@ -334,8 +334,6 @@ namespace Pastelaria.WindowsApp
             operations.RegistersFilter();
         }
 
-
-
         #endregion
 
         

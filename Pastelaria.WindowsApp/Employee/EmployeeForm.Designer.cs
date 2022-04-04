@@ -30,7 +30,7 @@
         {
             this.labelID = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
-            this.label = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.labelIdentifyDocument = new System.Windows.Forms.Label();
             this.labelPhoneNumber = new System.Windows.Forms.Label();
@@ -73,16 +73,16 @@
             this.textBoxID.TabIndex = 0;
             this.textBoxID.TabStop = false;
             // 
-            // label
+            // labelName
             // 
-            this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.label.Location = new System.Drawing.Point(36, 84);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(64, 28);
-            this.label.TabIndex = 1;
-            this.label.Text = "Name";
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.labelName.Location = new System.Drawing.Point(36, 84);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(64, 28);
+            this.labelName.TabIndex = 1;
+            this.labelName.Text = "Name";
             // 
             // textBoxName
             // 
@@ -185,6 +185,8 @@
             // 
             // panelPermissions
             // 
+            this.panelPermissions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelPermissions.CausesValidation = false;
             this.panelPermissions.Controls.Add(this.radioButtonCashier);
             this.panelPermissions.Controls.Add(this.radioButtonAdmin);
@@ -192,7 +194,7 @@
             this.panelPermissions.Location = new System.Drawing.Point(213, 149);
             this.panelPermissions.Margin = new System.Windows.Forms.Padding(0);
             this.panelPermissions.Name = "panelPermissions";
-            this.panelPermissions.Size = new System.Drawing.Size(123, 114);
+            this.panelPermissions.Size = new System.Drawing.Size(121, 114);
             this.panelPermissions.TabIndex = 12;
             // 
             // radioButtonCashier
@@ -317,7 +319,7 @@
             this.Controls.Add(this.labelPhoneNumber);
             this.Controls.Add(this.labelIdentifyDocument);
             this.Controls.Add(this.textBoxName);
-            this.Controls.Add(this.label);
+            this.Controls.Add(this.labelName);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.labelID);
             this.MaximizeBox = false;
@@ -335,7 +337,7 @@
 
         private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.TextBox textBoxID;
-        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label labelIdentifyDocument;
         private System.Windows.Forms.Label labelPhoneNumber;

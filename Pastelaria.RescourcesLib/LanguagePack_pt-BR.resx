@@ -117,17 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AreYouSureThatYouWantToCancel?" xml:space="preserve">
+    <value>Tem certeza que deseja cancelar?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>Configuração</value>
+  </data>
   <data name="Employees" xml:space="preserve">
     <value>Funcionários</value>
   </data>
   <data name="Enployee" xml:space="preserve">
     <value>Funcionário</value>
   </data>
+  <data name="Language" xml:space="preserve">
+    <value>Linguagem</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Senha</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salvar</value>
   </data>
   <data name="User" xml:space="preserve">
     <value>Usuário</value>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,9 @@ namespace Pastelaria.RescourcesLib
 {
     public static class GeneralConfig
     {
-        public static string Language; //{ get { return Language; } set { Language = value; SetLanguageData(); } }
+        public static string Language;
+
+        //public static Dictionary<string, Color> Settings;
 
         public static Dictionary<string, string> Data = new Dictionary<string, string>()
         {
@@ -18,6 +21,11 @@ namespace Pastelaria.RescourcesLib
             ,{"Password",""}
             ,{"User",""}
             ,{"Users",""}
+            ,{"Configuration",""}
+            ,{"Language",""}
+            ,{"Save",""}
+            ,{"Cancel",""}
+            ,{@"AreYouSureThatYouWantToCancel?",""}
         };
 
         public static void SetLanguageData()
@@ -43,6 +51,16 @@ namespace Pastelaria.RescourcesLib
                     }
                     break;
             }
+        }
+
+        public static bool LanguageIsValid()
+        {
+            foreach (var line in Data)
+            {
+                if(line.Value.Equals(string.Empty))
+                    return false;
+            }
+            return true;
         }
 
     }

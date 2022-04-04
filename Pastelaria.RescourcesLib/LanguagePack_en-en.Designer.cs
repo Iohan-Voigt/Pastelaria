@@ -61,6 +61,33 @@ namespace Pastelaria.RescourcesLib {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure that you want to cancel?.
+        /// </summary>
+        internal static string AreYouSureThatYouWantToCancel_ {
+            get {
+                return ResourceManager.GetString("AreYouSureThatYouWantToCancel?", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configuration.
+        /// </summary>
+        internal static string Configuration {
+            get {
+                return ResourceManager.GetString("Configuration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Employees.
         /// </summary>
         internal static string Employees {
@@ -79,6 +106,15 @@ namespace Pastelaria.RescourcesLib {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        internal static string Language {
+            get {
+                return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to login.
         /// </summary>
         internal static string Login {
@@ -93,6 +129,15 @@ namespace Pastelaria.RescourcesLib {
         internal static string Password {
             get {
                 return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        internal static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
             }
         }
         
