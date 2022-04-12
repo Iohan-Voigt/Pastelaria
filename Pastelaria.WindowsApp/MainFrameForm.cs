@@ -2,6 +2,7 @@
 using Pastelaria.AppService;
 using Pastelaria.ORM;
 using Pastelaria.ORM.Features;
+using Pastelaria.RescourcesLib;
 using Pastelaria.WindowsApp.Config;
 using Pastelaria.WindowsApp.Costumer;
 using Pastelaria.WindowsApp.Employee;
@@ -31,7 +32,8 @@ namespace Pastelaria.WindowsApp
             InitializeComponent();
             labelRegisterType.Text = "Title :)";
             toolBoxActions.Renderer = new NoLoadToolStripRenderer();
-            UpdateFooter("Welcome " + LoggedEmployee.Name);
+            UpdateFooter(GeneralConfig.Data["Welcome"] + " " + LoggedEmployee.Name);
+            ConfigureTexts();
 
             this.Padding = new (2);
             this.BackColor = Color.FromArgb(28, 31, 51);
@@ -269,6 +271,7 @@ namespace Pastelaria.WindowsApp
         {
             ConfigForm configForm = new();
             configForm.ShowDialog();
+            ConfigureTexts();
         }
 
         private void logutBtn_Click(object sender, EventArgs e)
@@ -332,6 +335,18 @@ namespace Pastelaria.WindowsApp
         private void btnFilter_Click(object sender, EventArgs e)
         {
             operations.RegistersFilter();
+        }
+
+        private void ConfigureTexts()
+        {
+            this.homeBtn.Text = GeneralConfig.Data["Home"];
+            this.employeeBtn.Text = GeneralConfig.Data["Employees"];
+            this.productBtn.Text = GeneralConfig.Data["Products"];
+            this.customersBtn.Text = GeneralConfig.Data["Customers"];
+            this.sellBtn.Text = GeneralConfig.Data["Sells"];
+            this.orderBtn.Text = GeneralConfig.Data["Orders"];
+            this.debitBtn.Text = GeneralConfig.Data["Debits"];
+            this.configBtn.Text = GeneralConfig.Data["Configuration"];
         }
 
         #endregion

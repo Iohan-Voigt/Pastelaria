@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrameForm));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.costumersBtn = new FontAwesome.Sharp.IconButton();
+            this.customersBtn = new FontAwesome.Sharp.IconButton();
             this.configBtn = new FontAwesome.Sharp.IconButton();
             this.orderBtn = new FontAwesome.Sharp.IconButton();
             this.debitBtn = new FontAwesome.Sharp.IconButton();
@@ -72,7 +72,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
-            this.panelMenu.Controls.Add(this.costumersBtn);
+            this.panelMenu.Controls.Add(this.customersBtn);
             this.panelMenu.Controls.Add(this.configBtn);
             this.panelMenu.Controls.Add(this.orderBtn);
             this.panelMenu.Controls.Add(this.debitBtn);
@@ -91,26 +91,26 @@
             this.panelMenu.Size = new System.Drawing.Size(250, 681);
             this.panelMenu.TabIndex = 0;
             // 
-            // costumersBtn
+            // customersBtn
             // 
-            this.costumersBtn.FlatAppearance.BorderSize = 0;
-            this.costumersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.costumersBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.costumersBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.costumersBtn.IconChar = FontAwesome.Sharp.IconChar.Restroom;
-            this.costumersBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.costumersBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.costumersBtn.IconSize = 50;
-            this.costumersBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.costumersBtn.Location = new System.Drawing.Point(0, 280);
-            this.costumersBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.costumersBtn.Name = "costumersBtn";
-            this.costumersBtn.Size = new System.Drawing.Size(250, 45);
-            this.costumersBtn.TabIndex = 5;
-            this.costumersBtn.Tag = "Costumers";
-            this.costumersBtn.Text = "Costumers";
-            this.costumersBtn.UseVisualStyleBackColor = false;
-            this.costumersBtn.Click += new System.EventHandler(this.costumersBtn_Click);
+            this.customersBtn.FlatAppearance.BorderSize = 0;
+            this.customersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customersBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customersBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.customersBtn.IconChar = FontAwesome.Sharp.IconChar.Restroom;
+            this.customersBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.customersBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.customersBtn.IconSize = 50;
+            this.customersBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.customersBtn.Location = new System.Drawing.Point(0, 280);
+            this.customersBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.customersBtn.Name = "customersBtn";
+            this.customersBtn.Size = new System.Drawing.Size(250, 45);
+            this.customersBtn.TabIndex = 5;
+            this.customersBtn.Tag = "Customers";
+            this.customersBtn.Text = "Costumers";
+            this.customersBtn.UseVisualStyleBackColor = false;
+            this.customersBtn.Click += new System.EventHandler(this.costumersBtn_Click);
             // 
             // configBtn
             // 
@@ -452,6 +452,7 @@
             // btnFilter
             // 
             this.btnFilter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnFilter.Enabled = false;
             this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
             this.btnFilter.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnFilter.Name = "btnFilter";
@@ -562,7 +563,7 @@
         private FontAwesome.Sharp.IconButton debitBtn;
         private FontAwesome.Sharp.IconButton orderBtn;
         private FontAwesome.Sharp.IconButton configBtn;
-        private FontAwesome.Sharp.IconButton costumersBtn;
+        private FontAwesome.Sharp.IconButton customersBtn;
         private System.Windows.Forms.PictureBox LogoPicBox;
         private System.Windows.Forms.Label titleLable;
         private System.Windows.Forms.ToolStrip toolBoxActions;

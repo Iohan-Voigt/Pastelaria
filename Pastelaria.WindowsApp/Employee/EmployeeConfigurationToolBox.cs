@@ -1,4 +1,5 @@
-﻿using Pastelaria.WindowsApp.Shared;
+﻿using Pastelaria.RescourcesLib;
+using Pastelaria.WindowsApp.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,22 +12,22 @@ namespace Pastelaria.WindowsApp.Employee
     {
         public string ToolTipAdd
         {
-            get { return "Add new employee"; }
+            get { return GeneralConfig.Data["Employee"] + " | " + GeneralConfig.Data["Add new"]; }
         }
 
         public string ToolType
         {
-            get { return "Employee register"; }
+            get { return GeneralConfig.Data["Employee"] + " | " + GeneralConfig.Data["Register"]; }
         }
 
         public string ToolTipEdit
         {
-            get { return "Update a employee"; }
+            get { return GeneralConfig.Data["Employee"] + " | " + GeneralConfig.Data["Update"]; }
         }
 
         public string ToolTipRemove
         {
-            get { return "Remove a employee"; }
+            get { return GeneralConfig.Data["Employee"] + " | " + GeneralConfig.Data["Remove"]; }
         }
     }
 }

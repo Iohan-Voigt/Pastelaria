@@ -16,7 +16,7 @@ namespace Pastelaria.RescourcesLib
         public static Dictionary<string, string> Data = new Dictionary<string, string>()
         {
             {"Employees",""}
-            ,{"Enployee",""}
+            ,{"Employee",""}
             ,{"Login",""}
             ,{"Password",""}
             ,{"User",""}
@@ -26,6 +26,32 @@ namespace Pastelaria.RescourcesLib
             ,{"Save",""}
             ,{"Cancel",""}
             ,{@"AreYouSureThatYouWantToCancel?",""}
+            ,{"Home",""}//
+            ,{"Products",""}
+            ,{"Product",""}
+            ,{"Customers",""}
+            ,{"Customer",""}
+            ,{"Sells",""}
+            ,{"Sell",""}
+            ,{"Orders",""}
+            ,{"Order",""}
+            ,{"Debits",""}
+            ,{"Debit",""}
+            ,{"Welcome",""}
+            ,{"Name",""}
+            ,{"Identify Document",""}
+            ,{"Phone Number",""}
+            ,{"Registration",""}
+            ,{"Acess user",""}
+            ,{"Permissions",""}
+            ,{"Admin",""}
+            ,{"Cashier",""}
+            ,{"Add new",""}
+            ,{"Register",""}
+            ,{"Update",""}
+            ,{"Remove",""}
+            ,{"Are you sure that you want to remove",""}
+            //,{"",""}
         };
 
         public static void SetLanguageData()

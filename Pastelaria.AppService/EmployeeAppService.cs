@@ -50,7 +50,6 @@ namespace Pastelaria.AppService
             }
             catch (Exception)
             {
-
                 return "ERROR";
             }
         }

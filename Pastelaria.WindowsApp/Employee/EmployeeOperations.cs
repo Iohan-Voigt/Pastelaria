@@ -1,4 +1,5 @@
 ﻿using Pastelaria.AppService;
+using Pastelaria.RescourcesLib;
 using Pastelaria.WindowsApp.Shared;
 using System;
 using System.Collections.Generic;
@@ -51,7 +52,24 @@ namespace Pastelaria.WindowsApp.Employee
 
         public void RegisterRemove()
         {
-            throw new NotImplementedException();
+            Guid employeeId = table.GetSelectedId();
+
+            if (employeeId == default)
+            {
+                MainFrameForm.instance.UpdateFooter("Any employee selected!");
+                return;
+            }
+
+            Domain.Employee employee = employeeAppService.GetById(employeeId);
+            if ((MessageBox.Show(GeneralConfig.Data["Are you sure that you want to remove"] + employee.Name
+                , GeneralConfig.Data["Employee"] + " | " + GeneralConfig.Data["Registration"]
+                ,MessageBoxButtons.YesNo
+                , MessageBoxIcon.Exclamation) == DialogResult.Yes))
+            {
+                employeeAppService.Delete(employee);
+            }
+
+            LoadGrid();
         }
 
         public void RegistersFilter()
@@ -82,6 +100,8 @@ namespace Pastelaria.WindowsApp.Employee
             {
                 employeeAppService.Update(screen.Employee);
             }
+
+            LoadGrid();
         }
     }
 }

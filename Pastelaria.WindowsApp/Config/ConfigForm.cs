@@ -45,6 +45,7 @@ namespace Pastelaria.WindowsApp.Config
         private void iconButtonSave_Click(object sender, EventArgs e)
         {
             GensSysConfs.Default.Language = comboBoxLanguages.SelectedItem.ToString();
+            GensSysConfs.Default.Save();
             GeneralConfig.Language = GensSysConfs.Default.Language;
             GeneralConfig.SetLanguageData();
 
