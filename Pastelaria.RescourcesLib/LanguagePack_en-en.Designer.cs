@@ -196,7 +196,7 @@ namespace Pastelaria.RescourcesLib {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Identify Document.
+        ///   Looks up a localized string similar to Identifyer Document.
         /// </summary>
         internal static string Identify_Document {
             get {
