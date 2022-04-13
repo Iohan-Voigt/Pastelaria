@@ -15,6 +15,10 @@ namespace Pastelaria.WindowsApp
         [STAThread]
         static void Main()
         {
+            try
+            {
+
+            
             GeneralConfig.Language = GensSysConfs.Default.Language;
             GeneralConfig.SetLanguageData();
 
@@ -30,6 +34,12 @@ namespace Pastelaria.WindowsApp
 
 
             Application.Run(loginForm);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

@@ -117,22 +117,112 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Acess user" xml:space="preserve">
+    <value>Usuario de acceso</value>
+  </data>
+  <data name="Add new" xml:space="preserve">
+    <value>Añadir nuevo</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="Are you sure that you want to remove" xml:space="preserve">
+    <value>Estás segura de que quieres eliminar</value>
+  </data>
+  <data name="AreYouSureThatYouWantToCancel?" xml:space="preserve">
+    <value>¿Estás segura de que quieres cancelar?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Cashier" xml:space="preserve">
+    <value>Cajero</value>
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Cliente</value>
+  </data>
+  <data name="Customers" xml:space="preserve">
+    <value>Clientes</value>
+  </data>
+  <data name="Debit" xml:space="preserve">
+    <value>Débito</value>
+  </data>
+  <data name="Debits" xml:space="preserve">
+    <value>Débitos</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Empleado</value>
+  </data>
   <data name="Employees" xml:space="preserve">
     <value>Empleados</value>
   </data>
-  <data name="Enployee" xml:space="preserve">
-    <value>Empleado</value>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Identify Document" xml:space="preserve">
+    <value>Documento identificativo</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Idioma</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Login</value>
+    <value>login</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Pedido</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Pedidos</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Clave</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Permissions</value>
+  </data>
+  <data name="Phone Number" xml:space="preserve">
+    <value>Número de teléfono</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>Producto</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Productos</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Registro</value>
+  </data>
+  <data name="Registration" xml:space="preserve">
+    <value>Registro</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remover</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="Sell" xml:space="preserve">
+    <value>vender</value>
+  </data>
+  <data name="Sells" xml:space="preserve">
+    <value>vende</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Actualizar</value>
   </data>
   <data name="User" xml:space="preserve">
     <value>Usuario</value>
   </data>
   <data name="Users" xml:space="preserve">
     <value>Usuarios</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Bienvenido</value>
   </data>
 </root>
