@@ -25,7 +25,7 @@ namespace Pastelaria.ORM.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("IndentityDocument")
+                    b.Property<string>("IdentityDocument")
                         .HasColumnType("VARCHAR(14)");
 
                     b.Property<string>("Name")
@@ -56,7 +56,7 @@ namespace Pastelaria.ORM.Migrations
                     b.Property<int>("EmployeePermissionsEnum")
                         .HasColumnType("INT");
 
-                    b.Property<string>("IndentityDocument")
+                    b.Property<string>("IdentityDocument")
                         .IsRequired()
                         .HasColumnType("VARCHAR(14)");
 

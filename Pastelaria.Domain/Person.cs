@@ -32,7 +32,7 @@ namespace Pastelaria.Domain
             return validationResult;
         }
 
-        private static bool ValidateCpf(string cpf)
+        private static bool ValidateCpf(string strCpf)
         {
 			int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
 			int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
@@ -40,11 +40,16 @@ namespace Pastelaria.Domain
 			string digito;
 			int soma;
 			int resto;
-			cpf = cpf.Trim();
-			cpf = cpf.Replace(".", "").Replace("-", "");
-			if (cpf.Length != 11)
+			strCpf = strCpf.Trim();
+			strCpf = strCpf.Replace(".", "").Replace("-", "");
+			if (strCpf == "00000000000" || strCpf == "11111111111" || strCpf == "22222222222" ||
+			strCpf == "33333333333" || strCpf == "44444444444" || strCpf == "55555555555" ||
+			strCpf == "66666666666" || strCpf == "77777777777" || strCpf == "88888888888" ||
+			strCpf == "99999999999")
 				return false;
-			tempCpf = cpf.Substring(0, 9);
+			if (strCpf.Length != 11)
+				return false;
+			tempCpf = strCpf.Substring(0, 9);
 			soma = 0;
 
 			for (int i = 0; i < 9; i++)
@@ -65,7 +70,7 @@ namespace Pastelaria.Domain
 			else
 				resto = 11 - resto;
 			digito = digito + resto.ToString();
-			return cpf.EndsWith(digito);
+			return strCpf.EndsWith(digito);
 		}
 
     }
