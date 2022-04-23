@@ -18,7 +18,7 @@ namespace Pastelaria.ORM.Configuration
             builder.HasKey(x => x.Id);
 
             builder.Property(p => p.Name).HasColumnType("VARCHAR(75)").IsRequired();
-            builder.Property(p => p.IndentityDocument).HasColumnType("VARCHAR(14)");
+            builder.Property(p => p.IdentityDocument).HasColumnType("VARCHAR(14)");
             builder.Property(p => p.PhoneNumber).HasColumnType("VARCHAR(20)");
         }
     }

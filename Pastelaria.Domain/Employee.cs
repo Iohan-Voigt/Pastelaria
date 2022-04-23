@@ -22,12 +22,12 @@ namespace Pastelaria.Domain
             this.AcessUser = acessUser;
         }
 
-        public Employee(string name, string acessUser, string password, string indentityDocument,string phoneNumber,EmployeePermissionsEnum employeePermissionsEnum)
+        public Employee(string name, string acessUser, string password, string identityDocument,string phoneNumber,EmployeePermissionsEnum employeePermissionsEnum)
         {
             this.Name = name;
             this.AcessUser = acessUser;
             this.Password = password;
-            this.IndentityDocument = indentityDocument;
+            this.IdentityDocument = identityDocument;
             this.PhoneNumber = phoneNumber;
             this.EmployeePermissionsEnum = employeePermissionsEnum;
         }

@@ -12,7 +12,7 @@ namespace Pastelaria.Domain
     
         public string Name { get; set; }
         #nullable enable
-        public string? IndentityDocument { get; set; }
+        public string? IdentityDocument { get; set; }
         
         public string? PhoneNumber {get;set;}
 
@@ -22,8 +22,8 @@ namespace Pastelaria.Domain
         {
             string validationResult = "";
 
-            if(!ValidateCpf(IndentityDocument))
-                validationResult = "The Indetity Document isn't right\n";
+            if(!ValidateCpf(IdentityDocument))
+                validationResult = "The Identity Document isn't right\n";
 
             if (Name.Length < 5)
                 validationResult += "The name must have at least 5 characters\n";

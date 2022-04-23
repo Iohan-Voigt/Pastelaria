@@ -29,7 +29,7 @@ namespace Pastelaria.WindowsApp.Employee
         
                 textBoxID.Text = employee.Id.ToString();
                 textBoxName.Text = employee.Name;
-                maskedTextBoxIdentifyDocument.Text = employee.IndentityDocument;
+                maskedTextBoxIdentifyDocument.Text = employee.IdentityDocument;
                 maskedTextBoxPhoneNumber.Text = employee.PhoneNumber;
                 textBoxRegistration.Text = employee.Registration;
                 textBoxAcessUser.Text = employee.AcessUser;
@@ -68,7 +68,7 @@ namespace Pastelaria.WindowsApp.Employee
         {
 
             employee.Name = textBoxName.Text;
-            employee.IndentityDocument = maskedTextBoxIdentifyDocument.Text;
+            employee.IdentityDocument = maskedTextBoxIdentifyDocument.Text;
             employee.PhoneNumber = maskedTextBoxPhoneNumber.Text;
             employee.Registration = textBoxRegistration.Text;
             employee.AcessUser = textBoxAcessUser.Text;
