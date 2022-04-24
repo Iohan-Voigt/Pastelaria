@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="Language" Type="System.String" Scope="User">
-      <Value Profile="(Default)">pt-BR</Value>
+      <Value Profile="(Default)">en-En</Value>
     </Setting>
     <Setting Name="ColorTheme" Type="System.String" Scope="User">
       <Value Profile="(Default)">Default</Value>

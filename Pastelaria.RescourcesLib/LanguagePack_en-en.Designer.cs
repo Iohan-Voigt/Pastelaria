@@ -205,6 +205,15 @@ namespace Pastelaria.RescourcesLib {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Identity Document incorect.
+        /// </summary>
+        internal static string Identity_Document_incorect {
+            get {
+                return ResourceManager.GetString("Identity Document incorect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Language.
         /// </summary>
         internal static string Language {
@@ -345,6 +354,51 @@ namespace Pastelaria.RescourcesLib {
         internal static string Sells {
             get {
                 return ResourceManager.GetString("Sells", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The AcessUser must have at least 5 characters.
+        /// </summary>
+        internal static string The_AcessUser_must_have_at_least_5_characters {
+            get {
+                return ResourceManager.GetString("The AcessUser must have at least 5 characters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name must have at least 5 characters.
+        /// </summary>
+        internal static string The_name_must_have_at_least_5_characters {
+            get {
+                return ResourceManager.GetString("The name must have at least 5 characters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Password must have at least 8 characters.
+        /// </summary>
+        internal static string The_Password_must_have_at_least_8_characters {
+            get {
+                return ResourceManager.GetString("The Password must have at least 8 characters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Phone Number is not completed.
+        /// </summary>
+        internal static string The_Phone_Number_is_not_completed {
+            get {
+                return ResourceManager.GetString("The Phone Number is not completed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Registration must have at least 3 characters.
+        /// </summary>
+        internal static string The_Registration_must_have_at_least_3_characters {
+            get {
+                return ResourceManager.GetString("The Registration must have at least 3 characters", resourceCulture);
             }
         }
         

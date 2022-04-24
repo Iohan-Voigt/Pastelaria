@@ -10,8 +10,8 @@ using Pastelaria.ORM;
 namespace Pastelaria.ORM.Migrations
 {
     [DbContext(typeof(PastelariaDBContext))]
-    [Migration("20220324211416_mg")]
-    partial class mg
+    [Migration("20220424152443_1")]
+    partial class _1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,7 +27,7 @@ namespace Pastelaria.ORM.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("IndentityDocument")
+                    b.Property<string>("IdentityDocument")
                         .HasColumnType("VARCHAR(14)");
 
                     b.Property<string>("Name")
@@ -58,7 +58,7 @@ namespace Pastelaria.ORM.Migrations
                     b.Property<int>("EmployeePermissionsEnum")
                         .HasColumnType("INT");
 
-                    b.Property<string>("IndentityDocument")
+                    b.Property<string>("IdentityDocument")
                         .IsRequired()
                         .HasColumnType("VARCHAR(14)");
 

@@ -22,9 +22,9 @@ namespace Pastelaria.WindowsApp
 
         private Domain.Employee loggedEmployee;
 
-        private readonly PastelariaDBContext db;
+        private PastelariaDBContext db;
 
-        private readonly EmployeeAppService employeeAppService;
+        private EmployeeAppService employeeAppService;
 
         public LoginForm()
         {
@@ -44,16 +44,21 @@ namespace Pastelaria.WindowsApp
             }
             else
             {
-                foreach(Domain.Employee employee in employeeAppService.GetAll())
+                Domain.Employee employee = new()
                 {
-                    if(userTextBox.Text == employee.AcessUser 
-                        && passwordTextBox.Text == employee.Password)
-                    {
-                        loggedEmployee = employee;
-                        Loggin();
-                        return;
-                    }
+                    AcessUser = userTextBox.Text,
+                    Password = passwordTextBox.Text
+                };
+
+                employee = employeeAppService.GetByAcessUserAndPassword(employee);
+
+                if(employee != null)
+                {
+                    loggedEmployee = employee;
+                    Loggin();
+                    return;
                 }
+
                 userTextBox.Clear();
                 passwordTextBox.Clear();
                 InfoLabel.Text = "Invalid User";
@@ -75,7 +80,7 @@ namespace Pastelaria.WindowsApp
         private void CallMainForm()
         {
             MainFrameForm.LoggedEmployee = loggedEmployee;
-            Application.Run(new MainFrameForm(employeeAppService));
+            Application.Run(new MainFrameForm());
         }
 
         private void ConfigureInfo()

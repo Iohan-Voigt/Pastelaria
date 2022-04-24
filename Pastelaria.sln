@@ -27,7 +27,7 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Pastelaria.SQLDB", "Pastela
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pastelaria.ORM", "Pastelaria.ORM\Pastelaria.ORM.csproj", "{67D25ABC-C43B-4358-AB09-AAB4ECEE3A40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pastelaria.RescourcesLib", "Pastelaria.RescourcesLib\Pastelaria.RescourcesLib.csproj", "{D9A37A04-B4A7-4CF7-9800-D7416DE7C3A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pastelaria.RescourcesLib", "Pastelaria.RescourcesLib\Pastelaria.RescourcesLib.csproj", "{D9A37A04-B4A7-4CF7-9800-D7416DE7C3A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

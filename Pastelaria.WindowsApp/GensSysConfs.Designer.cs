@@ -25,7 +25,7 @@ namespace Pastelaria.WindowsApp {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("pt-BR")]
+        [global::System.Configuration.DefaultSettingValueAttribute("en-En")]
         public string Language {
             get {
                 return ((string)(this["Language"]));

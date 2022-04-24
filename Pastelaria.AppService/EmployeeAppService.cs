@@ -1,5 +1,6 @@
 ﻿using Pastelaria.AppService.Shared;
 using Pastelaria.Domain;
+using Pastelaria.Domain.Repositories;
 using Pastelaria.Domain.Shared;
 using Pastelaria.ORM.Features;
 using Pastelaria.ORM.Shared;
@@ -14,9 +15,10 @@ namespace Pastelaria.AppService
     public class EmployeeAppService : AppServiceBase<Employee>
     {
         //update XX
-        private readonly IRepository<Employee> employeeRepository;
+        //private readonly IRepository<Employee> employeeRepository;
+        private readonly IEmployeeRepository employeeRepository;
 
-        public EmployeeAppService(IRepository<Employee> employeeORM)
+        public EmployeeAppService(IEmployeeRepository employeeORM)
         {
             this.employeeRepository = employeeORM;
         }
@@ -110,6 +112,18 @@ namespace Pastelaria.AppService
             catch (Exception)
             {
 
+                return null;
+            }
+        }
+
+        public Employee GetByAcessUserAndPassword(Employee value)
+        {
+            try
+            {
+                return employeeRepository.GetByAcessUserAndPassword(value);
+            }
+            catch (Exception)
+            {
                 return null;
             }
         }

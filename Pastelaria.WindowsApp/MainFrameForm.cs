@@ -23,11 +23,8 @@ namespace Pastelaria.WindowsApp
         public static MainFrameForm instance { get => instance; set => instance = value; }
         public static Domain.Employee LoggedEmployee { get; set; }
 
-        private readonly EmployeeAppService employeeAppService;
-
-        public MainFrameForm(EmployeeAppService employeeAppService)
+        public MainFrameForm()
         {
-            this.employeeAppService = employeeAppService;
 
             InitializeComponent();
             labelRegisterType.Text = "Title :)";

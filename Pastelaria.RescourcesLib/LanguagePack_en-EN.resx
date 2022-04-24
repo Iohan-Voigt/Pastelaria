@@ -165,6 +165,9 @@
   <data name="Identify Document" xml:space="preserve">
     <value>Identifyer Document</value>
   </data>
+  <data name="Identity Document incorect" xml:space="preserve">
+    <value>Identity Document incorect</value>
+  </data>
   <data name="Language" xml:space="preserve">
     <value>Language</value>
   </data>
@@ -212,6 +215,21 @@
   </data>
   <data name="Sells" xml:space="preserve">
     <value>Sells</value>
+  </data>
+  <data name="The AcessUser must have at least 5 characters" xml:space="preserve">
+    <value>The AcessUser must have at least 5 characters</value>
+  </data>
+  <data name="The name must have at least 5 characters" xml:space="preserve">
+    <value>The name must have at least 5 characters</value>
+  </data>
+  <data name="The Password must have at least 8 characters" xml:space="preserve">
+    <value>The Password must have at least 8 characters</value>
+  </data>
+  <data name="The Phone Number is not completed" xml:space="preserve">
+    <value>The Phone Number is not completed</value>
+  </data>
+  <data name="The Registration must have at least 3 characters" xml:space="preserve">
+    <value>The Registration must have at least 3 characters</value>
   </data>
   <data name="Update" xml:space="preserve">
     <value>Update</value>

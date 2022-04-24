@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Pastelaria.AppService;
 using Pastelaria.AppService.Shared;
+using Pastelaria.Domain.Repositories;
 using Pastelaria.Domain.Shared;
 using Pastelaria.ORM;
 using Pastelaria.ORM.Features;
@@ -45,7 +46,7 @@ namespace Pastelaria.WindowsApp.Shared
 
         private static void ORMConfiguration()
         {
-            Builder.RegisterType<EmployeeORM>().As<IRepository<Domain.Employee>>().InstancePerDependency();
+            Builder.RegisterType<EmployeeORM>().As<IEmployeeRepository>().InstancePerDependency();
         }
     }
 }

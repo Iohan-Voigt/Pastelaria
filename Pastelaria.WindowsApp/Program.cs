@@ -15,17 +15,14 @@ namespace Pastelaria.WindowsApp
         [STAThread]
         static void Main()
         {
-            try
-            {
 
-            
             GeneralConfig.Language = GensSysConfs.Default.Language;
             GeneralConfig.SetLanguageData();
 
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false); 
-            LoginForm loginForm = new ();
+            Application.SetCompatibleTextRenderingDefault(false);
+            LoginForm loginForm = new();
 
             PastelariaDBContext db = new();
             var pendingChanges = db.Database.GetPendingMigrations();
@@ -34,12 +31,8 @@ namespace Pastelaria.WindowsApp
 
 
             Application.Run(loginForm);
-            }
-            catch (Exception)
-            {
 
-                throw;
-            }
         }
     }
 }
+

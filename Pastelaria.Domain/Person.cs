@@ -1,4 +1,5 @@
 ﻿using Pastelaria.Domain.Shared;
+using Pastelaria.RescourcesLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,10 +24,10 @@ namespace Pastelaria.Domain
             string validationResult = "";
 
             if(!ValidateCpf(IdentityDocument))
-                validationResult = "The Identity Document isn't right\n";
+                validationResult = GeneralConfig.Data["Identity Document incorect"] + "\n";
 
             if (Name.Length < 5)
-                validationResult += "The name must have at least 5 characters\n";
+                validationResult += GeneralConfig.Data["The name must have at least 5 characters"] + "\n";
 
 
             return validationResult;

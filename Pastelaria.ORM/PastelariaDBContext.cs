@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Win32;
 using Newtonsoft.Json;
 using Pastelaria.Domain;
 using System.Data;
@@ -18,13 +19,10 @@ namespace Pastelaria.ORM
         {
             DataSet ds = new();
 
-            // MANUAL
-            //ds.ReadXml(@"..\Pastelaria.ORM\databases.xml");
-
-            ds.ReadXml(@"..\..\..\..\Pastelaria.ORM\databases.xml");
+            RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Pastelaria");
 
             //var connectionString = "";
-            var connectionString = ds.Tables["connectionstring"].Rows[0][0].ToString();
+            var connectionString = key.GetValue("ConnectionString").ToString();
 
             optionsBuilder
                 .UseLoggerFactory(loggerFactoryConsole)
