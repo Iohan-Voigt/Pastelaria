@@ -13,6 +13,7 @@ using System.Threading;
 using Pastelaria.AppService;
 using Pastelaria.ORM.Features;
 using Pastelaria.RescourcesLib;
+using Pastelaria.WindowsApp.Shared;
 
 namespace Pastelaria.WindowsApp
 {
@@ -32,6 +33,16 @@ namespace Pastelaria.WindowsApp
             employeeAppService = new(new EmployeeORM(db));
             InitializeComponent();
             ConfigureInfo();
+            CofigureTextBox();
+        }
+
+        private void CofigureTextBox()
+        {
+            userTextBox.Enter += new(CustomEvents.EnterFieldEvent!);
+            userTextBox.Leave += new(CustomEvents.LeaveFieldEvent!);
+
+            passwordTextBox.Enter += new(CustomEvents.EnterFieldEvent!);
+            passwordTextBox.Leave += new(CustomEvents.LeaveFieldEvent!);
         }
 
         private void LogginBtn_Click(object sender, EventArgs e)

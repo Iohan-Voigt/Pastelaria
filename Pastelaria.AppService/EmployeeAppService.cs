@@ -14,8 +14,6 @@ namespace Pastelaria.AppService
 {
     public class EmployeeAppService : AppServiceBase<Employee>
     {
-        //update XX
-        //private readonly IRepository<Employee> employeeRepository;
         private readonly IEmployeeRepository employeeRepository;
 
         public EmployeeAppService(IEmployeeRepository employeeORM)

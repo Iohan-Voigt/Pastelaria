@@ -11,7 +11,7 @@ namespace Pastelaria.ORM.Features
     {
         public EmployeeORM(PastelariaDBContext db) : base(db)
         {
- 
+
         }
 
         public Employee GetByAcessUserAndPassword(Employee value)
