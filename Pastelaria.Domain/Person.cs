@@ -17,8 +17,6 @@ namespace Pastelaria.Domain
         
         public string? PhoneNumber {get;set;}
 
-
-
         public virtual string ValidatePerson() 
         {
             string validationResult = "";

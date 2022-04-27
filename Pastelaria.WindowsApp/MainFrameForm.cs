@@ -39,6 +39,7 @@ namespace Pastelaria.WindowsApp
             private Size formSize;
 
         #region SideMenu
+        #region Form Resize
         protected override void WndProc(ref Message m)
         {
 
@@ -49,7 +50,7 @@ namespace Pastelaria.WindowsApp
             const int WM_NCHITTEST = 0x0084;
             const int resizeAreaSize = 10;
 
-            #region Form Resize
+            
 
             const int HTCLIENT = 1;
             const int HTLEFT = 10;
@@ -99,7 +100,7 @@ namespace Pastelaria.WindowsApp
                 }
                 return;
             }
-            #endregion
+
             if (m.Msg == WM_NCCALCSIZE && m.WParam.ToInt32() == 1)
             {
                 return;
@@ -114,54 +115,7 @@ namespace Pastelaria.WindowsApp
             }
             base.WndProc(ref m);
         }
-
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-
-        private void PanelTitleBar_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void MinimizeBtn_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void MaximaziBtn_Click(object sender, EventArgs e)
-        {
-            _ = this.WindowState == FormWindowState.Normal ? this.WindowState = FormWindowState.Maximized :
-                                                             this.WindowState = FormWindowState.Normal;
-        }
-
-        private void MainFrameForm_Resize(object sender, EventArgs e)
-        {
-            AdjustForm();
-        }
-
-        private void AdjustForm()
-        {
-            switch (this.WindowState)
-            {
-                case FormWindowState.Maximized:
-                    this.Padding = new Padding(8, 8, 8, 0);
-                    break;
-                case FormWindowState.Normal:
-                    if (this.Padding.Top != 2)
-                        this.Padding = new Padding(2);
-                    break;
-            }
-        }
-        
-
-        private void ExitBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
+        #endregion        
         private void MenuBtn_Click(object sender, EventArgs e)
         {
             CollapseMenu();
@@ -198,6 +152,62 @@ namespace Pastelaria.WindowsApp
                     menuButton.Padding = new Padding(10, 0, 0, 0);
                     menuButton.Width = 250;
                 }
+            }
+        }
+        #endregion
+
+        #region WindowsButtons
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void PanelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void MinimizeBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void MaximaziBtn_Click(object sender, EventArgs e)
+        {
+            _ = this.WindowState == FormWindowState.Normal ? this.WindowState = FormWindowState.Maximized :
+                                                             this.WindowState = FormWindowState.Normal;
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show(GeneralConfig.Data["Are you sure that you want to quit"] + "?", "Pastelaria"
+                                , MessageBoxButtons.YesNo
+                                , MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                Application.Exit();
+            else
+            {
+                this.Hide();
+                notifyIconSystemTray.ShowBalloonTip(1000,"Pastelaria","Application minimized",ToolTipIcon.Info);
+            }
+        }
+
+        private void MainFrameForm_Resize(object sender, EventArgs e)
+        {
+            AdjustForm();
+        }
+
+        private void AdjustForm()
+        {
+            switch (this.WindowState)
+            {
+                case FormWindowState.Maximized:
+                    this.Padding = new Padding(8, 8, 8, 0);
+                    break;
+                case FormWindowState.Normal:
+                    if (this.Padding.Top != 2)
+                        this.Padding = new Padding(2);
+                    break;
             }
         }
         #endregion
@@ -282,12 +292,6 @@ namespace Pastelaria.WindowsApp
         #endregion
 
         #region Privates
-
-        public void UpdateFooter(string Message)
-        {
-            footerLabelBase.Text = Message;
-            footerLabelBase.Font = new Font("Segoe UI", this.footerLabelBase.Font.Size);
-        }
         private void ToolboxConfig(IConfigurationToolBox configuration, bool filter)
         {
             toolBoxActions.Enabled = true;
@@ -306,12 +310,8 @@ namespace Pastelaria.WindowsApp
             DataPanel.Controls.Clear();
             DataPanel.Controls.Add(table);
         }
-        #endregion
 
-        public void UpdateTitle(string title)
-        {
-            this.titleLable.Text = title;
-        }
+        #endregion
 
         #region Buttons actions
         private void btnAdd_Click(object sender, EventArgs e)
@@ -344,10 +344,62 @@ namespace Pastelaria.WindowsApp
             this.orderBtn.Text = GeneralConfig.Data["Orders"];
             this.debitBtn.Text = GeneralConfig.Data["Debits"];
             this.configBtn.Text = GeneralConfig.Data["Configuration"];
+            this.contextMenuStripSystemTray.Items[0].Text = GeneralConfig.Data["Exit"];
+            this.contextMenuStripSystemTray.Items[1].Text = GeneralConfig.Data["Open"];
         }
 
         #endregion
 
-        
+        public void UpdateFooter(string Message)
+        {
+            footerLabelBase.Text = Message;
+            footerLabelBase.Font = new Font("Segoe UI", this.footerLabelBase.Font.Size);
+        }
+
+        public void UpdateTitle(string title)
+        {
+            this.titleLable.Text = title;
+        }
+
+        private void MainFrameForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.F1:
+                    
+                    break;
+                case Keys.F2:
+                    employeeBtn_Click(sender, e);
+                    break;
+                case Keys.F3:
+                    productBtn_Click(sender, e);
+                    break;
+                case Keys.F4:
+                    break;
+                case Keys.F5:
+                    break;
+                case Keys.F6:
+                    break;
+                case Keys.F7:
+                    break;
+                case Keys.F8:
+                    break;
+                case Keys.F9:
+                    break;
+            }
+        }
+
+        private void iconMenuItemOpen_Click(object sender, EventArgs e)
+        {
+            this.Show();
+        }
+
+        private void iconMenuItemExit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(GeneralConfig.Data["Are you sure that you want to quit"] + "?", "Pastelaria"
+                               , MessageBoxButtons.YesNo
+                               , MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                Application.Exit();
+        }
     }
 }

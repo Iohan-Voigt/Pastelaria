@@ -88,6 +88,15 @@ namespace Pastelaria.RescourcesLib {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure that you want to quit.
+        /// </summary>
+        internal static string Are_you_sure_that_you_want_to_quit {
+            get {
+                return ResourceManager.GetString("Are you sure that you want to quit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Are you sure that you want to remove.
         /// </summary>
         internal static string Are_you_sure_that_you_want_to_remove {
@@ -187,6 +196,15 @@ namespace Pastelaria.RescourcesLib {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exit.
+        /// </summary>
+        internal static string Exit {
+            get {
+                return ResourceManager.GetString("Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         internal static string Home {
@@ -237,6 +255,15 @@ namespace Pastelaria.RescourcesLib {
         internal static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open.
+        /// </summary>
+        internal static string Open {
+            get {
+                return ResourceManager.GetString("Open", resourceCulture);
             }
         }
         

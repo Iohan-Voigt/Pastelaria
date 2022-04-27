@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrameForm));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.customersBtn = new FontAwesome.Sharp.IconButton();
@@ -59,6 +60,10 @@
             this.FooterLabel = new System.Windows.Forms.Label();
             this.footerPanel = new System.Windows.Forms.Panel();
             this.footerLabelBase = new System.Windows.Forms.Label();
+            this.notifyIconSystemTray = new System.Windows.Forms.NotifyIcon(this.components);
+            this.contextMenuStripSystemTray = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.iconMenuItemExit = new FontAwesome.Sharp.IconMenuItem();
+            this.iconMenuItemOpen = new FontAwesome.Sharp.IconMenuItem();
             this.panelMenu.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).BeginInit();
@@ -67,6 +72,7 @@
             this.toolBoxActions.SuspendLayout();
             this.DataPanel.SuspendLayout();
             this.footerPanel.SuspendLayout();
+            this.contextMenuStripSystemTray.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -513,6 +519,41 @@
             this.footerLabelBase.TabIndex = 0;
             this.footerLabelBase.Text = "asd";
             // 
+            // notifyIconSystemTray
+            // 
+            this.notifyIconSystemTray.ContextMenuStrip = this.contextMenuStripSystemTray;
+            this.notifyIconSystemTray.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIconSystemTray.Icon")));
+            this.notifyIconSystemTray.Text = "Pastelaria";
+            this.notifyIconSystemTray.Visible = true;
+            // 
+            // contextMenuStripSystemTray
+            // 
+            this.contextMenuStripSystemTray.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iconMenuItemExit,
+            this.iconMenuItemOpen});
+            this.contextMenuStripSystemTray.Name = "contextMenuStripSystemTray";
+            this.contextMenuStripSystemTray.Size = new System.Drawing.Size(104, 48);
+            // 
+            // iconMenuItemExit
+            // 
+            this.iconMenuItemExit.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconMenuItemExit.IconColor = System.Drawing.Color.Black;
+            this.iconMenuItemExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconMenuItemExit.Name = "iconMenuItemExit";
+            this.iconMenuItemExit.Size = new System.Drawing.Size(103, 22);
+            this.iconMenuItemExit.Text = "Exit";
+            this.iconMenuItemExit.Click += new System.EventHandler(this.iconMenuItemExit_Click);
+            // 
+            // iconMenuItemOpen
+            // 
+            this.iconMenuItemOpen.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconMenuItemOpen.IconColor = System.Drawing.Color.Black;
+            this.iconMenuItemOpen.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconMenuItemOpen.Name = "iconMenuItemOpen";
+            this.iconMenuItemOpen.Size = new System.Drawing.Size(103, 22);
+            this.iconMenuItemOpen.Text = "Open";
+            this.iconMenuItemOpen.Click += new System.EventHandler(this.iconMenuItemOpen_Click);
+            // 
             // MainFrameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -524,10 +565,13 @@
             this.Controls.Add(this.toolBoxActions);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "MainFrameForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainFrameForm";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainFrameForm_KeyDown);
             this.Resize += new System.EventHandler(this.MainFrameForm_Resize);
             this.panelMenu.ResumeLayout(false);
             this.logoPanel.ResumeLayout(false);
@@ -541,6 +585,7 @@
             this.DataPanel.PerformLayout();
             this.footerPanel.ResumeLayout(false);
             this.footerPanel.PerformLayout();
+            this.contextMenuStripSystemTray.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -577,5 +622,9 @@
         private System.Windows.Forms.Label FooterLabel;
         private System.Windows.Forms.Panel footerPanel;
         private System.Windows.Forms.Label footerLabelBase;
+        private System.Windows.Forms.NotifyIcon notifyIconSystemTray;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripSystemTray;
+        private FontAwesome.Sharp.IconMenuItem iconMenuItemExit;
+        private FontAwesome.Sharp.IconMenuItem iconMenuItemOpen;
     }
 }

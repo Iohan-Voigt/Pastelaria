@@ -55,9 +55,9 @@ namespace Pastelaria.RescourcesLib
             ,{"The name must have at least 5 characters",""}
             ,{"The AcessUser must have at least 5 characters",""}
             ,{"The Password must have at least 8 characters",""}
-            //,{"",""}
-            //,{"",""}
-            //,{"",""}
+            ,{"Exit",""}
+            ,{"Open",""}
+            ,{"Are you sure that you want to quit",""}
             //,{"",""}
             //,{"",""}
         };
