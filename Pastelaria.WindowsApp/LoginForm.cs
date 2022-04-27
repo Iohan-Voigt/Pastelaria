@@ -36,15 +36,6 @@ namespace Pastelaria.WindowsApp
             CofigureTextBox();
         }
 
-        private void CofigureTextBox()
-        {
-            userTextBox.Enter += new(CustomEvents.EnterFieldEvent!);
-            userTextBox.Leave += new(CustomEvents.LeaveFieldEvent!);
-
-            passwordTextBox.Enter += new(CustomEvents.EnterFieldEvent!);
-            passwordTextBox.Leave += new(CustomEvents.LeaveFieldEvent!);
-        }
-
         private void LogginBtn_Click(object sender, EventArgs e)
         {
             if (userTextBox.Text.Equals("admin")
@@ -99,6 +90,15 @@ namespace Pastelaria.WindowsApp
             labelUser.Text = GeneralConfig.Data["User"];
             labelPassword.Text = GeneralConfig.Data["Password"];
             loginBtn.Text = GeneralConfig.Data["Login"];
+        }
+
+        private void CofigureTextBox()
+        {
+            userTextBox.Enter += new(CustomEvents.EnterFieldEvent!);
+            userTextBox.Leave += new(CustomEvents.LeaveFieldEvent!);
+
+            passwordTextBox.Enter += new(CustomEvents.EnterFieldEvent!);
+            passwordTextBox.Leave += new(CustomEvents.LeaveFieldEvent!);
         }
     }
 }

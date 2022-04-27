@@ -13,8 +13,10 @@ namespace Pastelaria.WindowsApp.Shared
         public static void EnterFieldEvent(object sender, EventArgs e)
         {
             if (sender is TextBoxBase txt)
+            {
                 txt.BackColor = Color.LightGoldenrodYellow;
-
+            }
+                
         }
 
         public static void LeaveFieldEvent(object sender, EventArgs e)

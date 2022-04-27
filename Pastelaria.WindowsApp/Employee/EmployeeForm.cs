@@ -1,4 +1,5 @@
 ﻿using Pastelaria.Domain.Shared;
+using Pastelaria.WindowsApp.Shared;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,11 +55,35 @@ namespace Pastelaria.WindowsApp.Employee
             InitializeComponent();
             this.labelMessages.BackColor = lightRed;
             this.Text = title;
+            ConfigureTextBox();
+        }
+
+        private void ConfigureTextBox()
+        {
+            textBoxName.Enter += new(CustomEvents.EnterFieldEvent!);
+            textBoxName.Leave += new(CustomEvents.LeaveFieldEvent!);
+
+            textBoxAcessUser.Enter += new(CustomEvents.EnterFieldEvent!);
+            textBoxAcessUser.Leave += new(CustomEvents.LeaveFieldEvent!);
+
+            textBoxPassword.Enter += new(CustomEvents.EnterFieldEvent!);
+            textBoxPassword.Leave += new(CustomEvents.LeaveFieldEvent!);
+
+            textBoxRegistration.Enter += new(CustomEvents.EnterFieldEvent!);
+            textBoxRegistration.Leave += new(CustomEvents.LeaveFieldEvent!);
+
+            maskedTextBoxPhoneNumber.Enter += new(CustomEvents.EnterFieldEvent!);
+            maskedTextBoxPhoneNumber.Leave += new(CustomEvents.LeaveFieldEvent!);
+
+            maskedTextBoxIdentifyDocument.Enter += new(CustomEvents.EnterFieldEvent!);
+            maskedTextBoxIdentifyDocument.Leave += new(CustomEvents.LeaveFieldEvent!);
         }
 
         private void iconButtonCancel_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Are you sure that you want to cancel?","Employee registration",MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            if(MessageBox.Show("Are you sure that you want to cancel?","Employee registration"
+                                ,MessageBoxButtons.YesNo
+                                ,MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
                 DialogResult = DialogResult.Cancel;
             }

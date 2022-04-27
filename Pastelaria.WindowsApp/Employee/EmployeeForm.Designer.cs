@@ -120,7 +120,7 @@
             this.maskedTextBoxPhoneNumber.Mask = "(00) 0 0000-0000";
             this.maskedTextBoxPhoneNumber.Name = "maskedTextBoxPhoneNumber";
             this.maskedTextBoxPhoneNumber.Size = new System.Drawing.Size(174, 23);
-            this.maskedTextBoxPhoneNumber.TabIndex = 5;
+            this.maskedTextBoxPhoneNumber.TabIndex = 3;
             this.maskedTextBoxPhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.maskedTextBoxPhoneNumber.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -141,7 +141,7 @@
             this.textBoxRegistration.MaxLength = 30;
             this.textBoxRegistration.Name = "textBoxRegistration";
             this.textBoxRegistration.Size = new System.Drawing.Size(298, 23);
-            this.textBoxRegistration.TabIndex = 7;
+            this.textBoxRegistration.TabIndex = 6;
             // 
             // labelAcessUser
             // 
@@ -160,7 +160,7 @@
             this.textBoxAcessUser.MaxLength = 20;
             this.textBoxAcessUser.Name = "textBoxAcessUser";
             this.textBoxAcessUser.Size = new System.Drawing.Size(298, 23);
-            this.textBoxAcessUser.TabIndex = 9;
+            this.textBoxAcessUser.TabIndex = 7;
             // 
             // labelPassword
             // 
@@ -180,7 +180,7 @@
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '@';
             this.textBoxPassword.Size = new System.Drawing.Size(298, 23);
-            this.textBoxPassword.TabIndex = 11;
+            this.textBoxPassword.TabIndex = 8;
             this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // panelPermissions
@@ -207,7 +207,7 @@
             this.radioButtonCashier.Location = new System.Drawing.Point(9, 71);
             this.radioButtonCashier.Name = "radioButtonCashier";
             this.radioButtonCashier.Size = new System.Drawing.Size(80, 25);
-            this.radioButtonCashier.TabIndex = 15;
+            this.radioButtonCashier.TabIndex = 5;
             this.radioButtonCashier.TabStop = true;
             this.radioButtonCashier.Text = "Cashier";
             this.radioButtonCashier.UseVisualStyleBackColor = true;
@@ -221,7 +221,7 @@
             this.radioButtonAdmin.Location = new System.Drawing.Point(9, 40);
             this.radioButtonAdmin.Name = "radioButtonAdmin";
             this.radioButtonAdmin.Size = new System.Drawing.Size(74, 25);
-            this.radioButtonAdmin.TabIndex = 14;
+            this.radioButtonAdmin.TabIndex = 4;
             this.radioButtonAdmin.Text = "Admin";
             this.radioButtonAdmin.UseVisualStyleBackColor = true;
             // 
@@ -251,7 +251,7 @@
             this.iconButtonSave.Location = new System.Drawing.Point(530, 223);
             this.iconButtonSave.Name = "iconButtonSave";
             this.iconButtonSave.Size = new System.Drawing.Size(120, 60);
-            this.iconButtonSave.TabIndex = 13;
+            this.iconButtonSave.TabIndex = 10;
             this.iconButtonSave.Text = "Save";
             this.iconButtonSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonSave.UseVisualStyleBackColor = false;
@@ -272,7 +272,7 @@
             this.iconButtonCancel.Location = new System.Drawing.Point(352, 223);
             this.iconButtonCancel.Name = "iconButtonCancel";
             this.iconButtonCancel.Size = new System.Drawing.Size(120, 60);
-            this.iconButtonCancel.TabIndex = 14;
+            this.iconButtonCancel.TabIndex = 9;
             this.iconButtonCancel.Text = "Cancel";
             this.iconButtonCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonCancel.UseVisualStyleBackColor = false;
@@ -294,7 +294,7 @@
             this.maskedTextBoxIdentifyDocument.Mask = "000.000.000-00";
             this.maskedTextBoxIdentifyDocument.Name = "maskedTextBoxIdentifyDocument";
             this.maskedTextBoxIdentifyDocument.Size = new System.Drawing.Size(174, 23);
-            this.maskedTextBoxIdentifyDocument.TabIndex = 16;
+            this.maskedTextBoxIdentifyDocument.TabIndex = 2;
             this.maskedTextBoxIdentifyDocument.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.maskedTextBoxIdentifyDocument.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
