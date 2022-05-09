@@ -11,6 +11,7 @@ namespace Pastelaria.Domain.Shared
         public Guid Id { get; set; }
 
         public abstract string Validate();
+
         public abstract override string ToString();
     }
 }

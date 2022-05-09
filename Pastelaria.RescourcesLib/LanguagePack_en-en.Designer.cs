@@ -250,6 +250,33 @@ namespace Pastelaria.RescourcesLib {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Must hava a Image.
+        /// </summary>
+        internal static string Must_hava_a_Image {
+            get {
+                return ResourceManager.GetString("Must hava a Image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Must have a Name.
+        /// </summary>
+        internal static string Must_have_a_Name {
+            get {
+                return ResourceManager.GetString("Must have a Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Must have a Value.
+        /// </summary>
+        internal static string Must_have_a_Value {
+            get {
+                return ResourceManager.GetString("Must have a Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
         internal static string Name {

@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            this.loginBtn = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.userTextBox = new System.Windows.Forms.TextBox();
-            this.labelUser = new System.Windows.Forms.Label();
-            this.labelPassword = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.InfoLabel = new System.Windows.Forms.Label();
             this.LogoPicBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // loginBtn
+            // btnLogin
             // 
-            this.loginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.loginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
-            this.loginBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
-            this.loginBtn.FlatAppearance.BorderSize = 0;
-            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginBtn.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.loginBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.loginBtn.Location = new System.Drawing.Point(97, 324);
-            this.loginBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(180, 46);
-            this.loginBtn.TabIndex = 3;
-            this.loginBtn.Text = "Login";
-            this.loginBtn.UseVisualStyleBackColor = false;
-            this.loginBtn.Click += new System.EventHandler(this.LogginBtn_Click);
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.btnLogin.Location = new System.Drawing.Point(97, 324);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(180, 46);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.LogginBtn_Click);
             // 
             // userTextBox
             // 
@@ -66,27 +66,27 @@
             this.userTextBox.Size = new System.Drawing.Size(180, 23);
             this.userTextBox.TabIndex = 1;
             // 
-            // labelUser
+            // lblUser
             // 
-            this.labelUser.AutoSize = true;
-            this.labelUser.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.labelUser.Location = new System.Drawing.Point(97, 170);
-            this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(51, 28);
-            this.labelUser.TabIndex = 0;
-            this.labelUser.Text = "User";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.lblUser.Location = new System.Drawing.Point(97, 170);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(51, 28);
+            this.lblUser.TabIndex = 0;
+            this.lblUser.Text = "User";
             // 
-            // labelPassword
+            // lblPassword
             // 
-            this.labelPassword.AutoSize = true;
-            this.labelPassword.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.labelPassword.Location = new System.Drawing.Point(97, 227);
-            this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(94, 28);
-            this.labelPassword.TabIndex = 0;
-            this.labelPassword.Text = "Password";
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.lblPassword.Location = new System.Drawing.Point(97, 227);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(94, 28);
+            this.lblPassword.TabIndex = 0;
+            this.lblPassword.Text = "Password";
             // 
             // passwordTextBox
             // 
@@ -126,10 +126,10 @@
             this.Controls.Add(this.LogoPicBox);
             this.Controls.Add(this.InfoLabel);
             this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.labelPassword);
-            this.Controls.Add(this.labelUser);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.userTextBox);
-            this.Controls.Add(this.loginBtn);
+            this.Controls.Add(this.btnLogin);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
@@ -141,10 +141,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button loginBtn;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox userTextBox;
-        private System.Windows.Forms.Label labelUser;
-        private System.Windows.Forms.Label labelPassword;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Label InfoLabel;
         private System.Windows.Forms.PictureBox LogoPicBox;

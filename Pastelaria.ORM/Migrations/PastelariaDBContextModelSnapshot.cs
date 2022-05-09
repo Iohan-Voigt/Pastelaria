@@ -80,6 +80,30 @@ namespace Pastelaria.ORM.Migrations
 
                     b.ToTable("TBEMPLOYEE");
                 });
+
+            modelBuilder.Entity("Pastelaria.Domain.Product", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("VARCHAR(100)");
+
+                    b.Property<byte[]>("Image")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("VARCHAR(75)");
+
+                    b.Property<decimal>("Value")
+                        .HasColumnType("DECIMAL");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TBPRODUCT");
+                });
 #pragma warning restore 612, 618
         }
     }

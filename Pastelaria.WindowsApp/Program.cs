@@ -1,11 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Pastelaria.ORM;
 using Pastelaria.RescourcesLib;
-using Pastelaria.WindowsApp.Costumer;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pastelaria.WindowsApp
@@ -25,10 +22,11 @@ namespace Pastelaria.WindowsApp
             LoginForm loginForm = new();
 
             PastelariaDBContext db = new();
+            #if DEBUG
             var pendingChanges = db.Database.GetPendingMigrations();
             if (pendingChanges.Any())
                 db.Database.Migrate();
-
+            #endif
 
             Application.Run(loginForm);
 

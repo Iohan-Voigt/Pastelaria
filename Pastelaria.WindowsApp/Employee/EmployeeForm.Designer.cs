@@ -29,255 +29,255 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeForm));
-            this.labelID = new System.Windows.Forms.Label();
-            this.textBoxID = new System.Windows.Forms.TextBox();
-            this.labelName = new System.Windows.Forms.Label();
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.labelIdentifyDocument = new System.Windows.Forms.Label();
-            this.labelPhoneNumber = new System.Windows.Forms.Label();
-            this.maskedTextBoxPhoneNumber = new System.Windows.Forms.MaskedTextBox();
-            this.labelRegistration = new System.Windows.Forms.Label();
-            this.textBoxRegistration = new System.Windows.Forms.TextBox();
-            this.labelAcessUser = new System.Windows.Forms.Label();
-            this.textBoxAcessUser = new System.Windows.Forms.TextBox();
-            this.labelPassword = new System.Windows.Forms.Label();
-            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.lblID = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblIdentifyDocument = new System.Windows.Forms.Label();
+            this.lblPhoneNumber = new System.Windows.Forms.Label();
+            this.mtxtPhoneNumber = new System.Windows.Forms.MaskedTextBox();
+            this.lblRegistration = new System.Windows.Forms.Label();
+            this.txtRegistration = new System.Windows.Forms.TextBox();
+            this.lblAcessUser = new System.Windows.Forms.Label();
+            this.txtAcessUser = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.panelPermissions = new System.Windows.Forms.Panel();
-            this.radioButtonCashier = new System.Windows.Forms.RadioButton();
-            this.radioButtonAdmin = new System.Windows.Forms.RadioButton();
-            this.labelPermissions = new System.Windows.Forms.Label();
-            this.iconButtonSave = new FontAwesome.Sharp.IconButton();
-            this.iconButtonCancel = new FontAwesome.Sharp.IconButton();
+            this.rbtnCashier = new System.Windows.Forms.RadioButton();
+            this.rbtnAdmin = new System.Windows.Forms.RadioButton();
+            this.lblPermissions = new System.Windows.Forms.Label();
+            this.ibtnSave = new FontAwesome.Sharp.IconButton();
+            this.ibtnCancel = new FontAwesome.Sharp.IconButton();
             this.labelMessages = new System.Windows.Forms.Label();
-            this.maskedTextBoxIdentifyDocument = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtBoxIdentifyDocument = new System.Windows.Forms.MaskedTextBox();
             this.panelPermissions.SuspendLayout();
             this.SuspendLayout();
             // 
-            // labelID
+            // lblID
             // 
-            this.labelID.AutoSize = true;
-            this.labelID.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.labelID.Location = new System.Drawing.Point(36, 27);
-            this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(31, 28);
-            this.labelID.TabIndex = 0;
-            this.labelID.Text = "ID";
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.lblID.Location = new System.Drawing.Point(36, 27);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(31, 28);
+            this.lblID.TabIndex = 0;
+            this.lblID.Text = "ID";
             // 
-            // textBoxID
+            // txtID
             // 
-            this.textBoxID.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxID.Location = new System.Drawing.Point(36, 58);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.ReadOnly = true;
-            this.textBoxID.Size = new System.Drawing.Size(298, 23);
-            this.textBoxID.TabIndex = 0;
-            this.textBoxID.TabStop = false;
+            this.txtID.BackColor = System.Drawing.SystemColors.Window;
+            this.txtID.Location = new System.Drawing.Point(36, 58);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(298, 23);
+            this.txtID.TabIndex = 0;
+            this.txtID.TabStop = false;
             // 
-            // labelName
+            // lblName
             // 
-            this.labelName.AutoSize = true;
-            this.labelName.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.labelName.Location = new System.Drawing.Point(36, 84);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(64, 28);
-            this.labelName.TabIndex = 1;
-            this.labelName.Text = "Name";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.lblName.Location = new System.Drawing.Point(36, 84);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(64, 28);
+            this.lblName.TabIndex = 1;
+            this.lblName.Text = "Name";
             // 
-            // textBoxName
+            // txtName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(36, 115);
-            this.textBoxName.MaxLength = 75;
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(298, 23);
-            this.textBoxName.TabIndex = 1;
+            this.txtName.Location = new System.Drawing.Point(36, 115);
+            this.txtName.MaxLength = 75;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(298, 23);
+            this.txtName.TabIndex = 1;
             // 
-            // labelIdentifyDocument
+            // lblIdentifyDocument
             // 
-            this.labelIdentifyDocument.AutoSize = true;
-            this.labelIdentifyDocument.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelIdentifyDocument.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.labelIdentifyDocument.Location = new System.Drawing.Point(36, 141);
-            this.labelIdentifyDocument.Name = "labelIdentifyDocument";
-            this.labelIdentifyDocument.Size = new System.Drawing.Size(174, 28);
-            this.labelIdentifyDocument.TabIndex = 2;
-            this.labelIdentifyDocument.Text = "Identify Document";
+            this.lblIdentifyDocument.AutoSize = true;
+            this.lblIdentifyDocument.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblIdentifyDocument.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.lblIdentifyDocument.Location = new System.Drawing.Point(36, 141);
+            this.lblIdentifyDocument.Name = "lblIdentifyDocument";
+            this.lblIdentifyDocument.Size = new System.Drawing.Size(174, 28);
+            this.lblIdentifyDocument.TabIndex = 2;
+            this.lblIdentifyDocument.Text = "Identify Document";
             // 
-            // labelPhoneNumber
+            // lblPhoneNumber
             // 
-            this.labelPhoneNumber.AutoSize = true;
-            this.labelPhoneNumber.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.labelPhoneNumber.Location = new System.Drawing.Point(36, 209);
-            this.labelPhoneNumber.Name = "labelPhoneNumber";
-            this.labelPhoneNumber.Size = new System.Drawing.Size(144, 28);
-            this.labelPhoneNumber.TabIndex = 4;
-            this.labelPhoneNumber.Text = "Phone Number";
+            this.lblPhoneNumber.AutoSize = true;
+            this.lblPhoneNumber.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.lblPhoneNumber.Location = new System.Drawing.Point(36, 209);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(144, 28);
+            this.lblPhoneNumber.TabIndex = 4;
+            this.lblPhoneNumber.Text = "Phone Number";
             // 
-            // maskedTextBoxPhoneNumber
+            // mtxtPhoneNumber
             // 
-            this.maskedTextBoxPhoneNumber.Location = new System.Drawing.Point(36, 240);
-            this.maskedTextBoxPhoneNumber.Mask = "(00) 0 0000-0000";
-            this.maskedTextBoxPhoneNumber.Name = "maskedTextBoxPhoneNumber";
-            this.maskedTextBoxPhoneNumber.Size = new System.Drawing.Size(174, 23);
-            this.maskedTextBoxPhoneNumber.TabIndex = 3;
-            this.maskedTextBoxPhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.maskedTextBoxPhoneNumber.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mtxtPhoneNumber.Location = new System.Drawing.Point(36, 240);
+            this.mtxtPhoneNumber.Mask = "(00) 0 0000-0000";
+            this.mtxtPhoneNumber.Name = "mtxtPhoneNumber";
+            this.mtxtPhoneNumber.Size = new System.Drawing.Size(174, 23);
+            this.mtxtPhoneNumber.TabIndex = 3;
+            this.mtxtPhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.mtxtPhoneNumber.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // labelRegistration
+            // lblRegistration
             // 
-            this.labelRegistration.AutoSize = true;
-            this.labelRegistration.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelRegistration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.labelRegistration.Location = new System.Drawing.Point(352, 27);
-            this.labelRegistration.Name = "labelRegistration";
-            this.labelRegistration.Size = new System.Drawing.Size(118, 28);
-            this.labelRegistration.TabIndex = 6;
-            this.labelRegistration.Text = "Registration";
+            this.lblRegistration.AutoSize = true;
+            this.lblRegistration.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblRegistration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.lblRegistration.Location = new System.Drawing.Point(352, 27);
+            this.lblRegistration.Name = "lblRegistration";
+            this.lblRegistration.Size = new System.Drawing.Size(118, 28);
+            this.lblRegistration.TabIndex = 6;
+            this.lblRegistration.Text = "Registration";
             // 
-            // textBoxRegistration
+            // txtRegistration
             // 
-            this.textBoxRegistration.Location = new System.Drawing.Point(352, 58);
-            this.textBoxRegistration.MaxLength = 30;
-            this.textBoxRegistration.Name = "textBoxRegistration";
-            this.textBoxRegistration.Size = new System.Drawing.Size(298, 23);
-            this.textBoxRegistration.TabIndex = 6;
+            this.txtRegistration.Location = new System.Drawing.Point(352, 58);
+            this.txtRegistration.MaxLength = 30;
+            this.txtRegistration.Name = "txtRegistration";
+            this.txtRegistration.Size = new System.Drawing.Size(298, 23);
+            this.txtRegistration.TabIndex = 6;
             // 
-            // labelAcessUser
+            // lblAcessUser
             // 
-            this.labelAcessUser.AutoSize = true;
-            this.labelAcessUser.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelAcessUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.labelAcessUser.Location = new System.Drawing.Point(352, 84);
-            this.labelAcessUser.Name = "labelAcessUser";
-            this.labelAcessUser.Size = new System.Drawing.Size(104, 28);
-            this.labelAcessUser.TabIndex = 8;
-            this.labelAcessUser.Text = "Acess User";
+            this.lblAcessUser.AutoSize = true;
+            this.lblAcessUser.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAcessUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.lblAcessUser.Location = new System.Drawing.Point(352, 84);
+            this.lblAcessUser.Name = "lblAcessUser";
+            this.lblAcessUser.Size = new System.Drawing.Size(104, 28);
+            this.lblAcessUser.TabIndex = 8;
+            this.lblAcessUser.Text = "Acess User";
             // 
-            // textBoxAcessUser
+            // txtAcessUser
             // 
-            this.textBoxAcessUser.Location = new System.Drawing.Point(352, 115);
-            this.textBoxAcessUser.MaxLength = 20;
-            this.textBoxAcessUser.Name = "textBoxAcessUser";
-            this.textBoxAcessUser.Size = new System.Drawing.Size(298, 23);
-            this.textBoxAcessUser.TabIndex = 7;
+            this.txtAcessUser.Location = new System.Drawing.Point(352, 115);
+            this.txtAcessUser.MaxLength = 20;
+            this.txtAcessUser.Name = "txtAcessUser";
+            this.txtAcessUser.Size = new System.Drawing.Size(298, 23);
+            this.txtAcessUser.TabIndex = 7;
             // 
-            // labelPassword
+            // lblPassword
             // 
-            this.labelPassword.AutoSize = true;
-            this.labelPassword.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.labelPassword.Location = new System.Drawing.Point(352, 141);
-            this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(94, 28);
-            this.labelPassword.TabIndex = 10;
-            this.labelPassword.Text = "Password";
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.lblPassword.Location = new System.Drawing.Point(352, 141);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(94, 28);
+            this.lblPassword.TabIndex = 10;
+            this.lblPassword.Text = "Password";
             // 
-            // textBoxPassword
+            // txtPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(352, 172);
-            this.textBoxPassword.MaxLength = 20;
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.PasswordChar = '@';
-            this.textBoxPassword.Size = new System.Drawing.Size(298, 23);
-            this.textBoxPassword.TabIndex = 8;
-            this.textBoxPassword.UseSystemPasswordChar = true;
+            this.txtPassword.Location = new System.Drawing.Point(352, 172);
+            this.txtPassword.MaxLength = 20;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '@';
+            this.txtPassword.Size = new System.Drawing.Size(298, 23);
+            this.txtPassword.TabIndex = 8;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // panelPermissions
             // 
             this.panelPermissions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelPermissions.CausesValidation = false;
-            this.panelPermissions.Controls.Add(this.radioButtonCashier);
-            this.panelPermissions.Controls.Add(this.radioButtonAdmin);
-            this.panelPermissions.Controls.Add(this.labelPermissions);
+            this.panelPermissions.Controls.Add(this.rbtnCashier);
+            this.panelPermissions.Controls.Add(this.rbtnAdmin);
+            this.panelPermissions.Controls.Add(this.lblPermissions);
             this.panelPermissions.Location = new System.Drawing.Point(213, 149);
             this.panelPermissions.Margin = new System.Windows.Forms.Padding(0);
             this.panelPermissions.Name = "panelPermissions";
-            this.panelPermissions.Size = new System.Drawing.Size(121, 114);
+            this.panelPermissions.Size = new System.Drawing.Size(119, 114);
             this.panelPermissions.TabIndex = 12;
             // 
-            // radioButtonCashier
+            // rbtnCashier
             // 
-            this.radioButtonCashier.AutoSize = true;
-            this.radioButtonCashier.CausesValidation = false;
-            this.radioButtonCashier.Checked = true;
-            this.radioButtonCashier.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButtonCashier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.radioButtonCashier.Location = new System.Drawing.Point(9, 71);
-            this.radioButtonCashier.Name = "radioButtonCashier";
-            this.radioButtonCashier.Size = new System.Drawing.Size(80, 25);
-            this.radioButtonCashier.TabIndex = 5;
-            this.radioButtonCashier.TabStop = true;
-            this.radioButtonCashier.Text = "Cashier";
-            this.radioButtonCashier.UseVisualStyleBackColor = true;
+            this.rbtnCashier.AutoSize = true;
+            this.rbtnCashier.CausesValidation = false;
+            this.rbtnCashier.Checked = true;
+            this.rbtnCashier.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbtnCashier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.rbtnCashier.Location = new System.Drawing.Point(9, 71);
+            this.rbtnCashier.Name = "rbtnCashier";
+            this.rbtnCashier.Size = new System.Drawing.Size(80, 25);
+            this.rbtnCashier.TabIndex = 5;
+            this.rbtnCashier.TabStop = true;
+            this.rbtnCashier.Text = "Cashier";
+            this.rbtnCashier.UseVisualStyleBackColor = true;
             // 
-            // radioButtonAdmin
+            // rbtnAdmin
             // 
-            this.radioButtonAdmin.AutoSize = true;
-            this.radioButtonAdmin.CausesValidation = false;
-            this.radioButtonAdmin.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButtonAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.radioButtonAdmin.Location = new System.Drawing.Point(9, 40);
-            this.radioButtonAdmin.Name = "radioButtonAdmin";
-            this.radioButtonAdmin.Size = new System.Drawing.Size(74, 25);
-            this.radioButtonAdmin.TabIndex = 4;
-            this.radioButtonAdmin.Text = "Admin";
-            this.radioButtonAdmin.UseVisualStyleBackColor = true;
+            this.rbtnAdmin.AutoSize = true;
+            this.rbtnAdmin.CausesValidation = false;
+            this.rbtnAdmin.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbtnAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.rbtnAdmin.Location = new System.Drawing.Point(9, 40);
+            this.rbtnAdmin.Name = "rbtnAdmin";
+            this.rbtnAdmin.Size = new System.Drawing.Size(74, 25);
+            this.rbtnAdmin.TabIndex = 4;
+            this.rbtnAdmin.Text = "Admin";
+            this.rbtnAdmin.UseVisualStyleBackColor = true;
             // 
-            // labelPermissions
+            // lblPermissions
             // 
-            this.labelPermissions.AutoSize = true;
-            this.labelPermissions.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPermissions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.labelPermissions.Location = new System.Drawing.Point(3, 9);
-            this.labelPermissions.Name = "labelPermissions";
-            this.labelPermissions.Size = new System.Drawing.Size(114, 28);
-            this.labelPermissions.TabIndex = 13;
-            this.labelPermissions.Text = "Permissions";
+            this.lblPermissions.AutoSize = true;
+            this.lblPermissions.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPermissions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.lblPermissions.Location = new System.Drawing.Point(3, 9);
+            this.lblPermissions.Name = "lblPermissions";
+            this.lblPermissions.Size = new System.Drawing.Size(114, 28);
+            this.lblPermissions.TabIndex = 13;
+            this.lblPermissions.Text = "Permissions";
             // 
-            // iconButtonSave
+            // ibtnSave
             // 
-            this.iconButtonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
-            this.iconButtonSave.FlatAppearance.BorderSize = 0;
-            this.iconButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonSave.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.iconButtonSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.iconButtonSave.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.iconButtonSave.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.iconButtonSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonSave.IconSize = 50;
-            this.iconButtonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonSave.Location = new System.Drawing.Point(530, 223);
-            this.iconButtonSave.Name = "iconButtonSave";
-            this.iconButtonSave.Size = new System.Drawing.Size(120, 60);
-            this.iconButtonSave.TabIndex = 10;
-            this.iconButtonSave.Text = "Save";
-            this.iconButtonSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButtonSave.UseVisualStyleBackColor = false;
-            this.iconButtonSave.Click += new System.EventHandler(this.iconButtonSave_Click);
+            this.ibtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
+            this.ibtnSave.FlatAppearance.BorderSize = 0;
+            this.ibtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnSave.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ibtnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.ibtnSave.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.ibtnSave.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.ibtnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnSave.IconSize = 50;
+            this.ibtnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnSave.Location = new System.Drawing.Point(530, 220);
+            this.ibtnSave.Name = "ibtnSave";
+            this.ibtnSave.Size = new System.Drawing.Size(120, 60);
+            this.ibtnSave.TabIndex = 10;
+            this.ibtnSave.Text = "Save";
+            this.ibtnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ibtnSave.UseVisualStyleBackColor = false;
+            this.ibtnSave.Click += new System.EventHandler(this.iconButtonSave_Click);
             // 
-            // iconButtonCancel
+            // ibtnCancel
             // 
-            this.iconButtonCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
-            this.iconButtonCancel.FlatAppearance.BorderSize = 0;
-            this.iconButtonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonCancel.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.iconButtonCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.iconButtonCancel.IconChar = FontAwesome.Sharp.IconChar.Ban;
-            this.iconButtonCancel.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
-            this.iconButtonCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonCancel.IconSize = 50;
-            this.iconButtonCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonCancel.Location = new System.Drawing.Point(352, 223);
-            this.iconButtonCancel.Name = "iconButtonCancel";
-            this.iconButtonCancel.Size = new System.Drawing.Size(120, 60);
-            this.iconButtonCancel.TabIndex = 9;
-            this.iconButtonCancel.Text = "Cancel";
-            this.iconButtonCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButtonCancel.UseVisualStyleBackColor = false;
-            this.iconButtonCancel.Click += new System.EventHandler(this.iconButtonCancel_Click);
+            this.ibtnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(85)))), ((int)(((byte)(37)))));
+            this.ibtnCancel.FlatAppearance.BorderSize = 0;
+            this.ibtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ibtnCancel.Font = new System.Drawing.Font("Yu Gothic UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ibtnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.ibtnCancel.IconChar = FontAwesome.Sharp.IconChar.Ban;
+            this.ibtnCancel.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(234)))), ((int)(((byte)(225)))));
+            this.ibtnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnCancel.IconSize = 50;
+            this.ibtnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ibtnCancel.Location = new System.Drawing.Point(352, 220);
+            this.ibtnCancel.Name = "ibtnCancel";
+            this.ibtnCancel.Size = new System.Drawing.Size(120, 60);
+            this.ibtnCancel.TabIndex = 9;
+            this.ibtnCancel.Text = "Cancel";
+            this.ibtnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ibtnCancel.UseVisualStyleBackColor = false;
+            this.ibtnCancel.Click += new System.EventHandler(this.iconButtonCancel_Click);
             // 
             // labelMessages
             // 
@@ -289,40 +289,40 @@
             this.labelMessages.Size = new System.Drawing.Size(0, 19);
             this.labelMessages.TabIndex = 15;
             // 
-            // maskedTextBoxIdentifyDocument
+            // mtxtBoxIdentifyDocument
             // 
-            this.maskedTextBoxIdentifyDocument.Location = new System.Drawing.Point(36, 172);
-            this.maskedTextBoxIdentifyDocument.Mask = "000.000.000-00";
-            this.maskedTextBoxIdentifyDocument.Name = "maskedTextBoxIdentifyDocument";
-            this.maskedTextBoxIdentifyDocument.Size = new System.Drawing.Size(174, 23);
-            this.maskedTextBoxIdentifyDocument.TabIndex = 2;
-            this.maskedTextBoxIdentifyDocument.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.maskedTextBoxIdentifyDocument.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mtxtBoxIdentifyDocument.Location = new System.Drawing.Point(36, 172);
+            this.mtxtBoxIdentifyDocument.Mask = "000.000.000-00";
+            this.mtxtBoxIdentifyDocument.Name = "mtxtBoxIdentifyDocument";
+            this.mtxtBoxIdentifyDocument.Size = new System.Drawing.Size(174, 23);
+            this.mtxtBoxIdentifyDocument.TabIndex = 2;
+            this.mtxtBoxIdentifyDocument.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.mtxtBoxIdentifyDocument.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(123)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(686, 312);
-            this.Controls.Add(this.maskedTextBoxIdentifyDocument);
+            this.ClientSize = new System.Drawing.Size(684, 311);
+            this.Controls.Add(this.mtxtBoxIdentifyDocument);
             this.Controls.Add(this.labelMessages);
-            this.Controls.Add(this.iconButtonCancel);
-            this.Controls.Add(this.iconButtonSave);
+            this.Controls.Add(this.ibtnCancel);
+            this.Controls.Add(this.ibtnSave);
             this.Controls.Add(this.panelPermissions);
-            this.Controls.Add(this.textBoxPassword);
-            this.Controls.Add(this.labelPassword);
-            this.Controls.Add(this.textBoxAcessUser);
-            this.Controls.Add(this.labelAcessUser);
-            this.Controls.Add(this.textBoxRegistration);
-            this.Controls.Add(this.labelRegistration);
-            this.Controls.Add(this.maskedTextBoxPhoneNumber);
-            this.Controls.Add(this.labelPhoneNumber);
-            this.Controls.Add(this.labelIdentifyDocument);
-            this.Controls.Add(this.textBoxName);
-            this.Controls.Add(this.labelName);
-            this.Controls.Add(this.textBoxID);
-            this.Controls.Add(this.labelID);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.txtAcessUser);
+            this.Controls.Add(this.lblAcessUser);
+            this.Controls.Add(this.txtRegistration);
+            this.Controls.Add(this.lblRegistration);
+            this.Controls.Add(this.mtxtPhoneNumber);
+            this.Controls.Add(this.lblPhoneNumber);
+            this.Controls.Add(this.lblIdentifyDocument);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.lblID);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "EmployeeForm";
@@ -337,26 +337,26 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelID;
-        private System.Windows.Forms.TextBox textBoxID;
-        private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.Label labelIdentifyDocument;
-        private System.Windows.Forms.Label labelPhoneNumber;
-        private System.Windows.Forms.MaskedTextBox maskedTextBoxPhoneNumber;
-        private System.Windows.Forms.Label labelRegistration;
-        private System.Windows.Forms.TextBox textBoxRegistration;
-        private System.Windows.Forms.Label labelAcessUser;
-        private System.Windows.Forms.TextBox textBoxAcessUser;
-        private System.Windows.Forms.Label labelPassword;
-        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label lblIdentifyDocument;
+        private System.Windows.Forms.Label lblPhoneNumber;
+        private System.Windows.Forms.MaskedTextBox mtxtPhoneNumber;
+        private System.Windows.Forms.Label lblRegistration;
+        private System.Windows.Forms.TextBox txtRegistration;
+        private System.Windows.Forms.Label lblAcessUser;
+        private System.Windows.Forms.TextBox txtAcessUser;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Panel panelPermissions;
-        private System.Windows.Forms.RadioButton radioButtonCashier;
-        private System.Windows.Forms.RadioButton radioButtonAdmin;
-        private System.Windows.Forms.Label labelPermissions;
-        private FontAwesome.Sharp.IconButton iconButtonSave;
-        private FontAwesome.Sharp.IconButton iconButtonCancel;
+        private System.Windows.Forms.RadioButton rbtnCashier;
+        private System.Windows.Forms.RadioButton rbtnAdmin;
+        private System.Windows.Forms.Label lblPermissions;
+        private FontAwesome.Sharp.IconButton ibtnSave;
+        private FontAwesome.Sharp.IconButton ibtnCancel;
         private System.Windows.Forms.Label labelMessages;
-        private System.Windows.Forms.MaskedTextBox maskedTextBoxIdentifyDocument;
+        private System.Windows.Forms.MaskedTextBox mtxtBoxIdentifyDocument;
     }
 }

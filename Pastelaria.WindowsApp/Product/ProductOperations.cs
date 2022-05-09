@@ -11,6 +11,8 @@ namespace Pastelaria.WindowsApp.Product
     public class ProductOperations : IRegisterable
     {
         private readonly ProductUserControl table;
+        private ProductForm screen;
+
         public ProductOperations()
         {
             table = new();
@@ -26,7 +28,12 @@ namespace Pastelaria.WindowsApp.Product
 
         public void RegisterInsertNew()
         {
-            throw new NotImplementedException();
+            screen = new("Product Register");
+
+            if (screen.ShowDialog() == DialogResult.OK)
+            {
+                LoadGrid();
+            }
         }
 
         public void RegisterRemove()
@@ -47,6 +54,10 @@ namespace Pastelaria.WindowsApp.Product
         public void RegisterUpdate()
         {
             throw new NotImplementedException();
+        }
+        private void LoadGrid()
+        {
+            
         }
     }
 }

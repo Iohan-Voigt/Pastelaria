@@ -1,7 +1,4 @@
 ﻿using Autofac;
-using Pastelaria.AppService;
-using Pastelaria.ORM;
-using Pastelaria.ORM.Features;
 using Pastelaria.RescourcesLib;
 using Pastelaria.WindowsApp.Config;
 using Pastelaria.WindowsApp.Costumer;
@@ -27,7 +24,7 @@ namespace Pastelaria.WindowsApp
         {
 
             InitializeComponent();
-            labelRegisterType.Text = "Title :)";
+            lblRegisterType.Text = "Title :)";
             toolBoxActions.Renderer = new NoLoadToolStripRenderer();
             UpdateFooter(GeneralConfig.Data["Welcome"] + " " + LoggedEmployee.Name);
             ConfigureTexts();
@@ -128,7 +125,7 @@ namespace Pastelaria.WindowsApp
                 panelMenu.Width = 120;
                 logoPic.Visible = false;
                 LogoPicBox.Visible = false;
-                menuBtn.Dock = DockStyle.Top;
+                ibtnMenu.Dock = DockStyle.Top;
                 logoPanel.Height = 50;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {
@@ -143,7 +140,7 @@ namespace Pastelaria.WindowsApp
                 panelMenu.Width = 250;
                 logoPic.Visible = true;
                 LogoPicBox.Visible = true;
-                menuBtn.Dock = DockStyle.None;
+                ibtnMenu.Dock = DockStyle.None;
                 logoPanel.Height = 140;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {
@@ -292,12 +289,26 @@ namespace Pastelaria.WindowsApp
         #endregion
 
         #region Privates
+
+        private void iconMenuItemOpen_Click(object sender, EventArgs e)
+        {
+            this.Show();
+        }
+
+        private void iconMenuItemExit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(GeneralConfig.Data["Are you sure that you want to quit"] + "?", "Pastelaria"
+                               , MessageBoxButtons.YesNo
+                               , MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                Application.Exit();
+        }
+
         private void ToolboxConfig(IConfigurationToolBox configuration, bool filter)
         {
             toolBoxActions.Enabled = true;
             filter = true ? btnFilter.Enabled = true : btnFilter.Enabled = false;
 
-            labelRegisterType.Text = configuration.ToolType;
+            lblRegisterType.Text = configuration.ToolType;
             btnAdd.Text = configuration.ToolTipAdd;
             btnEdit.Text = configuration.ToolTipEdit;
             btnRemove.Text = configuration.ToolTipRemove;
@@ -309,6 +320,34 @@ namespace Pastelaria.WindowsApp
             table.Dock = DockStyle.Fill;
             DataPanel.Controls.Clear();
             DataPanel.Controls.Add(table);
+        }
+
+        private void MainFrameForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.F1:
+
+                    break;
+                case Keys.F2:
+                    employeeBtn_Click(sender, e);
+                    break;
+                case Keys.F3:
+                    productBtn_Click(sender, e);
+                    break;
+                case Keys.F4:
+                    break;
+                case Keys.F5:
+                    break;
+                case Keys.F6:
+                    break;
+                case Keys.F7:
+                    break;
+                case Keys.F8:
+                    break;
+                case Keys.F9:
+                    break;
+            }
         }
 
         #endregion
@@ -336,14 +375,14 @@ namespace Pastelaria.WindowsApp
 
         private void ConfigureTexts()
         {
-            this.homeBtn.Text = GeneralConfig.Data["Home"];
-            this.employeeBtn.Text = GeneralConfig.Data["Employees"];
-            this.productBtn.Text = GeneralConfig.Data["Products"];
-            this.customersBtn.Text = GeneralConfig.Data["Customers"];
-            this.sellBtn.Text = GeneralConfig.Data["Sells"];
-            this.orderBtn.Text = GeneralConfig.Data["Orders"];
-            this.debitBtn.Text = GeneralConfig.Data["Debits"];
-            this.configBtn.Text = GeneralConfig.Data["Configuration"];
+            this.ibtnHome.Text = GeneralConfig.Data["Home"];
+            this.ibtnEmployee.Text = GeneralConfig.Data["Employees"];
+            this.ibtnProduct.Text = GeneralConfig.Data["Products"];
+            this.ibtnCustomers.Text = GeneralConfig.Data["Customers"];
+            this.ibtnSell.Text = GeneralConfig.Data["Sells"];
+            this.ibtnOrder.Text = GeneralConfig.Data["Orders"];
+            this.ibtnDebit.Text = GeneralConfig.Data["Debits"];
+            this.ibtnConfig.Text = GeneralConfig.Data["Configuration"];
             this.contextMenuStripSystemTray.Items[0].Text = GeneralConfig.Data["Exit"];
             this.contextMenuStripSystemTray.Items[1].Text = GeneralConfig.Data["Open"];
         }
@@ -352,54 +391,14 @@ namespace Pastelaria.WindowsApp
 
         public void UpdateFooter(string Message)
         {
-            footerLabelBase.Text = Message;
-            footerLabelBase.Font = new Font("Segoe UI", this.footerLabelBase.Font.Size);
+            lblFooter.Text = Message;
+            lblFooter.Font = new Font("Segoe UI", this.lblFooter.Font.Size);
         }
 
         public void UpdateTitle(string title)
         {
-            this.titleLable.Text = title;
+            this.lblTitle.Text = title;
         }
 
-        private void MainFrameForm_KeyDown(object sender, KeyEventArgs e)
-        {
-            switch (e.KeyCode)
-            {
-                case Keys.F1:
-                    
-                    break;
-                case Keys.F2:
-                    employeeBtn_Click(sender, e);
-                    break;
-                case Keys.F3:
-                    productBtn_Click(sender, e);
-                    break;
-                case Keys.F4:
-                    break;
-                case Keys.F5:
-                    break;
-                case Keys.F6:
-                    break;
-                case Keys.F7:
-                    break;
-                case Keys.F8:
-                    break;
-                case Keys.F9:
-                    break;
-            }
-        }
-
-        private void iconMenuItemOpen_Click(object sender, EventArgs e)
-        {
-            this.Show();
-        }
-
-        private void iconMenuItemExit_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show(GeneralConfig.Data["Are you sure that you want to quit"] + "?", "Pastelaria"
-                               , MessageBoxButtons.YesNo
-                               , MessageBoxIcon.Exclamation) == DialogResult.Yes)
-                Application.Exit();
-        }
     }
 }

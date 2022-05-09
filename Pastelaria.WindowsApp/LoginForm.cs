@@ -87,9 +87,9 @@ namespace Pastelaria.WindowsApp
 
         private void ConfigureInfo()
         {
-            labelUser.Text = GeneralConfig.Data["User"];
-            labelPassword.Text = GeneralConfig.Data["Password"];
-            loginBtn.Text = GeneralConfig.Data["Login"];
+            lblUser.Text = GeneralConfig.Data["User"];
+            lblPassword.Text = GeneralConfig.Data["Password"];
+            btnLogin.Text = GeneralConfig.Data["Login"];
         }
 
         private void CofigureTextBox()

@@ -58,7 +58,9 @@ namespace Pastelaria.RescourcesLib
             ,{"Exit",""}
             ,{"Open",""}
             ,{"Are you sure that you want to quit",""}
-            //,{"",""}
+            ,{"Must have a Name",""}
+            ,{"Must have a Value",""}
+            ,{"Must hava a Image",""}
             //,{"",""}
         };
 

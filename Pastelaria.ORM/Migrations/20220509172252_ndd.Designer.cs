@@ -10,8 +10,8 @@ using Pastelaria.ORM;
 namespace Pastelaria.ORM.Migrations
 {
     [DbContext(typeof(PastelariaDBContext))]
-    [Migration("20220424152443_1")]
-    partial class _1
+    [Migration("20220509172252_ndd")]
+    partial class ndd
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -81,6 +81,30 @@ namespace Pastelaria.ORM.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TBEMPLOYEE");
+                });
+
+            modelBuilder.Entity("Pastelaria.Domain.Product", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("VARCHAR(100)");
+
+                    b.Property<byte[]>("Image")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("VARCHAR(75)");
+
+                    b.Property<decimal>("Value")
+                        .HasColumnType("DECIMAL");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TBPRODUCT");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,4 +1,5 @@
 ﻿using Pastelaria.Domain.Shared;
+using Pastelaria.RescourcesLib;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -23,9 +24,22 @@ namespace Pastelaria.Domain
             this.Image = image;
         }
 
+        public Product() {   }
+
         public override string Validate()
         {
-            throw new NotImplementedException();
+            string result = "";
+            if(Name.Length == 0)
+                result += (GeneralConfig.Data["Must have a Name"] + "\n");
+            if(Value == 0)
+                result += (GeneralConfig.Data["Must have a Value"] + "\n");
+            if(Image == null)
+                result += (GeneralConfig.Data["Must hava a Image"] + "\n");
+
+            if (result == "")
+                return "VALID";
+            else
+                return result;
         }
 
         public override string ToString()

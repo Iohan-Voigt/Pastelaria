@@ -180,6 +180,15 @@
   <data name="Login" xml:space="preserve">
     <value>login</value>
   </data>
+  <data name="Must hava a Image" xml:space="preserve">
+    <value>Must hava a Image</value>
+  </data>
+  <data name="Must have a Name" xml:space="preserve">
+    <value>Must have a Name</value>
+  </data>
+  <data name="Must have a Value" xml:space="preserve">
+    <value>Must have a Value</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
