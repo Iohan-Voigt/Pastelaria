@@ -17,22 +17,55 @@ namespace Pastelaria.AppService
 
         public override string Delete(Product entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                productRepository.Remove(entity.Id);
+                return "VALID";
+            }
+            catch (Exception)
+            {
+                return "ERROR";
+            }
         }
 
         public override string Exists(Guid Id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (productRepository.GetById(Id) != null)
+                    return "YES";
+                else
+                    return "NO";
+            }
+            catch (Exception)
+            {
+                return "ERROR";
+            }
         }
 
         public override List<Product> GetAll()
         {
-            throw new NotImplementedException();
+            try
+            {
+                return productRepository.GetAll();
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         public override Product GetById(Guid Id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return productRepository.GetById(Id);
+                
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         public override string Insert(Product entity)
@@ -57,7 +90,21 @@ namespace Pastelaria.AppService
 
         public override string Update(Product entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (entity.Validate().Equals("VALID"))
+                {
+                    productRepository.Update(entity);
+                    return "Product:  " + entity.Name.ToString() + " succeed updated!";
+                }
+
+                return entity.Validate();
+            }
+            catch (Exception)
+            {
+
+                return "ERROR";
+            }
         }
     }
 }

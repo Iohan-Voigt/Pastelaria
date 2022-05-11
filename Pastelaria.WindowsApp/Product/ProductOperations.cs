@@ -21,7 +21,7 @@ namespace Pastelaria.WindowsApp.Product
         }
         public UserControl ObtainTable()
         {
-            List<Domain.Product> product = new List<Domain.Product>();
+            List<Domain.Product> product = productAppService.GetAll();
 
             table.UpdateRegisters(product);
 
@@ -60,7 +60,8 @@ namespace Pastelaria.WindowsApp.Product
         }
         private void LoadGrid()
         {
-            
+            List<Domain.Product> products = productAppService.GetAll();
+            table.UpdateRegisters(products);
         }
     }
 }

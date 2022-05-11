@@ -36,7 +36,7 @@
             this.lblValue = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.mtxtValue = new System.Windows.Forms.MaskedTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtDescription = new System.Windows.Forms.RichTextBox();
             this.lblMessages = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -64,6 +64,7 @@
             this.ibtnCancel.Text = "Cancel";
             this.ibtnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ibtnCancel.UseVisualStyleBackColor = false;
+            this.ibtnCancel.Click += new System.EventHandler(this.ibtnCancel_Click);
             // 
             // ibtnSave
             // 
@@ -84,6 +85,7 @@
             this.ibtnSave.Text = "Save";
             this.ibtnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ibtnSave.UseVisualStyleBackColor = false;
+            this.ibtnSave.Click += new System.EventHandler(this.ibtnSave_Click);
             // 
             // pctImage
             // 
@@ -141,13 +143,13 @@
             this.mtxtValue.Size = new System.Drawing.Size(158, 23);
             this.mtxtValue.TabIndex = 17;
             // 
-            // richTextBox1
+            // txtDescription
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 121);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(210, 102);
-            this.richTextBox1.TabIndex = 18;
-            this.richTextBox1.Text = "";
+            this.txtDescription.Location = new System.Drawing.Point(12, 121);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(210, 102);
+            this.txtDescription.TabIndex = 18;
+            this.txtDescription.Text = "";
             // 
             // lblMessages
             // 
@@ -215,7 +217,7 @@
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.lblMessages);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.mtxtValue);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblValue);
@@ -242,7 +244,7 @@
         private System.Windows.Forms.Label lblValue;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.MaskedTextBox mtxtValue;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtDescription;
         private System.Windows.Forms.Label lblMessages;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.TextBox txtID;

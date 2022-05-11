@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pastelaria.WindowsApp.Shared;
+using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -36,6 +37,20 @@ namespace Pastelaria.WindowsApp.Product
             InitializeComponent();
             this.lblMessages.BackColor = lightRed;
             this.Text = title;
+            ConfigureTextBox();
+        }
+
+        private void ConfigureTextBox()
+        {
+            txtName.Enter += new(CustomEvents.EnterFieldEvent!);
+            txtName.Leave += new(CustomEvents.LeaveFieldEvent!);
+            
+            txtDescription.Enter += new(CustomEvents.EnterFieldEvent!);
+            txtDescription.Leave += new(CustomEvents.LeaveFieldEvent!);
+
+            mtxtValue.Enter += new(CustomEvents.EnterFieldEvent!);
+            mtxtValue.Leave += new(CustomEvents.LeaveFieldEvent!);
+
         }
 
         private void ibtnAlterImage_Click(object sender, EventArgs e)
@@ -49,6 +64,32 @@ namespace Pastelaria.WindowsApp.Product
                     pctImage.Image = (Bitmap)Image.FromFile(image);
                 }
             }
+        }
+
+        private void ibtnSave_Click(object sender, EventArgs e)
+        {
+            product.Name = txtName.Text;
+            product.Description = txtDescription.Text;
+            product.Image = (Bitmap)pctImage.Image;
+
+            if (mtxtValue.Text != "")
+                product.Value = Decimal.Parse(mtxtValue.Text);
+
+            
+            string validateResult = product.Validate();
+            
+            if (validateResult != "VALID")
+            {
+                lblMessages.Text = new StringReader(validateResult).ReadLine();
+                return;
+            
+            }
+            DialogResult = DialogResult.OK;
+        }
+
+        private void ibtnCancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

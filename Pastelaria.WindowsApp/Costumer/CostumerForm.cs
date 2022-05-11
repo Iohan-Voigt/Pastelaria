@@ -14,7 +14,7 @@ namespace Pastelaria.WindowsApp.Costumer
         private void btnCancel_Click(object sender, EventArgs e)
         {
 
-            if (MessageBox.Show("Are you sure that you wan to cancell?", "Confirmation") == DialogResult.Yes);
+            if (MessageBox.Show("Are you sure that you wan to cancel?", "Confirmation") == DialogResult.Yes);
             this.Close();
         }
 

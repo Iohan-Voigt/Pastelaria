@@ -26,6 +26,7 @@ namespace Pastelaria.WindowsApp.Product
             var coluns = new DataGridViewColumn[]
            {
                 new DataGridViewTextBoxColumn { DataPropertyName = "Id", HeaderText = "Id"},
+                //new DataGridViewImageColumn   { DataPropertyName = "Image", HeaderText = "Image"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "Name", HeaderText = "Nome"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "Value", HeaderText = "Value"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "Description", HeaderText = "Description"}
@@ -36,12 +37,8 @@ namespace Pastelaria.WindowsApp.Product
 
         public void UpdateRegisters(List<Domain.Product> products)
         {
-            productGrid.Rows.Clear();
-
-            foreach (Domain.Product product in products)
-            {
-                productGrid.Rows.Add(product);
-            }
+            productGrid.DataSource = null;
+            productGrid.DataSource = products;
         }
 
         public Guid GetSelectedId()

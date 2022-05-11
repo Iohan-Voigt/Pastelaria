@@ -33,7 +33,7 @@ namespace Pastelaria.WindowsApp.Employee
         public void UpdateRegisters(List<Domain.Employee> employees)
         {
             employeeGrid.DataSource = null;
-            employeeGrid.DataSource = (employees);
+            employeeGrid.DataSource = employees;
         }
 
         public Guid GetSelectedId()
