@@ -159,6 +159,9 @@
   <data name="Employee" xml:space="preserve">
     <value>Employee</value>
   </data>
+  <data name="Employee Register" xml:space="preserve">
+    <value>Employee Register</value>
+  </data>
   <data name="Employees" xml:space="preserve">
     <value>Employees</value>
   </data>
@@ -212,6 +215,9 @@
   </data>
   <data name="Product" xml:space="preserve">
     <value>Product</value>
+  </data>
+  <data name="Product Register" xml:space="preserve">
+    <value>Product Register</value>
   </data>
   <data name="Products" xml:space="preserve">
     <value>Products</value>

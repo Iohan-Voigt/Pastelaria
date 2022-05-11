@@ -42,11 +42,13 @@ namespace Pastelaria.WindowsApp.Shared
         private static void AppServiceConfiguration()
         {
             Builder.RegisterType<EmployeeAppService>().InstancePerDependency();
+            Builder.RegisterType<ProductAppService>().InstancePerDependency();
         }
 
         private static void ORMConfiguration()
         {
             Builder.RegisterType<EmployeeORM>().As<IEmployeeRepository>().InstancePerDependency();
+            Builder.RegisterType<ProductORM>().As<IProductRepository>().InstancePerDependency();
         }
     }
 }

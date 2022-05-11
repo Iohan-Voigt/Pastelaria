@@ -1,14 +1,8 @@
 ﻿using Pastelaria.AppService.Shared;
 using Pastelaria.Domain;
 using Pastelaria.Domain.Repositories;
-using Pastelaria.Domain.Shared;
-using Pastelaria.ORM.Features;
-using Pastelaria.ORM.Shared;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pastelaria.AppService
 {
@@ -16,9 +10,9 @@ namespace Pastelaria.AppService
     {
         private readonly IEmployeeRepository employeeRepository;
 
-        public EmployeeAppService(IEmployeeRepository employeeORM)
+        public EmployeeAppService(IEmployeeRepository employeeRepository)
         {
-            this.employeeRepository = employeeORM;
+            this.employeeRepository = employeeRepository;
         }
 
         public override string Insert(Employee entity)

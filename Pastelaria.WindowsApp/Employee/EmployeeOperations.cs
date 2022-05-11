@@ -40,7 +40,7 @@ namespace Pastelaria.WindowsApp.Employee
 
         public void RegisterInsertNew()
         {
-            screen = new ("Employee Register");
+            screen = new (GeneralConfig.Data["Employee Register"]);
 
             if (screen.ShowDialog() == DialogResult.OK)
             {
@@ -74,12 +74,12 @@ namespace Pastelaria.WindowsApp.Employee
 
         public void RegistersFilter()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void RegistersGroup()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void RegisterUpdate()

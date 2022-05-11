@@ -22,6 +22,7 @@ namespace Pastelaria.WindowsApp
             LoginForm loginForm = new();
 
             PastelariaDBContext db = new();
+
             #if DEBUG
             var pendingChanges = db.Database.GetPendingMigrations();
             if (pendingChanges.Any())

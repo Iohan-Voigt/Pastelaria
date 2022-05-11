@@ -61,7 +61,8 @@ namespace Pastelaria.RescourcesLib
             ,{"Must have a Name",""}
             ,{"Must have a Value",""}
             ,{"Must hava a Image",""}
-            //,{"",""}
+            ,{"Employee Register",""}
+            ,{"Product Register",""}
         };
 
         public static void SetLanguageData()

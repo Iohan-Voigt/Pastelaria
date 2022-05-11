@@ -187,6 +187,15 @@ namespace Pastelaria.RescourcesLib {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Employee Register.
+        /// </summary>
+        internal static string Employee_Register {
+            get {
+                return ResourceManager.GetString("Employee Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Employees.
         /// </summary>
         internal static string Employees {
@@ -345,6 +354,15 @@ namespace Pastelaria.RescourcesLib {
         internal static string Product {
             get {
                 return ResourceManager.GetString("Product", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Register.
+        /// </summary>
+        internal static string Product_Register {
+            get {
+                return ResourceManager.GetString("Product Register", resourceCulture);
             }
         }
         

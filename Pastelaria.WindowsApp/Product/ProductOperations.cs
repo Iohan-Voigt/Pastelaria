@@ -1,9 +1,8 @@
-﻿using Pastelaria.WindowsApp.Shared;
+﻿using Pastelaria.AppService;
+using Pastelaria.RescourcesLib;
+using Pastelaria.WindowsApp.Shared;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pastelaria.WindowsApp.Product
@@ -11,10 +10,13 @@ namespace Pastelaria.WindowsApp.Product
     public class ProductOperations : IRegisterable
     {
         private readonly ProductUserControl table;
+        private readonly ProductAppService productAppService;
+
         private ProductForm screen;
 
-        public ProductOperations()
+        public ProductOperations(ProductAppService productAppService)
         {
+            this.productAppService = productAppService;
             table = new();
         }
         public UserControl ObtainTable()
@@ -28,10 +30,11 @@ namespace Pastelaria.WindowsApp.Product
 
         public void RegisterInsertNew()
         {
-            screen = new("Product Register");
+            screen = new(GeneralConfig.Data["Product Register"]);
 
             if (screen.ShowDialog() == DialogResult.OK)
             {
+                productAppService.Insert(screen.product);
                 LoadGrid();
             }
         }

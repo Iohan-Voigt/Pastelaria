@@ -25,6 +25,7 @@ namespace Pastelaria.ORM.Configuration
         }
 
         #region Privates
+
         protected byte[] ConvertToArray(Bitmap entidade)
         {
             bmp = entidade;
@@ -43,6 +44,7 @@ namespace Pastelaria.ORM.Configuration
 
             return imagem;
         }
+
         #endregion
     }
 }

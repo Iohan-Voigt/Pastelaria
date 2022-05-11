@@ -1,14 +1,6 @@
 ﻿using Pastelaria.ORM;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Pastelaria.Domain;
 using System.Threading;
 using Pastelaria.AppService;
 using Pastelaria.ORM.Features;
@@ -23,14 +15,15 @@ namespace Pastelaria.WindowsApp
 
         private Domain.Employee loggedEmployee;
 
-        private PastelariaDBContext db;
-
-        private EmployeeAppService employeeAppService;
+        private readonly PastelariaDBContext db;
+        private readonly EmployeeAppService employeeAppService;
+        private readonly ProductAppService productAppService;
 
         public LoginForm()
         {
             db = new();
             employeeAppService = new(new EmployeeORM(db));
+            productAppService = new(new ProductORM(db));
             InitializeComponent();
             ConfigureInfo();
             CofigureTextBox();
