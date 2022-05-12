@@ -13,20 +13,20 @@ namespace Pastelaria.WindowsApp
     public partial class LoginForm : Form
     {
         private Thread thread;
-
         private Domain.Employee loggedEmployee;
 
         private readonly PastelariaDBContext db;
         private readonly EmployeeAppService employeeAppService;
         private readonly ProductAppService productAppService;
         public LoginForm()
-        {
+        {          
             db = new();
             employeeAppService = new(new EmployeeORM(db));
             productAppService = new(new ProductORM(db));
             InitializeComponent();
             ConfigureInfo();
             CofigureTextBox();
+            SystemColors.ConfigureColors(this.Controls);
         }
 
         private void LogginBtn_Click(object sender, EventArgs e)

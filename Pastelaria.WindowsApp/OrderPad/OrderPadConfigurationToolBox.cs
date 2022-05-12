@@ -1,4 +1,5 @@
-﻿using Pastelaria.WindowsApp.Shared;
+﻿using Pastelaria.RescourcesLib;
+using Pastelaria.WindowsApp.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,22 +13,22 @@ namespace Pastelaria.WindowsApp.OrderPad
     {
         public string ToolTipAdd
         {
-            get { return "Add new order"; }
+            get { return GeneralConfig.Data["Order Pad"] + " | " + GeneralConfig.Data["Add new"]; }
         }
 
         public string ToolType
         {
-            get { return "Order register"; }
+            get { return GeneralConfig.Data["Order Pad"] + " | " + GeneralConfig.Data["Register"]; }
         }
 
         public string ToolTipEdit
         {
-            get { return "Update a order"; }
+            get { return GeneralConfig.Data["Order Pad"] + " | " + GeneralConfig.Data["Remove"]; }
         }
 
         public string ToolTipRemove
         {
-            get { return "Remove a order"; }
+            get { return GeneralConfig.Data["Order Pad"] + " | " + GeneralConfig.Data["Remove"]; }
         }
     }
 }

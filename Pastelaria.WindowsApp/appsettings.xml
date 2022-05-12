@@ -5,12 +5,17 @@
   </tax>
   <colors>
     <clear>
-      <baseCollor>173; 85; 37</baseCollor>
-      <secondCollor>219; 123; 0</secondCollor>
-      <thirdCollor></thirdCollor>
-      <textCollor>238; 234; 225</textCollor>
+      <baseColor>173,85,37</baseColor>
+      <secondColor>219,123,0</secondColor>
+      <thirdColor></thirdColor>
+      <textColor>238,234,225</textColor>
     </clear>
-    <dark></dark>
+    <dark>
+      <baseColor>45,36,36</baseColor>
+      <secondColor>92,61,46</secondColor>
+      <thirdColor>184,92,56</thirdColor>
+      <textColor>224,192,151</textColor>
+    </dark>
   </colors>
 </appsettings>
 

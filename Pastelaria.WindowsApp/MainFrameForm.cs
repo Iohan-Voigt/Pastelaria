@@ -7,7 +7,6 @@ using Pastelaria.WindowsApp.OrderPad;
 using Pastelaria.WindowsApp.Product;
 using Pastelaria.WindowsApp.Shared;
 using System;
-using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -21,21 +20,21 @@ namespace Pastelaria.WindowsApp
         public static Domain.Employee LoggedEmployee { get; set; }
 
         public MainFrameForm()
-        {
-
+        { 
             InitializeComponent();
             lblRegisterType.Text = "Title :)";
             toolBoxActions.Renderer = new NoLoadToolStripRenderer();
             UpdateFooter(GeneralConfig.Data["Welcome"] + " " + LoggedEmployee.Name);
             ConfigureTexts();
+            SystemColors.ConfigureColors(this.Controls);
 
             this.Padding = new (2);
-            this.BackColor = Color.FromArgb(28, 31, 51);
+            this.BackColor = System.Drawing.Color.FromArgb(28, 31, 51);
         }
 
-            private Size formSize;
-
         #region SideMenu
+        private System.Drawing.Size formSize;
+
         #region Form Resize
         protected override void WndProc(ref Message m)
         {
@@ -66,8 +65,8 @@ namespace Pastelaria.WindowsApp
                 {
                     if ((int)m.Result == HTCLIENT)
                     {
-                        Point screenPoint = new (m.LParam.ToInt32());                        
-                        Point clientPoint = this.PointToClient(screenPoint);
+                        System.Drawing.Point screenPoint = new (m.LParam.ToInt32());
+                        System.Drawing.Point clientPoint = this.PointToClient(screenPoint);
                         if (clientPoint.Y <= resizeAreaSize)
                         {
                             if (clientPoint.X <= resizeAreaSize)
@@ -130,7 +129,7 @@ namespace Pastelaria.WindowsApp
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {
                     menuButton.Text = "";
-                    menuButton.ImageAlign = ContentAlignment.MiddleCenter;
+                    menuButton.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
                     menuButton.Padding = new Padding(0);
                     menuButton.Width = 120;
                 }
@@ -145,7 +144,7 @@ namespace Pastelaria.WindowsApp
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {
                     menuButton.Text = "   " + menuButton.Tag.ToString();
-                    menuButton.ImageAlign = ContentAlignment.MiddleLeft;
+                    menuButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
                     menuButton.Padding = new Padding(10, 0, 0, 0);
                     menuButton.Width = 250;
                 }
@@ -391,7 +390,7 @@ namespace Pastelaria.WindowsApp
         {
            foreach(Label lbl in this.Controls)
             {
-                lbl.ForeColor
+                //lbl.ForeColor = 
             }
         }
 
@@ -400,7 +399,7 @@ namespace Pastelaria.WindowsApp
         public void UpdateFooter(string Message)
         {
             lblFooter.Text = Message;
-            lblFooter.Font = new Font("Segoe UI", this.lblFooter.Font.Size);
+            lblFooter.Font = new System.Drawing.Font("Segoe UI", this.lblFooter.Font.Size);
         }
 
         public void UpdateTitle(string title)

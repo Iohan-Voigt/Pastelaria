@@ -37,7 +37,7 @@ namespace Pastelaria.WindowsApp {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Default")]
+        [global::System.Configuration.DefaultSettingValueAttribute("dark")]
         public string ColorTheme {
             get {
                 return ((string)(this["ColorTheme"]));

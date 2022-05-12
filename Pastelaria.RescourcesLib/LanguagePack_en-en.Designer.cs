@@ -313,6 +313,15 @@ namespace Pastelaria.RescourcesLib {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Order Pad.
+        /// </summary>
+        internal static string Order_Pad {
+            get {
+                return ResourceManager.GetString("Order Pad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Orders.
         /// </summary>
         internal static string Orders {
