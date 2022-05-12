@@ -6,6 +6,7 @@ using Pastelaria.AppService;
 using Pastelaria.ORM.Features;
 using Pastelaria.RescourcesLib;
 using Pastelaria.WindowsApp.Shared;
+using Serilog;
 
 namespace Pastelaria.WindowsApp
 {
@@ -18,7 +19,6 @@ namespace Pastelaria.WindowsApp
         private readonly PastelariaDBContext db;
         private readonly EmployeeAppService employeeAppService;
         private readonly ProductAppService productAppService;
-
         public LoginForm()
         {
             db = new();
@@ -31,6 +31,7 @@ namespace Pastelaria.WindowsApp
 
         private void LogginBtn_Click(object sender, EventArgs e)
         {
+            Log.Logger.Information($"{this.ToString().Replace(", Text: ", "")} | Attempt to login");
             if (userTextBox.Text.Equals("admin")
                 && passwordTextBox.Text.Equals("admin"))
             {
@@ -49,11 +50,12 @@ namespace Pastelaria.WindowsApp
 
                 if(employee != null)
                 {
+                    Log.Logger.Information($"{this.ToString().Replace(", Text: ", "")} | Attempt to login succed");
                     loggedEmployee = employee;
                     Loggin();
                     return;
                 }
-
+                Log.Logger.Information($"{this.ToString().Replace(", Text: ", "")} | Attempt to login failed");
                 userTextBox.Clear();
                 passwordTextBox.Clear();
                 InfoLabel.Text = "Invalid User";

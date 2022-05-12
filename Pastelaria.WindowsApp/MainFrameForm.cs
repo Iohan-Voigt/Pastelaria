@@ -387,6 +387,14 @@ namespace Pastelaria.WindowsApp
             this.contextMenuStripSystemTray.Items[1].Text = GeneralConfig.Data["Open"];
         }
 
+        private void ConfigureCollors()
+        {
+           foreach(Label lbl in this.Controls)
+            {
+                lbl.ForeColor
+            }
+        }
+
         #endregion
 
         public void UpdateFooter(string Message)

@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using Pastelaria.Logger;
 using Pastelaria.ORM;
 using Pastelaria.RescourcesLib;
+using Serilog;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -12,6 +14,8 @@ namespace Pastelaria.WindowsApp
         [STAThread]
         static void Main()
         {
+            LogGenerator.ConfigureLog();
+            Log.Logger.Information($"Boot Started");
 
             GeneralConfig.Language = GensSysConfs.Default.Language;
             GeneralConfig.SetLanguageData();
@@ -30,7 +34,6 @@ namespace Pastelaria.WindowsApp
             #endif
 
             Application.Run(loginForm);
-
         }
     }
 }

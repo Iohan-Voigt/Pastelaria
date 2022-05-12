@@ -24,6 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Pastelaria.AppService\Pastelaria.AppService.csproj" />
     <ProjectReference Include="..\Pastelaria.Domain\Pastelaria.Domain.csproj" />
+    <ProjectReference Include="..\Pastelaria.Logger\Pastelaria.Logger.csproj" />
     <ProjectReference Include="..\Pastelaria.ORM\Pastelaria.ORM.csproj" />
     <ProjectReference Include="..\Pastelaria.RescourcesLib\Pastelaria.RescourcesLib.csproj" />
   </ItemGroup>

@@ -4,7 +4,12 @@
     
   </tax>
   <colors>
-    <clear></clear>
+    <clear>
+      <baseCollor>173; 85; 37</baseCollor>
+      <secondCollor>219; 123; 0</secondCollor>
+      <thirdCollor></thirdCollor>
+      <textCollor>238; 234; 225</textCollor>
+    </clear>
     <dark></dark>
   </colors>
 </appsettings>

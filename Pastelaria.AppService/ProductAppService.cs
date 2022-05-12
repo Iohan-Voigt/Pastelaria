@@ -59,8 +59,7 @@ namespace Pastelaria.AppService
         {
             try
             {
-                return productRepository.GetById(Id);
-                
+                return productRepository.GetById(Id);               
             }
             catch (Exception)
             {
