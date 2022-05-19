@@ -1,15 +1,11 @@
 ﻿using Pastelaria.Domain.Shared;
+using Pastelaria.RescourcesLib;
 using Pastelaria.WindowsApp.Shared;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using SystemColors = Pastelaria.WindowsApp.Shared.SystemColors;
 
 namespace Pastelaria.WindowsApp.Employee
 {
@@ -56,6 +52,7 @@ namespace Pastelaria.WindowsApp.Employee
             this.labelMessages.BackColor = lightRed;
             this.Text = title;
             ConfigureTextBox();
+            SystemColors.ConfigureColors(Controls);
         }
 
         private void ConfigureTextBox()
@@ -81,7 +78,7 @@ namespace Pastelaria.WindowsApp.Employee
 
         private void iconButtonCancel_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Are you sure that you want to cancel?","Employee registration"
+            if(MessageBox.Show(GeneralConfig.Data[@"AreYouSureThatYouWantToCancel?"], GeneralConfig.Data["Employee Register"]
                                 ,MessageBoxButtons.YesNo
                                 ,MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {

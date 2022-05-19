@@ -81,6 +81,36 @@ namespace Pastelaria.ORM.Migrations
                     b.ToTable("TBEMPLOYEE");
                 });
 
+            modelBuilder.Entity("Pastelaria.Domain.OrderPad", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("CostumerId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("EmployeeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("OpenTime")
+                        .HasColumnType("DATE");
+
+                    b.Property<int>("OrderPadPaymentStatus")
+                        .HasColumnType("INT");
+
+                    b.Property<int>("OrderPadStatus")
+                        .HasColumnType("INT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CostumerId");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.ToTable("TBORDERPAD");
+                });
+
             modelBuilder.Entity("Pastelaria.Domain.Product", b =>
                 {
                     b.Property<Guid>("Id")
@@ -97,12 +127,44 @@ namespace Pastelaria.ORM.Migrations
                         .IsRequired()
                         .HasColumnType("VARCHAR(75)");
 
+                    b.Property<Guid?>("OrderPadId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<decimal>("Value")
                         .HasColumnType("DECIMAL");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("OrderPadId");
+
                     b.ToTable("TBPRODUCT");
+                });
+
+            modelBuilder.Entity("Pastelaria.Domain.OrderPad", b =>
+                {
+                    b.HasOne("Pastelaria.Domain.Costumer", "Costumer")
+                        .WithMany()
+                        .HasForeignKey("CostumerId");
+
+                    b.HasOne("Pastelaria.Domain.Employee", "Employee")
+                        .WithMany()
+                        .HasForeignKey("EmployeeId");
+
+                    b.Navigation("Costumer");
+
+                    b.Navigation("Employee");
+                });
+
+            modelBuilder.Entity("Pastelaria.Domain.Product", b =>
+                {
+                    b.HasOne("Pastelaria.Domain.OrderPad", null)
+                        .WithMany("Products")
+                        .HasForeignKey("OrderPadId");
+                });
+
+            modelBuilder.Entity("Pastelaria.Domain.OrderPad", b =>
+                {
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

@@ -24,7 +24,7 @@ namespace Pastelaria.RescourcesLib {
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class LanguagePack_en_EN {
         
-        private static global::System.Resources.ResourceManager resourceMan;
+        public static global::System.Resources.ResourceManager resourceMan;
         
         public static global::System.Globalization.CultureInfo resourceCulture;
         
@@ -84,6 +84,15 @@ namespace Pastelaria.RescourcesLib {
         internal static string Admin {
             get {
                 return ResourceManager.GetString("Admin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Any employee selected!.
+        /// </summary>
+        internal static string Any_employee_selected_ {
+            get {
+                return ResourceManager.GetString("Any employee selected!", resourceCulture);
             }
         }
         

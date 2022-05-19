@@ -41,22 +41,55 @@ namespace Pastelaria.WindowsApp.Product
 
         public void RegisterRemove()
         {
-            throw new NotImplementedException();
+            Guid productId = table.GetSelectedId();
+
+            if (productId == default)
+            {
+                MainFrameForm.instance.UpdateFooter("Any employee selected!");
+                return;
+            }
+
+            Domain.Product product = productAppService.GetById(productId);
+            if ((MessageBox.Show(GeneralConfig.Data["Are you sure that you want to remove"] + product.Name
+                , GeneralConfig.Data["Product"] + " | " + GeneralConfig.Data["Registration"]
+                , MessageBoxButtons.YesNo
+                , MessageBoxIcon.Exclamation) == DialogResult.Yes))
+            {
+                productAppService.Delete(product);
+            }
+
+            LoadGrid();
         }
 
         public void RegistersFilter()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void RegistersGroup()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void RegisterUpdate()
         {
-            throw new NotImplementedException();
+            Guid productId = table.GetSelectedId();
+
+            if (productId == default)
+            {
+                MainFrameForm.instance.UpdateFooter("Any product selected!");
+                return;
+            }
+            screen = null;
+            screen = new("Product Update");
+            screen.Product = productAppService.GetById(productId);
+
+            if (screen.ShowDialog() == DialogResult.OK)
+            {
+                productAppService.Update(screen.Product);
+            }
+
+            LoadGrid();
         }
         private void LoadGrid()
         {

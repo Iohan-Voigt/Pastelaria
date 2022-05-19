@@ -5,10 +5,10 @@
   </tax>
   <colors>
     <clear>
-      <baseColor>173,85,37</baseColor>
-      <secondColor>219,123,0</secondColor>
-      <thirdColor></thirdColor>
-      <textColor>238,234,225</textColor>
+      <baseColor>255,255,193</baseColor>
+      <secondColor>255,210,165</secondColor>
+      <thirdColor>211,140,173</thirdColor>
+      <textColor>63,63,63</textColor>
     </clear>
     <dark>
       <baseColor>45,36,36</baseColor>

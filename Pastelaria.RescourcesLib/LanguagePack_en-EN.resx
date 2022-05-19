@@ -126,6 +126,9 @@
   <data name="Admin" xml:space="preserve">
     <value>Admin</value>
   </data>
+  <data name="Any employee selected!" xml:space="preserve">
+    <value>Any employee selected!</value>
+  </data>
   <data name="Are you sure that you want to quit" xml:space="preserve">
     <value>Are you sure that you want to quit</value>
   </data>

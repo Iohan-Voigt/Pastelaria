@@ -22,7 +22,7 @@ namespace Pastelaria.WindowsApp.Product
 
         public string ToolTipEdit
         {
-            get { return GeneralConfig.Data["Product"] + " | " + GeneralConfig.Data["Remove"]; }
+            get { return GeneralConfig.Data["Product"] + " | " + GeneralConfig.Data["Update"]; }
         }
 
         public string ToolTipRemove

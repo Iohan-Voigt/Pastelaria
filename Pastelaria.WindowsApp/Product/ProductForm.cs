@@ -1,4 +1,5 @@
-﻿using Pastelaria.WindowsApp.Shared;
+﻿using Pastelaria.RescourcesLib;
+using Pastelaria.WindowsApp.Shared;
 using System;
 using System.Drawing;
 using System.IO;
@@ -21,10 +22,12 @@ namespace Pastelaria.WindowsApp.Product
             }
             set
             {
-                lblId.Text = product.Id.ToString();
-                lblName.Text = product.Name.ToString();
-                lblValue.Text = product.Value.ToString();
-                lblDescription.Text = product.Description.ToString();
+                product = value;
+
+                txtID.Text = product.Id.ToString();
+                txtName.Text = product.Name.ToString();
+                mtxtValue.Text = product.Value.ToString();
+                txtDescription.Text = product.Description.ToString();
                 if(product.Image != null)
                     pctImage.Image = product.Image;
             }
@@ -89,7 +92,12 @@ namespace Pastelaria.WindowsApp.Product
 
         private void ibtnCancel_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show(GeneralConfig.Data[@"AreYouSureThatYouWantToCancel?"], GeneralConfig.Data["Product Register"]
+                                , MessageBoxButtons.YesNo
+                                , MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                DialogResult = DialogResult.Cancel;
+            }
         }
     }
 }

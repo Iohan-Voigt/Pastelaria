@@ -51,6 +51,7 @@
 
   <ItemGroup>
     <Folder Include="Libraries\" />
+    <Folder Include="DashBoard\" />
   </ItemGroup>
 
   <ItemGroup>

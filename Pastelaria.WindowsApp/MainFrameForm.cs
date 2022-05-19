@@ -6,6 +6,7 @@ using Pastelaria.WindowsApp.Employee;
 using Pastelaria.WindowsApp.OrderPad;
 using Pastelaria.WindowsApp.Product;
 using Pastelaria.WindowsApp.Shared;
+using Serilog;
 using System;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -26,13 +27,18 @@ namespace Pastelaria.WindowsApp
             toolBoxActions.Renderer = new NoLoadToolStripRenderer();
             UpdateFooter(GeneralConfig.Data["Welcome"] + " " + LoggedEmployee.Name);
             ConfigureTexts();
-            SystemColors.ConfigureColors(this.Controls);
+            SystemColors.ConfigureColors(Controls);
 
-            this.Padding = new (2);
-            this.BackColor = System.Drawing.Color.FromArgb(28, 31, 51);
+            //Padding = new (2);
+            //BackColor = System.Drawing.Color.FromArgb(28, 31, 51);
+            // this button have the same collor of the panel
+            ibtnMenu.BackColor = SystemColors.ThirdColor;
+            ibtnMenu.ForeColor = SystemColors.TextColor;
+            Log.Logger.Information($"{this.ToString().Replace(", Text: ", "")} | MainFrame Loaded");
         }
 
         #region SideMenu
+
         private System.Drawing.Size formSize;
 
         #region Form Resize
@@ -119,7 +125,7 @@ namespace Pastelaria.WindowsApp
 
         private void CollapseMenu()
         {
-            if (this.panelMenu.Width > 200)
+            if (panelMenu.Width > 200)
             {
                 panelMenu.Width = 120;
                 logoPic.Visible = false;
@@ -153,6 +159,7 @@ namespace Pastelaria.WindowsApp
         #endregion
 
         #region WindowsButtons
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -335,16 +342,21 @@ namespace Pastelaria.WindowsApp
                     productBtn_Click(sender, e);
                     break;
                 case Keys.F4:
+
                     break;
                 case Keys.F5:
+
                     break;
                 case Keys.F6:
                     break;
                 case Keys.F7:
+
                     break;
                 case Keys.F8:
+
                     break;
                 case Keys.F9:
+
                     break;
             }
         }

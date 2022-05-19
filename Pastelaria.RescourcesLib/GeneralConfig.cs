@@ -66,6 +66,7 @@ namespace Pastelaria.RescourcesLib
             ,{"Employee Register",""}
             ,{"Product Register",""}
             ,{"Order Pad",""}
+            ,{@"Any employee selected!",""}
         };
 
         public static void SetLanguageData()

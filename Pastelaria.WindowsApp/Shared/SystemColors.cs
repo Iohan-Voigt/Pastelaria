@@ -57,10 +57,10 @@ namespace Pastelaria.WindowsApp.Shared
                         ctr.ForeColor = TextColor;
                         break;
                     case Panel:
-                        ctr.BackColor = SecondColor;
+                        ctr.BackColor = ThirdColor;
                         break;
                     case ToolStrip:
-                        ctr.BackColor = SecondColor;
+                        ctr.BackColor = ThirdColor;
                         break;
 
                 }     

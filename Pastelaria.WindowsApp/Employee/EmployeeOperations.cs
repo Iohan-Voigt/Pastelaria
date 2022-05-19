@@ -3,9 +3,6 @@ using Pastelaria.RescourcesLib;
 using Pastelaria.WindowsApp.Shared;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pastelaria.WindowsApp.Employee
@@ -56,7 +53,7 @@ namespace Pastelaria.WindowsApp.Employee
 
             if (employeeId == default)
             {
-                MainFrameForm.instance.UpdateFooter("Any employee selected!");
+                MainFrameForm.instance.UpdateFooter(GeneralConfig.Data["Any employee selected!"]);
                 return;
             }
 
@@ -88,11 +85,11 @@ namespace Pastelaria.WindowsApp.Employee
 
             if(employeeId==default)
             {
-                MainFrameForm.instance.UpdateFooter("Any employee selected!");
+                MainFrameForm.instance.UpdateFooter(GeneralConfig.Data[@"Any employee selected!"]);
                 return;
             }
             screen = null;
-            screen = new("Employee Update");
+            screen = new(GeneralConfig.Data["Employee"] + " " + GeneralConfig.Data["Update"]);
 
             screen.Employee = employeeAppService.GetById(employeeId);
 

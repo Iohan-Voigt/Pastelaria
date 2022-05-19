@@ -14,8 +14,7 @@ namespace Pastelaria.Domain
         public Costumer Costumer { get; set; }
         public DateTime OpenTime { get; set; }
         public OrderPadStatus OrderPadStatus { get; set; }
-        public OrderPadPaymentStatus orderPadPaymentStatus { get; set; }
-        public decimal TotalValue { get; set; }
+        public OrderPadPaymentStatus OrderPadPaymentStatus { get; set; }
 
         public override string ToString()
         {
