@@ -14,7 +14,7 @@ namespace Pastelaria.ORM.Configuration
 
         public void Configure(EntityTypeBuilder<Product> builder)
         {
-            builder.ToTable("TBPRODUCT");
+            builder.ToTable("DOMAIN.PRODUCT");
 
             builder.HasKey(x => x.Id);
 

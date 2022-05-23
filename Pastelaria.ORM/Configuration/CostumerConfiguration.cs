@@ -8,7 +8,7 @@ namespace Pastelaria.ORM.Configuration
     {
         public void Configure(EntityTypeBuilder<Costumer> builder)
         {
-            builder.ToTable("TBCOSTUMER");
+            builder.ToTable("DOMAIN.COSTUMER");
 
             builder.HasKey(x => x.Id);
 

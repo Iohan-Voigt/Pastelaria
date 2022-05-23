@@ -1,5 +1,5 @@
 ﻿using Pastelaria.Domain;
-using Pastelaria.Domain.Shared;
+using Pastelaria.Domain.Repositories;
 using Pastelaria.ORM.Shared;
 
 namespace Pastelaria.ORM.Features

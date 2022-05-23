@@ -1,7 +1,8 @@
-﻿using System;
+﻿using Pastelaria.Domain.Shared;
+using System;
 using System.Collections.Generic;
 
-namespace Pastelaria.Domain.Shared
+namespace Pastelaria.Domain.Repositories
 {
     public interface IRepository<T> where T : EntityBase
     {

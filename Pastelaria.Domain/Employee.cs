@@ -23,14 +23,16 @@ namespace Pastelaria.Domain
             this.AcessUser = acessUser;
         }
 
-        public Employee(string name, string acessUser, string password, string identityDocument,string phoneNumber,EmployeePermissionsEnum employeePermissionsEnum)
+        public Employee(string name, string acessUser, string password, string registration, string identityDocument,string phoneNumber,EmployeePermissionsEnum employeePermissionsEnum)
         {
             this.Name = name;
             this.AcessUser = acessUser;
             this.Password = password;
+            this.Registration = registration;
             this.IdentityDocument = identityDocument;
             this.PhoneNumber = phoneNumber;
             this.EmployeePermissionsEnum = employeePermissionsEnum;
+            this.EmployeeActiveEnum = EmployeeActiveEnum.Active;
         }
 
         public override string ToString()

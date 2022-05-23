@@ -8,7 +8,7 @@ namespace Pastelaria.ORM.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "TBCOSTUMER",
+                name: "DOMAIN.COSTUMER",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -18,11 +18,11 @@ namespace Pastelaria.ORM.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TBCOSTUMER", x => x.Id);
+                    table.PrimaryKey("PK_DOMAIN.COSTUMER", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "TBEMPLOYEE",
+                name: "DOMAIN.EMPLOYEE",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -37,11 +37,26 @@ namespace Pastelaria.ORM.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TBEMPLOYEE", x => x.Id);
+                    table.PrimaryKey("PK_DOMAIN.EMPLOYEE", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "TBORDERPAD",
+                name: "DOMAIN.PRODUCT",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "VARCHAR(75)", nullable: false),
+                    Value = table.Column<decimal>(type: "DECIMAL", nullable: false),
+                    Description = table.Column<string>(type: "VARCHAR(100)", nullable: true),
+                    Image = table.Column<byte[]>(type: "varbinary(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DOMAIN.PRODUCT", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "DOMAIN.ORDERPAD",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -53,72 +68,74 @@ namespace Pastelaria.ORM.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TBORDERPAD", x => x.Id);
+                    table.PrimaryKey("PK_DOMAIN.ORDERPAD", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_TBORDERPAD_TBCOSTUMER_CostumerId",
+                        name: "FK_DOMAIN.ORDERPAD_DOMAIN.COSTUMER_CostumerId",
                         column: x => x.CostumerId,
-                        principalTable: "TBCOSTUMER",
+                        principalTable: "DOMAIN.COSTUMER",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_TBORDERPAD_TBEMPLOYEE_EmployeeId",
+                        name: "FK_DOMAIN.ORDERPAD_DOMAIN.EMPLOYEE_EmployeeId",
                         column: x => x.EmployeeId,
-                        principalTable: "TBEMPLOYEE",
+                        principalTable: "DOMAIN.EMPLOYEE",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "TBPRODUCT",
+                name: "PROCESSING.PRODUCT",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "VARCHAR(75)", nullable: false),
                     Value = table.Column<decimal>(type: "DECIMAL", nullable: false),
                     Description = table.Column<string>(type: "VARCHAR(100)", nullable: true),
-                    Image = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
                     OrderPadId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TBPRODUCT", x => x.Id);
+                    table.PrimaryKey("PK_PROCESSING.PRODUCT", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_TBPRODUCT_TBORDERPAD_OrderPadId",
+                        name: "FK_PROCESSING.PRODUCT_DOMAIN.ORDERPAD_OrderPadId",
                         column: x => x.OrderPadId,
-                        principalTable: "TBORDERPAD",
+                        principalTable: "DOMAIN.ORDERPAD",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_TBORDERPAD_CostumerId",
-                table: "TBORDERPAD",
+                name: "IX_DOMAIN.ORDERPAD_CostumerId",
+                table: "DOMAIN.ORDERPAD",
                 column: "CostumerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_TBORDERPAD_EmployeeId",
-                table: "TBORDERPAD",
+                name: "IX_DOMAIN.ORDERPAD_EmployeeId",
+                table: "DOMAIN.ORDERPAD",
                 column: "EmployeeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_TBPRODUCT_OrderPadId",
-                table: "TBPRODUCT",
+                name: "IX_PROCESSING.PRODUCT_OrderPadId",
+                table: "PROCESSING.PRODUCT",
                 column: "OrderPadId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "TBPRODUCT");
+                name: "DOMAIN.PRODUCT");
 
             migrationBuilder.DropTable(
-                name: "TBORDERPAD");
+                name: "PROCESSING.PRODUCT");
 
             migrationBuilder.DropTable(
-                name: "TBCOSTUMER");
+                name: "DOMAIN.ORDERPAD");
 
             migrationBuilder.DropTable(
-                name: "TBEMPLOYEE");
+                name: "DOMAIN.COSTUMER");
+
+            migrationBuilder.DropTable(
+                name: "DOMAIN.EMPLOYEE");
         }
     }
 }

@@ -10,7 +10,7 @@ using Pastelaria.ORM;
 namespace Pastelaria.ORM.Migrations
 {
     [DbContext(typeof(PastelariaDBContext))]
-    [Migration("20220517143946_tt")]
+    [Migration("20220523183159_tt")]
     partial class tt
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,7 +39,7 @@ namespace Pastelaria.ORM.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TBCOSTUMER");
+                    b.ToTable("DOMAIN.COSTUMER");
                 });
 
             modelBuilder.Entity("Pastelaria.Domain.Employee", b =>
@@ -80,7 +80,7 @@ namespace Pastelaria.ORM.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TBEMPLOYEE");
+                    b.ToTable("DOMAIN.EMPLOYEE");
                 });
 
             modelBuilder.Entity("Pastelaria.Domain.OrderPad", b =>
@@ -110,7 +110,33 @@ namespace Pastelaria.ORM.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.ToTable("TBORDERPAD");
+                    b.ToTable("DOMAIN.ORDERPAD");
+                });
+
+            modelBuilder.Entity("Pastelaria.Domain.ProcessingProduct", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("VARCHAR(100)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("VARCHAR(75)");
+
+                    b.Property<Guid?>("OrderPadId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("Value")
+                        .HasColumnType("DECIMAL");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderPadId");
+
+                    b.ToTable("PROCESSING.PRODUCT");
                 });
 
             modelBuilder.Entity("Pastelaria.Domain.Product", b =>
@@ -129,17 +155,12 @@ namespace Pastelaria.ORM.Migrations
                         .IsRequired()
                         .HasColumnType("VARCHAR(75)");
 
-                    b.Property<Guid?>("OrderPadId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<decimal>("Value")
                         .HasColumnType("DECIMAL");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OrderPadId");
-
-                    b.ToTable("TBPRODUCT");
+                    b.ToTable("DOMAIN.PRODUCT");
                 });
 
             modelBuilder.Entity("Pastelaria.Domain.OrderPad", b =>
@@ -157,16 +178,16 @@ namespace Pastelaria.ORM.Migrations
                     b.Navigation("Employee");
                 });
 
-            modelBuilder.Entity("Pastelaria.Domain.Product", b =>
+            modelBuilder.Entity("Pastelaria.Domain.ProcessingProduct", b =>
                 {
                     b.HasOne("Pastelaria.Domain.OrderPad", null)
-                        .WithMany("Products")
+                        .WithMany("ProcessingProducts")
                         .HasForeignKey("OrderPadId");
                 });
 
             modelBuilder.Entity("Pastelaria.Domain.OrderPad", b =>
                 {
-                    b.Navigation("Products");
+                    b.Navigation("ProcessingProducts");
                 });
 #pragma warning restore 612, 618
         }

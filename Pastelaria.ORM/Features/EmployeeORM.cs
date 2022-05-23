@@ -23,7 +23,6 @@ namespace Pastelaria.ORM.Features
             {
                 return null;
             }
-            return null;
         }
     }
 }

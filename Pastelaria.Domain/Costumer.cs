@@ -1,11 +1,7 @@
-﻿using System;
-
-namespace Pastelaria.Domain
+﻿namespace Pastelaria.Domain
 {
     public class Costumer : Person
     {
-
-
         public override string ToString()
         {
             return "Name: " + Name + " Id: " + Id;

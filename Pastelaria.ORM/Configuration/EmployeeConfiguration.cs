@@ -13,7 +13,7 @@ namespace Pastelaria.ORM.Configuration
     {
         public void Configure(EntityTypeBuilder<Employee> builder)
         {
-            builder.ToTable("TBEMPLOYEE");
+            builder.ToTable("DOMAIN.EMPLOYEE");
 
             builder.HasKey(x => x.Id);
 

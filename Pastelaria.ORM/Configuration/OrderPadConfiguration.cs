@@ -13,13 +13,13 @@ namespace Pastelaria.ORM.Configuration
     {
         public void Configure(EntityTypeBuilder<OrderPad> builder)
         {
-            builder.ToTable("TBORDERPAD");
+            builder.ToTable("DOMAIN.ORDERPAD");
 
             builder.HasKey(x => x.Id);
 
             builder.HasOne(x => x.Costumer);
             builder.HasOne(x => x.Employee);
-            builder.HasMany(x => x.Products).WithMany(x => x.);
+            builder.HasMany(x => x.ProcessingProducts);
 
             builder.Property(x => x.OrderPadStatus).HasColumnType("INT");
             builder.Property(x => x.OrderPadPaymentStatus).HasColumnType("INT");

@@ -2,7 +2,6 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Win32;
-using Newtonsoft.Json;
 using Pastelaria.Domain;
 using System.Data;
 using System.IO;
