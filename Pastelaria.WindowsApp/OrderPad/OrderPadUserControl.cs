@@ -10,9 +10,9 @@ namespace Pastelaria.WindowsApp.OrderPad
         public OrderPadUserControl()
         {
             InitializeComponent();
-            orderPadGrid.ConfigColoredGrid();
-            orderPadGrid.ConfigJustReadGrid();
-            orderPadGrid.Columns.AddRange(ObtainColuns());
+            debitsGrid.ConfigColoredGrid();
+            debitsGrid.ConfigJustReadGrid();
+            debitsGrid.Columns.AddRange(ObtainColuns());
         }
 
         private static DataGridViewColumn[] ObtainColuns()
@@ -32,17 +32,17 @@ namespace Pastelaria.WindowsApp.OrderPad
 
         public void UpdateRegisters(List<Domain.OrderPad> orders)
         {
-            orderPadGrid.Rows.Clear();
+            debitsGrid.Rows.Clear();
 
             foreach (Domain.OrderPad orderPad in orders)
             {
-                orderPadGrid.Rows.Add(orderPad);
+                debitsGrid.Rows.Add(orderPad);
             }
         }
 
         public Guid GetSelectedId()
         {
-            return orderPadGrid.SelectId<Guid>();
+            return debitsGrid.SelectId<Guid>();
         }
     }
 }

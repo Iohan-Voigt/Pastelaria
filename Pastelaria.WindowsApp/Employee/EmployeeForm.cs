@@ -16,10 +16,7 @@ namespace Pastelaria.WindowsApp.Employee
         private Domain.Employee employee;
         public Domain.Employee Employee
         {
-            get
-            {
-                return employee;
-            }
+            get { return employee; }
             set
             {
                 employee = value;

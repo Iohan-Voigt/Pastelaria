@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.orderPadGrid = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.orderPadGrid)).BeginInit();
+            this.debitsGrid = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.debitsGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // orderPadGrid
             // 
-            this.orderPadGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.orderPadGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.orderPadGrid.Location = new System.Drawing.Point(0, 0);
-            this.orderPadGrid.Name = "orderPadGrid";
-            this.orderPadGrid.RowTemplate.Height = 25;
-            this.orderPadGrid.Size = new System.Drawing.Size(150, 150);
-            this.orderPadGrid.TabIndex = 0;
+            this.debitsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.debitsGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.debitsGrid.Location = new System.Drawing.Point(0, 0);
+            this.debitsGrid.Name = "orderPadGrid";
+            this.debitsGrid.RowTemplate.Height = 25;
+            this.debitsGrid.Size = new System.Drawing.Size(150, 150);
+            this.debitsGrid.TabIndex = 0;
             // 
             // OrderPadUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.orderPadGrid);
+            this.Controls.Add(this.debitsGrid);
             this.Name = "OrderPadUserControl";
-            ((System.ComponentModel.ISupportInitialize)(this.orderPadGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.debitsGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView orderPadGrid;
+        private System.Windows.Forms.DataGridView debitsGrid;
     }
 }

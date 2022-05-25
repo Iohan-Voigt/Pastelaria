@@ -10,7 +10,7 @@ using Pastelaria.ORM;
 namespace Pastelaria.ORM.Migrations
 {
     [DbContext(typeof(PastelariaDBContext))]
-    [Migration("20220523183159_tt")]
+    [Migration("20220525002448_tt")]
     partial class tt
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

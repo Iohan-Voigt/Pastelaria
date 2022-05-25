@@ -1,20 +1,22 @@
-﻿using Pastelaria.WindowsApp.Shared;
+﻿using Pastelaria.AppService;
+using Pastelaria.RescourcesLib;
+using Pastelaria.WindowsApp.Shared;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Pastelaria.Domain;
 
 namespace Pastelaria.WindowsApp.OrderPad
 {
     public class OrderPadOperations : IRegisterable
     {
         private readonly OrderPadUserControl table;
+        private readonly OrderPadAppService orderPadAppService;
 
-        public OrderPadOperations()
+        private OrderPadForm screen;
+
+        public OrderPadOperations(OrderPadAppService orderPadAppService)
         {
+            this.orderPadAppService = orderPadAppService;
             table = new ();
         }
         public UserControl ObtainTable()
@@ -28,7 +30,13 @@ namespace Pastelaria.WindowsApp.OrderPad
 
         public void RegisterInsertNew()
         {
-            throw new NotImplementedException();
+            screen = new(GeneralConfig.Data["Employee Register"],false);
+
+            if (screen.ShowDialog() == DialogResult.OK)
+            {
+                orderPadAppService.Insert(screen.OrderPad);
+                LoadGrid();
+            }
         }
 
         public void RegisterRemove()
@@ -49,6 +57,12 @@ namespace Pastelaria.WindowsApp.OrderPad
         public void RegisterUpdate()
         {
             throw new NotImplementedException();
+        }
+
+        private void LoadGrid()
+        {
+            List<Domain.OrderPad> orderPads = orderPadAppService.GetAll();
+            table.UpdateRegisters(orderPads);
         }
     }
 }

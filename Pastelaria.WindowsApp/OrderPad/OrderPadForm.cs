@@ -1,18 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace Pastelaria.WindowsApp.OrderPad
 {
     public partial class OrderPadForm : Form
     {
-        public OrderPadForm()
+        private Color lightRed = Color.FromArgb(255, 105, 97);
+
+        private Domain.OrderPad orderpad;
+        public Domain.OrderPad OrderPad
+        {
+            get { return orderpad; }
+            set 
+            { 
+                orderpad = value;
+
+            }
+        }
+
+        public OrderPadForm(string title,bool isEdit)
         {
             InitializeComponent();
         }

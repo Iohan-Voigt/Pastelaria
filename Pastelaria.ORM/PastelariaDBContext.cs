@@ -31,6 +31,8 @@ namespace Pastelaria.ORM
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(PastelariaDBContext).Assembly);
+            modelBuilder.HasDefaultSchema(null);
+            
             foreach (var entity in modelBuilder.Model.GetEntityTypes())
             {
                 var properties = entity.GetProperties().Where(p => p.ClrType == typeof(decimal));
