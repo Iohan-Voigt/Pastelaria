@@ -24,5 +24,10 @@ namespace Pastelaria.WindowsApp.Shared
             if (sender is TextBoxBase txt)
                 txt.BackColor = Color.White;
         }
+
+        public static void UpdateProductList(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

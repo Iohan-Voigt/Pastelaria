@@ -31,7 +31,7 @@ namespace Pastelaria.ORM
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(PastelariaDBContext).Assembly);
-            modelBuilder.HasDefaultSchema(null);
+            modelBuilder.HasDefaultSchema("PASTELARIA");
             
             foreach (var entity in modelBuilder.Model.GetEntityTypes())
             {
