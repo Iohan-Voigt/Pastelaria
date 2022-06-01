@@ -41,6 +41,7 @@ namespace Pastelaria.WindowsApp.OrderPad
                 {
                     ProductListButtonUserControl buttonUserControl = new(product);
                     buttonUserControl.Location = new Point(0,0);
+                    buttonUserControl.pictureBox.Click += UpdateProductList!;
                     LoadProductsIntoPanel(buttonUserControl);
                 }
             }
@@ -51,6 +52,7 @@ namespace Pastelaria.WindowsApp.OrderPad
             if (isColumFirstItem)
             {
                 button.Location = new Point(5 ,linePixelIndex);
+                button.MouseClick += UpdateProductList!;
                 isColumFirstItem = false;
             }
             else
@@ -71,9 +73,21 @@ namespace Pastelaria.WindowsApp.OrderPad
 
         private void UpdateProductList(object sender, EventArgs e)
         {
+            bool productExists = false;
             ProductListButtonUserControl button = (ProductListButtonUserControl)sender;
             SelectedProductListUserControl selectedProductListUserControl = new(button.product);
-            SelectedProducts.Add(selectedProductListUserControl);
+
+            foreach (var selectedProduct in SelectedProducts)
+            {                
+                if(selectedProduct.product.Id == button.product.Id)
+                    productExists = true;               
+            }
+
+            if (!productExists)
+                SelectedProducts.Add(selectedProductListUserControl);
+            else
+
+
             UpdateSelectedProductsList();
         }
 

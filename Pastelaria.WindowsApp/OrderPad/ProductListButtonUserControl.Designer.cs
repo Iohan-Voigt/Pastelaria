@@ -81,7 +81,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label lblProductName;
+        public System.Windows.Forms.PictureBox pictureBox;
     }
 }

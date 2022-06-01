@@ -12,7 +12,7 @@ namespace Pastelaria.WindowsApp.OrderPad
 {
     public partial class SelectedProductListUserControl : UserControl
     {
-        Domain.Product product;
+        public Domain.Product product;
         int productAmount = 1;
         public SelectedProductListUserControl(Domain.Product product)
         {
@@ -20,6 +20,7 @@ namespace Pastelaria.WindowsApp.OrderPad
             InitializeComponent();
             Shared.SystemColors.UpdateControls(Controls);
             lblProcutName.Text = product.Name;
+            lblProductAmount.Text = productAmount.ToString();
         }
 
         private void ibtnAdd_Click(object sender, EventArgs e)
