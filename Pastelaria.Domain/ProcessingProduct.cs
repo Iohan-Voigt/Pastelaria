@@ -9,10 +9,11 @@ namespace Pastelaria.Domain
 {
     public class ProcessingProduct : EntityBase
     {
+        public List<OrderPad> OrderPads { get; set; }
         public string Name { get; set; }
         public decimal Value { get; set; }
         public string Description { get; set; }
-        public int Quantidade { get; set; }
+        public int Quantity { get; set; }
 
         public ProcessingProduct(decimal value, string description, string name)
         {
@@ -31,6 +32,17 @@ namespace Pastelaria.Domain
         public override string ToString()
         {
             return "";
+        }
+
+        public Product ParseToProduct()
+        {
+            Product product = new();
+            product.Id = Id;
+            product.Name = Name;
+            product.Value = Value;
+            product.Description = Description;
+
+            return product;
         }
     }
 }

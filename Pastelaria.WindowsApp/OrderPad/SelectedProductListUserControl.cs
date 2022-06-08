@@ -1,29 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Pastelaria.RescourcesLib;
+using System;
 using System.Windows.Forms;
 
 namespace Pastelaria.WindowsApp.OrderPad
 {
     public partial class SelectedProductListUserControl : UserControl
     {
-        public Domain.Product product;
-        int productAmount = 1;
-        public SelectedProductListUserControl(Domain.Product product)
+        public Domain.ProcessingProduct product;
+        public SelectedProductListUserControl(Domain.ProcessingProduct product)
         {
             this.product = product;
+            product.Quantity = 1;
             InitializeComponent();
             Shared.SystemColors.UpdateControls(Controls);
-            lblProcutName.Text = product.Name;
-            lblProductAmount.Text = productAmount.ToString();
+            if (product.Name != null && product.Name.Length > 13)
+                lblProducutName.Text = product.Name.Substring(0, 12) + "...";
+            else
+                lblProducutName.Text = product.Name;
+            lblProductAmount.Text = product.Quantity.ToString();
         }
 
-        private void ibtnAdd_Click(object sender, EventArgs e)
+        public void ibtnAdd_Click(object sender, EventArgs e)
         {
             UpdateProductAmount(true);
         }
@@ -37,13 +34,23 @@ namespace Pastelaria.WindowsApp.OrderPad
         {
             if (isAdd)
             {
-                productAmount++;
-                lblProductAmount.Text = productAmount.ToString();
+                product.Quantity++;
+                lblProductAmount.Text = product.Quantity.ToString();
             }
             else
             {
-                productAmount--;
-                lblProductAmount.Text = productAmount.ToString();
+                if(product.Quantity == 1)
+                {
+                    if(MessageBox.Show(GeneralConfig.Data[@"RemoveProduct?"],""
+                                , MessageBoxButtons.YesNo
+                                , MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                    {
+                        product.Quantity = 0;
+                    }
+                }
+                else
+                    product.Quantity--;            
+                lblProductAmount.Text = product.Quantity.ToString();
             }
         }
     }

@@ -101,7 +101,6 @@ namespace Pastelaria.WindowsApp.Employee
             {          
                 labelMessages.Text = new StringReader(validateResult).ReadLine();
                 return;
-
             }
             DialogResult = DialogResult.OK;
         }

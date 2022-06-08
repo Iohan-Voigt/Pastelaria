@@ -12,7 +12,7 @@ namespace Pastelaria.ORM
     public class PastelariaDBContext : DbContext
     {
         private static ILoggerFactory loggerFactoryConsole = LoggerFactory.Create(x => x.AddConsole());
-        private DbSet<Costumer> Costumers { get; set; }
+        private DbSet<Customer> Costumers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

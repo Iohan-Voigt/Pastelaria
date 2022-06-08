@@ -26,6 +26,7 @@ namespace Pastelaria.ORM.Configuration
             builder.Property(x => x.EmployeePermissionsEnum).HasColumnType("INT").IsRequired();
             builder.Property(x => x.EmployeeActiveEnum).HasColumnType("INT").IsRequired();
 
+            builder.HasMany(x => x.OrderPads).WithOne(x => x.Employee);
         }
     }
 }

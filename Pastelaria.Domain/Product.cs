@@ -41,5 +41,16 @@ namespace Pastelaria.Domain
         {
             return "";
         }
+
+        public ProcessingProduct ParseToProcessingProduct()
+        {
+            ProcessingProduct processingProduct = new ProcessingProduct();
+            processingProduct.Id = Id;
+            processingProduct.Name = Name;
+            processingProduct.Value = Value;
+            processingProduct.Description = Description;
+
+            return processingProduct;
+        }
     }
 }

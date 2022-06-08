@@ -10,6 +10,7 @@ namespace Pastelaria.Domain
 {
     public class Employee : Person
     {
+        public List<OrderPad> OrderPads { get; set; }
         public string AcessUser { get; set; }
         public string Password { get; set; }
         public string Registration { get; set; }

@@ -18,11 +18,18 @@ namespace Pastelaria.WindowsApp
         private readonly PastelariaDBContext db;
         private readonly EmployeeAppService employeeAppService;
         private readonly ProductAppService productAppService;
+        private readonly CustomerAppService customerAppService;
+        private readonly OrderPadAppService orderPadAppService;
+        private readonly ProcessingProductAppService processingProductAppService;
+        //private readonly 
         public LoginForm()
         {          
             db = new();
             employeeAppService = new(new EmployeeORM(db));
             productAppService = new(new ProductORM(db));
+            customerAppService = new(new CustomerORM(db));
+            processingProductAppService = new(new ProcessingProductORM(db));
+            orderPadAppService = new(new ProcessingProductORM(db), new OrderPadORM(db));
             InitializeComponent();
             ConfigureInfo();
             CofigureTextBox();

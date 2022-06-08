@@ -33,11 +33,11 @@ namespace Pastelaria.WindowsApp.Costumer
             return coluns;
         }
 
-        internal void UpdateRegisters(List<Domain.Costumer> costumers)
+        internal void UpdateRegisters(List<Domain.Customer> costumers)
         {
             costumerGrid.Rows.Clear();
 
-            foreach(Domain.Costumer costumer in costumers)
+            foreach(Domain.Customer costumer in costumers)
             {
                 costumerGrid.Rows.Add(costumer);
             }

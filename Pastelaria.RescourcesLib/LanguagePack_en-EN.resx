@@ -237,6 +237,9 @@
   <data name="Remove" xml:space="preserve">
     <value>Remove</value>
   </data>
+  <data name="RemoveProduct?" xml:space="preserve">
+    <value>Remove Product?</value>
+  </data>
   <data name="Save" xml:space="preserve">
     <value>Save</value>
   </data>

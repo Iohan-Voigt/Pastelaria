@@ -22,7 +22,7 @@ namespace Pastelaria.AppService
         {
             try
             {
-                return null;
+                return orderPadRepository.GetAll();               
             }
             catch (Exception ex)
             {
@@ -48,7 +48,19 @@ namespace Pastelaria.AppService
 
         public override string Insert(OrderPad entity)
         {
-            throw new NotImplementedException();
+            if (entity.Validate().Equals("VALID"))
+            {
+                foreach (var item in entity.ProcessingProducts)
+                {
+                    item.Id = Guid.Empty;
+                }
+                orderPadRepository.Insert(entity);
+                return "VALID";
+            }
+            else
+            {
+                return entity.Validate();
+            }
         }
 
         public override string Update(OrderPad entity)

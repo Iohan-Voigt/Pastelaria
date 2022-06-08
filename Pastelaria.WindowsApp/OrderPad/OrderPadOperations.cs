@@ -12,13 +12,15 @@ namespace Pastelaria.WindowsApp.OrderPad
         private readonly OrderPadUserControl table;
         private readonly OrderPadAppService orderPadAppService;
         private readonly ProductAppService productAppService;
+        private readonly CustomerAppService customerAppService;
 
         private OrderPadForm screen;
 
-        public OrderPadOperations(OrderPadAppService orderPadAppService, ProductAppService productAppService)
+        public OrderPadOperations(OrderPadAppService orderPadAppService, ProductAppService productAppService, CustomerAppService customerAppService)
         {
             this.orderPadAppService = orderPadAppService;
             this.productAppService = productAppService;
+            this.customerAppService = customerAppService;
             table = new ();
         }
         public UserControl ObtainTable()
@@ -33,10 +35,11 @@ namespace Pastelaria.WindowsApp.OrderPad
         public void RegisterInsertNew()
         {
 
-            screen = new(GeneralConfig.Data["Employee Register"],false,productAppService.GetAll());
+            screen = new(GeneralConfig.Data["Employee Register"],false,productAppService.GetAll(),customerAppService.GetAll());
 
             if (screen.ShowDialog() == DialogResult.OK)
             {
+                screen.OrderPad.OpenTime = DateTime.Now;
                 orderPadAppService.Insert(screen.OrderPad);
                 LoadGrid();
             }

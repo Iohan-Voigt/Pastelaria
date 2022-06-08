@@ -1,6 +1,7 @@
 ﻿using Pastelaria.Domain;
 using Pastelaria.Domain.Repositories;
 using Pastelaria.ORM.Shared;
+using System;
 
 namespace Pastelaria.ORM.Features
 {
@@ -8,6 +9,9 @@ namespace Pastelaria.ORM.Features
     {
         public OrderPadORM(PastelariaDBContext db) : base(db)
         {
+
         }
     }
 }
+
+

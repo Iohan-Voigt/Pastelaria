@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblPrice = new System.Windows.Forms.Label();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox = new Pastelaria.WindowsApp.OrderPad.PictureBoxWithProduct();
             this.lblProductName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -37,17 +37,20 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblPrice.Location = new System.Drawing.Point(3, 86);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(38, 15);
+            this.lblPrice.Size = new System.Drawing.Size(54, 28);
             this.lblPrice.TabIndex = 1;
-            this.lblPrice.Text = "label1";
+            this.lblPrice.Text = "Price";
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(116, 3);
+            this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox.Location = new System.Drawing.Point(109, -2);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(121, 124);
+            this.pictureBox.Product = null;
+            this.pictureBox.Size = new System.Drawing.Size(128, 128);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
@@ -55,11 +58,12 @@
             // lblProductName
             // 
             this.lblProductName.AutoSize = true;
+            this.lblProductName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblProductName.Location = new System.Drawing.Point(3, 11);
             this.lblProductName.Name = "lblProductName";
-            this.lblProductName.Size = new System.Drawing.Size(38, 15);
+            this.lblProductName.Size = new System.Drawing.Size(45, 19);
             this.lblProductName.TabIndex = 3;
-            this.lblProductName.Text = "label1";
+            this.lblProductName.Text = "Name";
             // 
             // ProductListButtonUserControl
             // 
@@ -82,6 +86,6 @@
 
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label lblProductName;
-        public System.Windows.Forms.PictureBox pictureBox;
+        public PictureBoxWithProduct pictureBox;
     }
 }

@@ -15,11 +15,13 @@ namespace Pastelaria.ORM.Configuration
         {
             builder.ToTable("PROCESSING.PRODUCT");
 
-            builder.HasKey(x => x.Id);
+            builder.HasKey(x => x.Id);            
 
             builder.Property(p => p.Name).HasColumnType("VARCHAR(75)").IsRequired();
             builder.Property(p => p.Value).HasColumnType("DECIMAL").IsRequired();
             builder.Property(p => p.Description).HasColumnType("VARCHAR(100)");
+
+            builder.HasMany(p => p.OrderPads).WithMany(p => p.ProcessingProducts);
         }
         
     }

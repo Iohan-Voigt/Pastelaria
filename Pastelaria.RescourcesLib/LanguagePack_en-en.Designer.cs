@@ -421,6 +421,15 @@ namespace Pastelaria.RescourcesLib {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Remove Product?.
+        /// </summary>
+        internal static string RemoveProduct_ {
+            get {
+                return ResourceManager.GetString("RemoveProduct?", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
         internal static string Save {

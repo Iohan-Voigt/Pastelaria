@@ -21,6 +21,7 @@ namespace Pastelaria.ORM.Shared
         {
             try
             {
+                register.Id = Guid.NewGuid();
                 dbSet.Add(register);
                 db.SaveChanges();
             }

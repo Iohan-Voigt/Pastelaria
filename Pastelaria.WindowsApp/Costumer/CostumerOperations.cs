@@ -18,7 +18,7 @@ namespace Pastelaria.WindowsApp.Costumer
 
         public UserControl ObtainTable()
         {
-            List<Domain.Costumer> costumers = new List<Domain.Costumer>();
+            List<Domain.Customer> costumers = new List<Domain.Customer>();
 
             table.UpdateRegisters(costumers);
 

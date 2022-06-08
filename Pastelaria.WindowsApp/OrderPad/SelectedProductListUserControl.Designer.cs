@@ -30,7 +30,7 @@
         {
             this.ibtnAdd = new FontAwesome.Sharp.IconButton();
             this.ibtnRemove = new FontAwesome.Sharp.IconButton();
-            this.lblProcutName = new System.Windows.Forms.Label();
+            this.lblProducutName = new System.Windows.Forms.Label();
             this.lblProductAmount = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -52,7 +52,7 @@
             this.ibtnAdd.Location = new System.Drawing.Point(276, 0);
             this.ibtnAdd.Margin = new System.Windows.Forms.Padding(0);
             this.ibtnAdd.Name = "ibtnAdd";
-            this.ibtnAdd.Size = new System.Drawing.Size(53, 79);
+            this.ibtnAdd.Size = new System.Drawing.Size(55, 81);
             this.ibtnAdd.TabIndex = 6;
             this.ibtnAdd.Tag = "";
             this.ibtnAdd.UseVisualStyleBackColor = false;
@@ -76,21 +76,21 @@
             this.ibtnRemove.Location = new System.Drawing.Point(154, -1);
             this.ibtnRemove.Margin = new System.Windows.Forms.Padding(0);
             this.ibtnRemove.Name = "ibtnRemove";
-            this.ibtnRemove.Size = new System.Drawing.Size(53, 80);
+            this.ibtnRemove.Size = new System.Drawing.Size(55, 82);
             this.ibtnRemove.TabIndex = 7;
             this.ibtnRemove.Tag = "";
             this.ibtnRemove.UseVisualStyleBackColor = false;
             this.ibtnRemove.Click += new System.EventHandler(this.ibtnRemove_Click);
             // 
-            // lblProcutName
+            // lblProducutName
             // 
-            this.lblProcutName.AutoSize = true;
-            this.lblProcutName.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblProcutName.Location = new System.Drawing.Point(3, 25);
-            this.lblProcutName.Name = "lblProcutName";
-            this.lblProcutName.Size = new System.Drawing.Size(65, 28);
-            this.lblProcutName.TabIndex = 8;
-            this.lblProcutName.Text = "label1";
+            this.lblProducutName.AutoSize = true;
+            this.lblProducutName.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblProducutName.Location = new System.Drawing.Point(3, 25);
+            this.lblProducutName.Name = "lblProducutName";
+            this.lblProducutName.Size = new System.Drawing.Size(65, 28);
+            this.lblProducutName.TabIndex = 8;
+            this.lblProducutName.Text = "label1";
             // 
             // lblProductAmount
             // 
@@ -106,13 +106,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.lblProductAmount);
-            this.Controls.Add(this.lblProcutName);
+            this.Controls.Add(this.lblProducutName);
             this.Controls.Add(this.ibtnRemove);
             this.Controls.Add(this.ibtnAdd);
             this.Name = "SelectedProductListUserControl";
-            this.Size = new System.Drawing.Size(328, 78);
+            this.Size = new System.Drawing.Size(330, 80);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,9 +119,9 @@
 
         #endregion
 
-        private FontAwesome.Sharp.IconButton ibtnAdd;
-        private FontAwesome.Sharp.IconButton ibtnRemove;
-        private System.Windows.Forms.Label lblProcutName;
+        public FontAwesome.Sharp.IconButton ibtnAdd;
+        public FontAwesome.Sharp.IconButton ibtnRemove;
+        private System.Windows.Forms.Label lblProducutName;
         private System.Windows.Forms.Label lblProductAmount;
     }
 }

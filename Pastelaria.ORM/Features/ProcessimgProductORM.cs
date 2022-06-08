@@ -15,6 +15,19 @@ namespace Pastelaria.ORM.Features
         {
         }
 
+        public List<ProcessingProduct> GetAllByOrderPadId(Guid id)
+        {
+            try
+            {
+                return null;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public bool RemoveByOrderPadId(Guid id)
         {
             try

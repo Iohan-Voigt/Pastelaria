@@ -4,9 +4,9 @@ using Pastelaria.ORM.Shared;
 
 namespace Pastelaria.ORM.Features
 {
-    public class CostumerORM : RepositoryBase<Costumer>, IRepository<Costumer>
+    public class CustomerORM : RepositoryBase<Customer>, ICustomerRepository
     {
-        public CostumerORM(PastelariaDBContext db) : base(db)
+        public CustomerORM(PastelariaDBContext db) : base(db)
         {
         }
     }
