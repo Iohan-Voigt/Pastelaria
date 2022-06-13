@@ -9,7 +9,7 @@ namespace Pastelaria.Domain
 {
     public class ProcessingProduct : EntityBase
     {
-        public List<OrderPad> OrderPads { get; set; }
+        public OrderPad OrderPad { get; set; }
         public string Name { get; set; }
         public decimal Value { get; set; }
         public string Description { get; set; }

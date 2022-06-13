@@ -38,7 +38,7 @@ namespace Pastelaria.Domain
 
         public override string ToString()
         {
-            return (Name + " " + EmployeePermissionsEnum.GetType());
+            return $"{Id}, {Name}, {AcessUser}, {Registration}";
         }
 
         public override string Validate()

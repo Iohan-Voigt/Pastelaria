@@ -14,7 +14,7 @@ namespace Pastelaria.ORM.Configuration
 
             builder.HasOne(x => x.Customer).WithMany(x => x.OrderPads);
             builder.HasOne(x => x.Employee).WithMany(x => x.OrderPads);
-            builder.HasMany(x => x.ProcessingProducts).WithMany(x => x.OrderPads);
+            builder.HasMany(x => x.ProcessingProducts).WithOne(x => x.OrderPad);
 
             builder.Property(x => x.OrderPadStatus).HasColumnType("INT");
             builder.Property(x => x.OrderPadPaymentStatus).HasColumnType("INT");

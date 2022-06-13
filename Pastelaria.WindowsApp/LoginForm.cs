@@ -29,7 +29,7 @@ namespace Pastelaria.WindowsApp
             productAppService = new(new ProductORM(db));
             customerAppService = new(new CustomerORM(db));
             processingProductAppService = new(new ProcessingProductORM(db));
-            orderPadAppService = new(new ProcessingProductORM(db), new OrderPadORM(db));
+            orderPadAppService = new( new OrderPadORM(db),new ProcessingProductORM(db),new EmployeeORM(db),new CustomerORM(db));
             InitializeComponent();
             ConfigureInfo();
             CofigureTextBox();

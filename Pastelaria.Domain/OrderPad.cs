@@ -9,7 +9,6 @@ namespace Pastelaria.Domain
 {
     public class OrderPad : EntityBase
     {
-        public List<OrderPad> OrderPads { get; set; }
         public List<ProcessingProduct> ProcessingProducts { get; set; }
         public Employee Employee { get; set; }
         public Customer Customer { get; set; }
@@ -20,7 +19,7 @@ namespace Pastelaria.Domain
 
         public override string ToString()
         {
-            return "GUID: " + Id;
+            return $"{Id}, {Employee}, {Customer}, {OpenTime}, {OrderPadStatus}, {OrderPadPaymentStatus}, {Total}";
         }
 
         public override string Validate()

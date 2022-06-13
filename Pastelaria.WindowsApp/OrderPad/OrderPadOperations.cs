@@ -25,9 +25,7 @@ namespace Pastelaria.WindowsApp.OrderPad
         }
         public UserControl ObtainTable()
         {
-            List<Domain.OrderPad> employee = new List<Domain.OrderPad>();
-
-            table.UpdateRegisters(employee);
+            LoadGrid();
 
             return table;
         }

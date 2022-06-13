@@ -1,4 +1,6 @@
-﻿using Pastelaria.WindowsApp.Shared;
+﻿using Pastelaria.AppService;
+using Pastelaria.RescourcesLib;
+using Pastelaria.WindowsApp.Shared;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -8,17 +10,19 @@ namespace Pastelaria.WindowsApp.Costumer
     public class CostumerOperations : IRegisterable
     {
         private readonly CostumerUserControl table;
+        private readonly CustomerAppService customerAppService;
 
         private CostumerForm screen;
 
-        public CostumerOperations()
+        public CostumerOperations(CustomerAppService customerAppService)
         {
+            this.customerAppService = customerAppService;
             table = new();
         }
 
         public UserControl ObtainTable()
         {
-            List<Domain.Customer> costumers = new List<Domain.Customer>();
+            List<Domain.Customer> costumers = customerAppService.GetAll();
 
             table.UpdateRegisters(costumers);
 
@@ -31,28 +35,51 @@ namespace Pastelaria.WindowsApp.Costumer
 
             if(screen.ShowDialog() == DialogResult.OK)
             {
-
+                customerAppService.Insert(screen.Customer);
+                LoadGrid();
             }
+        }
+
+        private void LoadGrid()
+        {
+            List<Domain.Customer> customer = customerAppService.GetAll();
+            table.UpdateRegisters(customer);
         }
 
         public void RegisterRemove()
         {
-            throw new NotImplementedException();
+            LoadGrid();
         }
 
         public void RegistersFilter()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void RegistersGroup()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void RegisterUpdate()
         {
-            throw new NotImplementedException();
+            Guid customerId = table.GetSelectedId();
+
+            if(customerId==default)
+            {
+                MainFrameForm.instance.UpdateFooter("Any Customer selected!");
+                return;
+            }
+            screen = null;
+            screen = new("Customer Update");
+
+            screen.Customer = customerAppService.GetById(customerId);
+
+            if(screen.ShowDialog() == DialogResult.OK)
+            {
+                customerAppService.Update(screen.Customer);
+            }
+            LoadGrid();
         }
     }
 }

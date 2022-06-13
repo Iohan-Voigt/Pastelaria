@@ -131,9 +131,8 @@
             this.lblMessages.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblMessages.Location = new System.Drawing.Point(12, 631);
             this.lblMessages.Name = "lblMessages";
-            this.lblMessages.Size = new System.Drawing.Size(71, 21);
+            this.lblMessages.Size = new System.Drawing.Size(0, 21);
             this.lblMessages.TabIndex = 14;
-            this.lblMessages.Text = "Message";
             // 
             // lblCustomer
             // 

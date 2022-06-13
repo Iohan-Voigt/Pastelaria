@@ -20,7 +20,10 @@ namespace Pastelaria.Domain
 
         public override string Validate()
         {
-            return ValidatePerson();          
+            string validationResult = ValidatePerson();
+            if (validationResult == "")
+                validationResult = "VALID";
+            return validationResult;
         }
     }
 }

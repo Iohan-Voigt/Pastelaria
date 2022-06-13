@@ -152,7 +152,7 @@ namespace Pastelaria.WindowsApp.OrderPad
             lblTotalValue.Text = "R$ " + orderpad.Total.ToString();
         }
 
-        public void RemoveSelectedProductFromList()
+        private void RemoveSelectedProductFromList()
         {
             foreach (SelectedProductListUserControl product in SelectedProducts)
             {

@@ -19,7 +19,7 @@ namespace Pastelaria.ORM.Configuration
             builder.HasKey(x => x.Id);
 
             builder.Property(p => p.Name).HasColumnType("VARCHAR(75)").IsRequired();
-            builder.Property(p => p.Value).HasColumnType("DECIMAL").IsRequired();
+            builder.Property(p => p.Value).HasColumnType("DECIMAL(25,2)").IsRequired();
             builder.Property(p => p.Description).HasColumnType("VARCHAR(100)");
             builder.Property(p => p.Image).HasConversion(v => ConvertToArray(v), v => ConvertToBitmap(v));
         }

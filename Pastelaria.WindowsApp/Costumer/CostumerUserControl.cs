@@ -1,12 +1,6 @@
 ﻿using Pastelaria.WindowsApp.Shared;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pastelaria.WindowsApp.Costumer
@@ -37,9 +31,9 @@ namespace Pastelaria.WindowsApp.Costumer
         {
             costumerGrid.Rows.Clear();
 
-            foreach(Domain.Customer costumer in costumers)
+            foreach(Domain.Customer customer in costumers)
             {
-                costumerGrid.Rows.Add(costumer);
+                costumerGrid.Rows.Add(customer.Id, customer.Name);
             }
         }
 

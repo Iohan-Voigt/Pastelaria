@@ -12,7 +12,12 @@ namespace Pastelaria.ORM
     public class PastelariaDBContext : DbContext
     {
         private static ILoggerFactory loggerFactoryConsole = LoggerFactory.Create(x => x.AddConsole());
-        private DbSet<Customer> Costumers { get; set; }
+        public DbSet<Customer> Costumers { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<OrderPad> OrderPads { get; set; }
+        public DbSet<ProcessingProduct> ProcessingProducts { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -31,7 +36,7 @@ namespace Pastelaria.ORM
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(PastelariaDBContext).Assembly);
-            modelBuilder.HasDefaultSchema("PASTELARIA");
+            //modelBuilder.HasDefaultSchema("PASTELARIA");
             
             foreach (var entity in modelBuilder.Model.GetEntityTypes())
             {

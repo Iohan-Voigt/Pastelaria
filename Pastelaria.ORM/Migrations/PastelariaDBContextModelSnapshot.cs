@@ -15,25 +15,9 @@ namespace Pastelaria.ORM.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasDefaultSchema("PASTELARIA")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.15")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("OrderPadProcessingProduct", b =>
-                {
-                    b.Property<Guid>("OrderPadsId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("ProcessingProductsId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("OrderPadsId", "ProcessingProductsId");
-
-                    b.HasIndex("ProcessingProductsId");
-
-                    b.ToTable("OrderPadProcessingProduct");
-                });
 
             modelBuilder.Entity("Pastelaria.Domain.Customer", b =>
                 {
@@ -112,9 +96,6 @@ namespace Pastelaria.ORM.Migrations
                     b.Property<DateTime>("OpenTime")
                         .HasColumnType("DATE");
 
-                    b.Property<Guid?>("OrderPadId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<int>("OrderPadPaymentStatus")
                         .HasColumnType("INT");
 
@@ -129,8 +110,6 @@ namespace Pastelaria.ORM.Migrations
                     b.HasIndex("CustomerId");
 
                     b.HasIndex("EmployeeId");
-
-                    b.HasIndex("OrderPadId");
 
                     b.ToTable("DOMAIN.ORDERPAD");
                 });
@@ -148,13 +127,18 @@ namespace Pastelaria.ORM.Migrations
                         .IsRequired()
                         .HasColumnType("VARCHAR(75)");
 
+                    b.Property<Guid?>("OrderPadId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
                     b.Property<decimal>("Value")
-                        .HasColumnType("DECIMAL");
+                        .HasColumnType("DECIMAL(25,2)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("OrderPadId");
 
                     b.ToTable("PROCESSING.PRODUCT");
                 });
@@ -176,26 +160,11 @@ namespace Pastelaria.ORM.Migrations
                         .HasColumnType("VARCHAR(75)");
 
                     b.Property<decimal>("Value")
-                        .HasColumnType("DECIMAL");
+                        .HasColumnType("DECIMAL(25,2)");
 
                     b.HasKey("Id");
 
                     b.ToTable("DOMAIN.PRODUCT");
-                });
-
-            modelBuilder.Entity("OrderPadProcessingProduct", b =>
-                {
-                    b.HasOne("Pastelaria.Domain.OrderPad", null)
-                        .WithMany()
-                        .HasForeignKey("OrderPadsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Pastelaria.Domain.ProcessingProduct", null)
-                        .WithMany()
-                        .HasForeignKey("ProcessingProductsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Pastelaria.Domain.OrderPad", b =>
@@ -208,13 +177,18 @@ namespace Pastelaria.ORM.Migrations
                         .WithMany("OrderPads")
                         .HasForeignKey("EmployeeId");
 
-                    b.HasOne("Pastelaria.Domain.OrderPad", null)
-                        .WithMany("OrderPads")
-                        .HasForeignKey("OrderPadId");
-
                     b.Navigation("Customer");
 
                     b.Navigation("Employee");
+                });
+
+            modelBuilder.Entity("Pastelaria.Domain.ProcessingProduct", b =>
+                {
+                    b.HasOne("Pastelaria.Domain.OrderPad", "OrderPad")
+                        .WithMany("ProcessingProducts")
+                        .HasForeignKey("OrderPadId");
+
+                    b.Navigation("OrderPad");
                 });
 
             modelBuilder.Entity("Pastelaria.Domain.Customer", b =>
@@ -229,7 +203,7 @@ namespace Pastelaria.ORM.Migrations
 
             modelBuilder.Entity("Pastelaria.Domain.OrderPad", b =>
                 {
-                    b.Navigation("OrderPads");
+                    b.Navigation("ProcessingProducts");
                 });
 #pragma warning restore 612, 618
         }

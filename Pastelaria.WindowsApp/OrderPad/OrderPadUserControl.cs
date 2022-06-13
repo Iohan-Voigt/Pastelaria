@@ -20,11 +20,11 @@ namespace Pastelaria.WindowsApp.OrderPad
             var coluns = new DataGridViewColumn[]
            {
                 new DataGridViewTextBoxColumn { DataPropertyName = "Id", HeaderText = "Id"},
-                new DataGridViewTextBoxColumn { DataPropertyName = "Costumer", HeaderText = "Costumer"},
-                new DataGridViewTextBoxColumn { DataPropertyName = "TotalValue", HeaderText = "Total Value"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "Employee", HeaderText = "Employee"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "Customer", HeaderText = "Customer"},
+                new DataGridViewTextBoxColumn { DataPropertyName = "Total", HeaderText = "Total Value"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "OrderPadStatus", HeaderText = "Status"},
                 new DataGridViewTextBoxColumn { DataPropertyName = "OpenTime", HeaderText = "Open date"}
-                
            };
 
             return coluns;
@@ -36,7 +36,7 @@ namespace Pastelaria.WindowsApp.OrderPad
 
             foreach (Domain.OrderPad orderPad in orders)
             {
-                debitsGrid.Rows.Add(orderPad);
+                debitsGrid.Rows.Add(orderPad.Id, orderPad.Employee.Name, orderPad.Customer.Name, orderPad.Total, orderPad.OrderPadStatus, orderPad.OpenTime);
             }
         }
 
