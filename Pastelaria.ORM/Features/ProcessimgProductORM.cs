@@ -1,4 +1,5 @@
-﻿using Pastelaria.Domain;
+﻿using Microsoft.EntityFrameworkCore;
+using Pastelaria.Domain;
 using Pastelaria.Domain.Repositories;
 using Pastelaria.ORM.Shared;
 using System;
@@ -32,6 +33,14 @@ namespace Pastelaria.ORM.Features
         {
             try
             {
+                var products = db.ProcessingProducts
+                    .Include(x => x.OrderPad)
+                    .Where(x => x.OrderPad.Id == id)
+                    .ToList<ProcessingProduct>();
+                foreach (var product in products)
+                {
+                    db.ProcessingProducts.Remove(product);
+                }                
                 return true;
             }
             catch (Exception)

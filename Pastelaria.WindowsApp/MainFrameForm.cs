@@ -31,9 +31,10 @@ namespace Pastelaria.WindowsApp
 
             //Padding = new (2);
             //BackColor = System.Drawing.Color.FromArgb(28, 31, 51);
-            // this button have the same collor of the panel
+            // this button have the same collor of the panel :/
             ibtnMenu.BackColor = SystemColors.ThirdColor;
             ibtnMenu.ForeColor = SystemColors.TextColor;
+            btnFilter.Enabled = false;
             Log.Logger.Information($"{this.ToString().Replace(", Text: ", "")} | MainFrame Loaded");
         }
 
@@ -218,7 +219,6 @@ namespace Pastelaria.WindowsApp
         #region Buttons
         private void employeeBtn_Click(object sender, EventArgs e)
         {
-
             EmployeeConfigurationToolBox configurationToolBox = new();
 
             ToolboxConfig(configurationToolBox, false);
@@ -230,6 +230,8 @@ namespace Pastelaria.WindowsApp
             DataConfig();
 
             UpdateTitle("Employee");
+
+            btnFilter.Enabled = false;
         }
 
         private void costumersBtn_Click(object sender, EventArgs e)
@@ -245,10 +247,14 @@ namespace Pastelaria.WindowsApp
             DataConfig();
 
             UpdateTitle("Costumer");
+
+            btnFilter.Enabled = false;
         }
 
         private void productBtn_Click(object sender, EventArgs e)
         {
+            btnFilter.Enabled = false;
+
             ProductConfigurationToolBox configurationToolBox = new();
 
             ToolboxConfig(configurationToolBox, false);
@@ -260,10 +266,14 @@ namespace Pastelaria.WindowsApp
             DataConfig();
 
             UpdateTitle("Product");
+
+            btnFilter.Enabled = false;
         }
 
         private void orderBtn_Click(object sender, EventArgs e)
         {
+            btnFilter.Enabled = true;
+
             OrderPadConfigurationToolBox configurationToolBox = new();
 
             ToolboxConfig(configurationToolBox, false);
@@ -318,6 +328,7 @@ namespace Pastelaria.WindowsApp
             btnAdd.Text = configuration.ToolTipAdd;
             btnEdit.Text = configuration.ToolTipEdit;
             btnRemove.Text = configuration.ToolTipRemove;
+            btnFilter.Text = configuration.ToolTipSpun;
         }
 
         private void DataConfig()
@@ -342,21 +353,22 @@ namespace Pastelaria.WindowsApp
                     productBtn_Click(sender, e);
                     break;
                 case Keys.F4:
-
+                    costumersBtn_Click(sender, e);
                     break;
                 case Keys.F5:
 
                     break;
                 case Keys.F6:
+                    orderBtn_Click(sender, e);
                     break;
                 case Keys.F7:
 
                     break;
                 case Keys.F8:
-
+                    configBtn_Click(sender, e);
                     break;
                 case Keys.F9:
-
+                    logutBtn_Click(sender, e);
                     break;
             }
         }

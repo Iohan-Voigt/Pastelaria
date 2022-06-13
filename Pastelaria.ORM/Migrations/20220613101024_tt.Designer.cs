@@ -10,7 +10,7 @@ using Pastelaria.ORM;
 namespace Pastelaria.ORM.Migrations
 {
     [DbContext(typeof(PastelariaDBContext))]
-    [Migration("20220612160312_tt")]
+    [Migration("20220613101024_tt")]
     partial class tt
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -105,7 +105,7 @@ namespace Pastelaria.ORM.Migrations
                         .HasColumnType("INT");
 
                     b.Property<decimal>("Total")
-                        .HasColumnType("DECIMAL");
+                        .HasColumnType("DECIMAL(25,2)");
 
                     b.HasKey("Id");
 

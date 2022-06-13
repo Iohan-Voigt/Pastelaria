@@ -6,5 +6,6 @@
         string ToolType { get; }
         string ToolTipEdit { get; }
         string ToolTipRemove { get; }
+        string ToolTipSpun { get; }
     }
 }

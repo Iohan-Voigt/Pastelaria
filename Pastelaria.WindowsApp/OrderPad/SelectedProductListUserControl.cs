@@ -10,7 +10,8 @@ namespace Pastelaria.WindowsApp.OrderPad
         public SelectedProductListUserControl(Domain.ProcessingProduct product)
         {
             this.product = product;
-            product.Quantity = 1;
+            if(product.Quantity == 0)
+                product.Quantity = 1;
             InitializeComponent();
             Shared.SystemColors.UpdateControls(Controls);
             if (product.Name != null && product.Name.Length > 13)

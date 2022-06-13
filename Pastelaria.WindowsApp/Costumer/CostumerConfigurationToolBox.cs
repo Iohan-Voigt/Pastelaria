@@ -23,5 +23,9 @@ namespace Pastelaria.WindowsApp.Costumer
         {
             get { return "Remove a costumer"; }
         }
+        public string ToolTipSpun
+        {
+            get { return ""; }
+        }
     }
 }

@@ -24,5 +24,9 @@ namespace Pastelaria.WindowsApp.Employee
         {
             get { return GeneralConfig.Data["Employee"] + " | " + GeneralConfig.Data["Remove"]; }
         }
+        public string ToolTipSpun
+        {
+            get { return ""; }
+        }
     }
 }

@@ -20,7 +20,17 @@ namespace Pastelaria.ORM.Features
             return db.OrderPads
                 .Include(x => x.Employee)
                 .Include(x => x.Customer)
+                .Include(x => x.ProcessingProducts)
                 .ToList<OrderPad>();
+        }
+
+        public override OrderPad GetById(Guid id)
+        { 
+            return db.OrderPads
+                .Include(x=> x.Employee)
+                .Include(x => x.Customer)
+                .Include(x => x.ProcessingProducts)
+                .FirstOrDefault(x => x.Id == id);
         }
     }
 }

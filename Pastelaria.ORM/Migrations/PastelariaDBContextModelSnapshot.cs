@@ -103,7 +103,7 @@ namespace Pastelaria.ORM.Migrations
                         .HasColumnType("INT");
 
                     b.Property<decimal>("Total")
-                        .HasColumnType("DECIMAL");
+                        .HasColumnType("DECIMAL(25,2)");
 
                     b.HasKey("Id");
 

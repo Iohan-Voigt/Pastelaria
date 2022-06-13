@@ -24,16 +24,26 @@ namespace Pastelaria.WindowsApp.OrderPad
             get { return orderpad; }
             set 
             { 
-                //to do
                 orderpad = value;
 
 
                 foreach (Domain.ProcessingProduct processingProduct in orderpad.ProcessingProducts)
                 {
-                    SelectedProducts.Add(new(processingProduct));
-                    orderpad.Total += processingProduct.Value;
-                    lblTotalValue.Text = orderpad.Total.ToString();
+                    SelectedProductListUserControl selectedProductListUserControl = new(processingProduct) { product = processingProduct };
+                    selectedProductListUserControl.ibtnAdd.Click += UpdateOrderPadTotalValueBySelectedProduct!;
+                    selectedProductListUserControl.ibtnRemove.Click += UpdateOrderPadTotalValueBySelectedProduct!;
+
+                    SelectedProducts.Add(selectedProductListUserControl);
                 }
+
+                foreach (var item in cbxCustomers.Items)
+                {
+                    if (new Guid(item.ToString().Split("Id: ")[1]) == (orderpad.Customer.Id))
+                        cbxCustomers.SelectedItem = item;
+                }
+
+                lblTotalValue.Text = orderpad.Total.ToString();
+                UpdateSelectedProductsList();
             }
         }
 
@@ -43,6 +53,7 @@ namespace Pastelaria.WindowsApp.OrderPad
             orderpad = null;
             orderpad = new();
             InitializeComponent();
+            SelectedProducts = null;
             SelectedProducts = new();
 
             Shared.SystemColors.ConfigureColors(Controls);
@@ -56,20 +67,17 @@ namespace Pastelaria.WindowsApp.OrderPad
             {
                 cbxCustomers.Items.Add(customer);
             }
-
-            if (!isEdit)
+          
+            foreach (var product in products)
             {
-                foreach (var product in products)
-                {
-                    ProductListButtonUserControl buttonUserControl = new(product);
-                    buttonUserControl.Location = new Point(0,0);
-                    buttonUserControl.pictureBox.Click += UpdateProductListUserControl!;
-                    LoadProductsIntoPanel(buttonUserControl);
-                }
+                ProductListButtonUserControl buttonUserControl = new(product);
+                buttonUserControl.Location = new Point(0,0);
+                buttonUserControl.pictureBox.Click += UpdateProductListUserControl!;
+                LoadAllProductsFromDBIntoPanel(buttonUserControl);
             }
         }
 
-        private void LoadProductsIntoPanel(UserControl button)
+        private void LoadAllProductsFromDBIntoPanel(UserControl button)
         {
             if (isColumFirstItem)
             {

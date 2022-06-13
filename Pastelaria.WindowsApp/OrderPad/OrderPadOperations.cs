@@ -45,22 +45,57 @@ namespace Pastelaria.WindowsApp.OrderPad
 
         public void RegisterRemove()
         {
-            throw new NotImplementedException();
+            Guid orderPadId = table.GetSelectedId();
+
+            if (orderPadId == default)
+            {
+                MainFrameForm.instance.UpdateFooter(GeneralConfig.Data["Any employee selected!"]);
+                return;
+            }
+
+            Domain.OrderPad orderpad = orderPadAppService.GetById(orderPadId);
+            if ((MessageBox.Show(GeneralConfig.Data["Are you sure that you want to remove"] + " "
+                , "OrderPad" + " | " + GeneralConfig.Data["Registration"]
+                , MessageBoxButtons.YesNo
+                , MessageBoxIcon.Exclamation) == DialogResult.Yes))
+            {
+                orderPadAppService.Delete(orderpad);
+            }
+
+            LoadGrid();
         }
 
         public void RegistersFilter()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void RegistersGroup()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void RegisterUpdate()
         {
-            throw new NotImplementedException();
+            Guid orderPadId = table.GetSelectedId();
+
+            if(orderPadId == default)
+            {
+                MainFrameForm.instance.UpdateFooter("Any OrderPad selected!");
+                return;
+            }
+
+            screen = null;
+            screen = new("OrderPad", true, productAppService.GetAll(), customerAppService.GetAll());
+
+            screen.OrderPad = orderPadAppService.GetById(orderPadId);
+
+            if(screen.ShowDialog() == DialogResult.OK)
+            {
+                orderPadAppService.Update(screen.OrderPad);
+            }
+
+            LoadGrid();
         }
 
         private void LoadGrid()

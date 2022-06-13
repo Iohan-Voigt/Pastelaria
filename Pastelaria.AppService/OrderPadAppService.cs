@@ -35,24 +35,86 @@ namespace Pastelaria.AppService
             }
             catch (Exception ex)
             {
-
                 return null;
             }
         }
 
         public override string Delete(OrderPad entity)
         {
-            throw new NotImplementedException();
+            Log.Logger.Information($"{this.ToString().Replace(", Text: ", "")} | Try to delete OrderPad ({entity.Id})");
+            try
+            {
+                stopwatch.Restart();
+                stopwatch.Start();
+
+                processingProductRepository.RemoveByOrderPadId(entity.Id);
+                orderPadRepository.Remove(entity.Id);
+
+                stopwatch.Stop();
+                Log.Logger.Information($"{this.ToString().Replace(", Text: ", "")} | OrderPad succeed removed | {stopwatch.ToString}");
+
+                return "VALID";
+            }
+            catch (Exception ex)
+            {
+                stopwatch.Stop();
+                Log.Logger.Error($"{this.ToString().Replace(", Text: ", "")} | OrderPad not removed");
+                Log.Logger.Error("Exception: " + ex.Message);
+
+                return "ERROR";
+            }
         }
 
         public override string Exists(Guid Id)
         {
-            throw new NotImplementedException();
+            Log.Logger.Information($"{this.ToString().Replace(", Text: ", "")} | OrderPad Exists ({Id})");
+            try
+            {
+                stopwatch.Restart();
+                stopwatch.Start();
+
+                OrderPad orderPad = orderPadRepository.GetById(Id);
+
+                Log.Logger.Information($"{this.ToString().Replace(", Text: ", "")} | OrdePad Found | {stopwatch.ToString}");
+                stopwatch.Stop();
+                if (orderPad != null)
+                    return "YES";
+                else
+                    return "NO";
+            }
+            catch (Exception ex)
+            {
+                stopwatch.Stop();
+                Log.Logger.Error($"{this.ToString().Replace(", Text: ", "")} | Get OrderPad error");
+                Log.Logger.Error("Exception: " + ex.Message);
+
+                return null;
+            }
         }
 
         public override OrderPad GetById(Guid Id)
         {
-            throw new NotImplementedException();
+            Log.Logger.Information($"{this.ToString().Replace(", Text: ", "")} | Get OrderPad by Id ({Id})");
+            try
+            {
+                stopwatch.Restart();
+                stopwatch.Start();
+
+                OrderPad orderPad = orderPadRepository.GetById(Id);
+
+                Log.Logger.Information($"{this.ToString().Replace(", Text: ", "")} | OrdePad Found | {stopwatch.ToString}");
+                stopwatch.Stop();
+
+                return orderPad;
+            }
+            catch (Exception ex)
+            {
+                stopwatch.Stop();
+                Log.Logger.Error($"{this.ToString().Replace(", Text: ", "")} | Get OrderPad error");
+                Log.Logger.Error("Exception: " + ex.Message);
+
+                return null;
+            }
         }
 
         public override string Insert(OrderPad entity)
@@ -107,7 +169,32 @@ namespace Pastelaria.AppService
 
         public override string Update(OrderPad entity)
         {
-            throw new NotImplementedException();
+            Log.Logger.Information($"{this.ToString().Replace(", Text: ", "")} | OrderPad update Id ({entity.Id})");
+            try
+            {
+                stopwatch.Restart();
+                stopwatch.Start();
+
+                if (entity.Validate().Equals("VALID"))
+                {
+                    orderPadRepository.Update(entity);
+                    stopwatch.Stop();
+
+                    return "OrderPad succeed updated!";
+                }
+
+                stopwatch.Stop();
+
+                return entity.Validate();
+            }
+            catch (Exception ex)
+            {
+                stopwatch.Stop();
+                Log.Logger.Error($"{this.ToString().Replace(", Text: ", "")} | Update OrderPad error");
+                Log.Logger.Error("Exception: " + ex.Message);
+
+                return "ERROR";
+            }
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Pastelaria.ORM.Configuration
             builder.Property(x => x.OrderPadStatus).HasColumnType("INT");
             builder.Property(x => x.OrderPadPaymentStatus).HasColumnType("INT");
             builder.Property(x => x.OpenTime).HasColumnType("DATE");
-            builder.Property(x => x.Total).HasColumnType("DECIMAL");
+            builder.Property(x => x.Total).HasColumnType("DECIMAL(25,2)");
         }
     }
 }

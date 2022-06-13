@@ -54,6 +54,7 @@ namespace Pastelaria.AppService
             }
             
         }
+
         public override string Delete(Employee entity)
         {
             Log.Logger.Information($"{this.ToString().Replace(", Text: ", "")} | Try to delete Employee ({entity.Id})");
@@ -78,6 +79,7 @@ namespace Pastelaria.AppService
                 return "ERROR";
             }
         }
+
         public override string Update(Employee entity)
         {
             Log.Logger.Information($"{this.ToString().Replace(", Text: ", "")} | Employee update Id ({entity.Id})");

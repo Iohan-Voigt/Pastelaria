@@ -25,5 +25,10 @@ namespace Pastelaria.WindowsApp.OrderPad
         {
             get { return GeneralConfig.Data["Order Pad"] + " | " + GeneralConfig.Data["Remove"]; }
         }
+
+        public string ToolTipSpun
+        {
+            get { return GeneralConfig.Data["Order Pad"] + " | " + "Spun"; }
+        }
     }
 }

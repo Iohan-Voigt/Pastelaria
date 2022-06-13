@@ -29,5 +29,10 @@ namespace Pastelaria.WindowsApp.Product
         {
             get { return GeneralConfig.Data["Product"] + " | " + GeneralConfig.Data["Remove"]; }
         }
+
+        public string ToolTipSpun
+        {
+            get { return ""; }
+        }
     }
 }

@@ -65,7 +65,7 @@ namespace Pastelaria.ORM.Migrations
                     OpenTime = table.Column<DateTime>(type: "DATE", nullable: false),
                     OrderPadStatus = table.Column<int>(type: "INT", nullable: false),
                     OrderPadPaymentStatus = table.Column<int>(type: "INT", nullable: false),
-                    Total = table.Column<decimal>(type: "DECIMAL", nullable: false)
+                    Total = table.Column<decimal>(type: "DECIMAL(25,2)", nullable: false)
                 },
                 constraints: table =>
                 {
