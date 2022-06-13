@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Pastelaria.Domain.Shared;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,8 +26,9 @@ namespace Pastelaria.ORM.Shared
                 dbSet.Add(register);
                 db.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Log.Logger.Error($"{this.ToString().Replace(", Text: ", "")} | Exception : {ex.Message}");
                 return false;
             }
             return true;
@@ -39,8 +41,9 @@ namespace Pastelaria.ORM.Shared
                 dbSet.Update(register);
                 db.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Log.Logger.Error($"{this.ToString().Replace(", Text: ", "")} | Exception : {ex.Message}");
                 return false;
             }
             return true;
@@ -55,8 +58,9 @@ namespace Pastelaria.ORM.Shared
                 dbSet.Remove(register);
                 db.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Log.Logger.Error($"{this.ToString().Replace(", Text: ", "")} | Exception : {ex.Message}");
                 return false;
             }
             return true;
@@ -70,7 +74,7 @@ namespace Pastelaria.ORM.Shared
             }
             catch (Exception ex)
             {
-
+                Log.Logger.Error($"{this.ToString().Replace(", Text: ", "")} | Exception : {ex.Message}");
                 return null;
             }
         }
@@ -83,7 +87,7 @@ namespace Pastelaria.ORM.Shared
             }
             catch (Exception ex)
             {
-
+                Log.Logger.Error($"{this.ToString().Replace(", Text: ", "")} | Exception : {ex.Message}");
                 return null;
             }
         }

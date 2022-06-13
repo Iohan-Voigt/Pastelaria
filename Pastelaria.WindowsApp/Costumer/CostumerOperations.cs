@@ -48,6 +48,24 @@ namespace Pastelaria.WindowsApp.Costumer
 
         public void RegisterRemove()
         {
+            Guid customerId = table.GetSelectedId();
+
+            if(customerId == default)
+            {
+                MainFrameForm.instance.UpdateFooter("Any customer selected");
+                return;
+            }
+
+            Domain.Customer customer = customerAppService.GetById(customerId);
+
+            if (MessageBox.Show(GeneralConfig.Data["Are you sure that you want to remove"] + customer.Name
+                , GeneralConfig.Data["Customer"] + " | " + GeneralConfig.Data["Registration"]
+                , MessageBoxButtons.YesNo
+                , MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                customerAppService.Delete(customer);
+            }
+
             LoadGrid();
         }
 
