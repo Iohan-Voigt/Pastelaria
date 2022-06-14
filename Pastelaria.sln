@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pastelaria.ORM", "Pastelari
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pastelaria.RescourcesLib", "Pastelaria.RescourcesLib\Pastelaria.RescourcesLib.csproj", "{D9A37A04-B4A7-4CF7-9800-D7416DE7C3A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pastelaria.Logger", "Pastelaria.Logger\Pastelaria.Logger.csproj", "{65A58AAC-B738-42AC-8AA2-A56B5C79233B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pastelaria.Logger", "Pastelaria.Logger\Pastelaria.Logger.csproj", "{65A58AAC-B738-42AC-8AA2-A56B5C79233B}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DBPASTELARIA", "DBPASTELARIA\DBPASTELARIA.sqlproj", "{D0755E8B-BEE3-4C7E-BA40-D1FA6FCCCFFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,12 @@ Global
 		{65A58AAC-B738-42AC-8AA2-A56B5C79233B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65A58AAC-B738-42AC-8AA2-A56B5C79233B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65A58AAC-B738-42AC-8AA2-A56B5C79233B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0755E8B-BEE3-4C7E-BA40-D1FA6FCCCFFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0755E8B-BEE3-4C7E-BA40-D1FA6FCCCFFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0755E8B-BEE3-4C7E-BA40-D1FA6FCCCFFB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D0755E8B-BEE3-4C7E-BA40-D1FA6FCCCFFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0755E8B-BEE3-4C7E-BA40-D1FA6FCCCFFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0755E8B-BEE3-4C7E-BA40-D1FA6FCCCFFB}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +83,7 @@ Global
 		{67D25ABC-C43B-4358-AB09-AAB4ECEE3A40} = {2C0EB07E-E23E-43A8-B9DB-A095AE7C39D5}
 		{D9A37A04-B4A7-4CF7-9800-D7416DE7C3A9} = {2C0EB07E-E23E-43A8-B9DB-A095AE7C39D5}
 		{65A58AAC-B738-42AC-8AA2-A56B5C79233B} = {2C0EB07E-E23E-43A8-B9DB-A095AE7C39D5}
+		{D0755E8B-BEE3-4C7E-BA40-D1FA6FCCCFFB} = {E7826D1E-DB36-421C-A19D-4CA86B1D4341}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D14ADC6E-D6BA-4730-A28A-087982204C32}
