@@ -1,0 +1,1 @@
+Criar o registro : Pastelaria\ConnectionString para armazenar a conectionstring do database
